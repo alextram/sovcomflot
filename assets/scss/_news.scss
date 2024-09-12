@@ -1,0 +1,154 @@
+.card {
+	position: relative;
+	padding: 0px 0px prc(480, 444) 0px;
+	// .card__content
+	&__content {
+		position: absolute;
+		bottom: 0;
+		left: 0;
+		width: 100%;
+		padding: rem(24);
+	}
+	// .card__title
+	&__title {
+		a {
+			color: #fff;
+		}
+	}
+	// .card__img
+	&__img {
+		position: absolute;
+		width: 100%;
+		height: 100%;
+		top: 0;
+		left: 0;
+		z-index: -1;
+	}
+}
+
+//===============================================================
+.card-big {
+	position: relative;
+	min-height: rem(480);
+	// .card-big__content
+	&__content {
+		max-width: rem(650);
+		padding: rem(80) rem(56);
+	}
+	// .card-big__title
+	&__title {
+		margin: 0px 0px rem(16) 0px;
+		color: #fff;
+	}
+	// .card-big__text
+	&__text {
+		color: #fff;
+		font-size: rem(16);
+		line-height: prc(24, 16);
+		margin: 0px 0px rem(30) 0px;
+	}
+	// .card-big__btn
+	&__btn {
+	}
+	// .card-big__img
+	&__img {
+		position: absolute;
+		width: 100%;
+		height: 100%;
+		top: 0;
+		left: 0;
+		z-index: -1;
+	}
+
+	// .card-big_right
+	&_right {
+		display: flex;
+		justify-content: flex-end;
+	}
+}
+
+//===============================================================
+.new-card {
+	display: block;
+	position: relative;
+	padding: 0px 0px prc(460, 678) 0px;
+	// .new-card__tag
+	&__tag {
+		position: absolute;
+		top: rem(18);
+		left: rem(18);
+	}
+	// .new-card__content
+	&__content {
+		position: absolute;
+		bottom: 0;
+		left: 0;
+		width: 100%;
+		padding: rem(18);
+	}
+	// .new-card__date
+	&__date {
+		color: #fff;
+		opacity: 0.5;
+		font-size: rem(16);
+		line-height: prc(20, 16);
+		margin: 0px 0px rem(8) 0px;
+	}
+	// .new-card__title
+	&__title {
+		a {
+			color: #fff;
+		}
+	}
+	// .new-card__img
+	&__img {
+		position: absolute;
+		width: 100%;
+		height: 100%;
+		top: 0;
+		left: 0;
+		z-index: -1;
+	}
+}
+
+//===============================================================
+.new-card-row {
+	position: relative;
+	display: grid;
+	grid-template-columns: 48% 1fr;
+	// .new-card-row__tag
+	&__tag {
+		position: absolute;
+		top: rem(18);
+		left: rem(18);
+		z-index: 2;
+	}
+	// .new-card-row__img
+	&__img {
+		display: inline-block;
+		height: 100%;
+	}
+	// .new-card-row__body
+	&__body {
+		display: flex;
+		align-items: flex-end;
+		padding: rem(24);
+	}
+	// .new-card-row__content
+	&__content {
+	}
+	// .new-card-row__date
+	&__date {
+		color: #000;
+		opacity: 0.5;
+		font-size: rem(16);
+		line-height: prc(20, 16);
+		margin: 0px 0px rem(8) 0px;
+	}
+	// .new-card-row__title
+	&__title {
+		a {
+			color: var(--color-main);
+		}
+	}
+}

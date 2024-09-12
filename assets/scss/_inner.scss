@@ -1,0 +1,46 @@
+.page-inner {
+	// .page-inner__head
+	&__head {
+	}
+	// .page-inner__section
+	&__section {
+		margin: 0px 0px rem(60) 0px;
+	}
+}
+
+//===============================================================
+.inner-head {
+	// .inner-head__top
+	&__top {
+		position: relative;
+		padding: rem(168) rem(0) rem(40);
+		margin: 0px 0px rem(20) 0px;
+	}
+	// .inner-head__container
+	&__container {
+	}
+	// .inner-head__top-body
+	&__top-body {
+		text-align: center;
+	}
+	// .inner-head__title
+	&__title {
+		color: #fff;
+	}
+	// .inner-head__bg
+	&__bg {
+		position: absolute;
+		width: 100%;
+		height: 100%;
+		top: 0;
+		left: 0;
+		z-index: -1;
+	}
+	// .inner-head__bottom
+	&__bottom {
+		padding: rem(20) 0px;
+	}
+	// .inner-head__bottom-body
+	&__bottom-body {
+	}
+}

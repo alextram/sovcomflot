@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+	<title>Стартовая сборка</title>
+	<meta charset="UTF-8">
+	<meta name="format-detection" content="telephone=no">
+	<link rel="stylesheet" href="assets/css/style.css">
+	<link rel="shortcut icon" href="favicon.ico">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+	<script>
+		const LOCALIZATION = 'Russian'; // English, Spanish... Ключ локализации. При необходимости изменять в соответствии с ответом сервера.
+	</script>
+</head>
+
+<body>
+	<div class="wrapper">
+		<header class="header">
+			<div class="header__container _container">
+				<div class="header__body">
+					<div class="header__top header-top">
+						<nav class="header-top__menu header-top-menu">
+							<ul class="header-top-menu__list">
+								<li class="header-top-menu__item"><a class="header-top-menu__link" href="#">Контакты</a></li>
+								<li class="header-top-menu__item"><a class="header-top-menu__link" href="#">Общественная приемная СКФ</a></li>
+								<li class="header-top-menu__item"><a class="header-top-menu__link" href="#">Закупки</a></li>
+								<li class="header-top-menu__item"><a class="header-top-menu__link" href="#">Противодействие коррупции</a></li>
+							</ul>
+						</nav>
+						<div class="header-top__actions">
+							<a class="header-top__enter _icon-enter" href="#">Внутренний портал</a>
+							<div class="header-top__socials socials">
+								<a class="socials__social _icon-tg" href="#"></a>
+								<a class="socials__social _icon-vk" href="#"></a>
+							</div>
+						</div>
+					</div>
+					<div class="header__bottom header-bottom">
+						<a class="header-bottom__logo logo" href="#">
+							<img src="assets/img/main/logo.svg" alt="logo">
+						</a>
+						<div class="header-bottom__menu menu" data-menu="main-menu">
+							<nav class="menu__body" data-menu-container="main-menu">
+								<ul class="menu__list">
+									<li class="menu__item" data-menu-item><a class="menu__link" href="#">О компании</a></li>
+									<li class="menu__item" data-menu-item><a class="menu__link" href="#">Инвесторам и акционерам</a></li>
+									<li class="menu__item" data-menu-item><a class="menu__link" href="#">Работа в СКФ</a></li>
+									<li class="menu__item" data-menu-item><a class="menu__link" href="#">Пресс-релизы</a></li>
+								</ul>
+							</nav>
+						</div>
+						<div class="header-bottom__actions">
+							<div class="search" data-da=".header-top,767">
+								<form class="search__search-form search-form _active" action="#" method="get">
+									<input class="search-form__input input" type="text" name="s" placeholder="Поиск">
+									<button class="search-form__btn _icon-search" type="submit"></button>
+								</form>
+								<button class="search__search-btn _icon-search" type="button">Поиск</button>
+							</div>
+							<div class="languages">
+								<a class="languages__language _active" href="#">Русский</a>
+								<a class="languages__language" href="#">English</a>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</header>
+		
+		<main class="page">
+			
+			<div class="page__inner page-inner">
+
+				<header class="page-inner__head inner-head">
+					<div class="inner-head__top">
+						<div class="inner-head__container _container">
+							<div class="inner-head__top-body">
+								<h1 class="inner-head__title">Контакты</h1>
+							</div>
+						</div>
+						<figure class="inner-head__bg _ibg">
+							<img src="assets/img/bgs/bg1.jpg" alt="image">
+						</figure>
+					</div>
+					<div class="inner-head__bottom">
+						<div class="inner-head__container _container">
+							<div class="inner-head__bottom-body">
+								<nav class="breadcrumbs">
+									<ul class="breadcrumbs__list">
+										<li class="breadcrumbs__item"><a class="breadcrumbs__link" href="#" title="Главная">Главная</a></li>
+										<li class="breadcrumbs__item"><span class="breadcrumbs__current" title="Контакты">Контакты</span></li>
+									</ul>
+								</nav>
+							</div>
+						</div>
+					</div>
+				</header>
+
+				<section class="page-inner__section contacts-section">
+					<div class="contacts-section__container _container">
+						<h2 class="contacts-section__title">ПАО «Совкомфлот»</h2>
+						<div class="contacts-section__body">
+							<div class="contacts-section__block contacts-block">
+								<div class="contacts-block__head">
+									<h3 class="contacts-block__title">Москва</h3>
+								</div>
+								<dl class="contacts-block__list">
+									<div class="contacts-block__item">
+										<dt class="contacts-block__prop">Город:</dt>
+										<dd class="contacts-block__value">Москва</dd>
+									</div>
+									<div class="contacts-block__item">
+										<dt class="contacts-block__prop">Адрес:</dt>
+										<dd class="contacts-block__value">Ул. Гашека, 6, Москва, Российская Федерация 125047</dd>
+									</div>
+									<div class="contacts-block__item">
+										<dt class="contacts-block__prop">Телефон:</dt>
+										<dd class="contacts-block__value"><a href="tel:+74956604000">+7 (495) 660-40-00</a></dd>
+									</div>
+									<div class="contacts-block__item">
+										<dt class="contacts-block__prop">Факс:</dt>
+										<dd class="contacts-block__value"><a href="tel:+74956604099">+7 (495) 660-40-99</a></dd>
+									</div>
+									<div class="contacts-block__item">
+										<dt class="contacts-block__prop">Эл. почта:</dt>
+										<dd class="contacts-block__value"><a href="mailto:info@scf-group.ru">info@scf-group.ru</a></dd>
+									</div>
+								</dl>
+								<div class="contacts-block__additional">
+									<a class="link-with-icon _icon-mark" href="#">Показать на карте</a>
+								</div>
+							</div>
+							<div class="contacts-section__block contacts-block">
+								<div class="contacts-block__head">
+									<h3 class="contacts-block__title">Санкт-Петербург</h3>
+								</div>
+								<dl class="contacts-block__list">
+									<div class="contacts-block__item">
+										<dt class="contacts-block__prop">Город:</dt>
+										<dd class="contacts-block__value">Санкт-Петербург</dd>
+									</div>
+									<div class="contacts-block__item">
+										<dt class="contacts-block__prop">Адрес:</dt>
+										<dd class="contacts-block__value">Наб. реки Мойки, 3а, Санкт-Петербург, Российская Федерация 191186</dd>
+									</div>
+									<div class="contacts-block__item">
+										<dt class="contacts-block__prop">Телефон:</dt>
+										<dd class="contacts-block__value"><a href="tel:+78129999999">+7 (812) 999-99-99</a></dd>
+									</div>
+									<div class="contacts-block__item">
+										<dt class="contacts-block__prop">Факс:</dt>
+										<dd class="contacts-block__value"><a href="tel:+78129999999">+7 (812) 999-99-99</a></dd>
+									</div>
+									<div class="contacts-block__item">
+										<dt class="contacts-block__prop">Эл. почта:</dt>
+										<dd class="contacts-block__value"><a href="mailto:info@scf-group.ru">info@scf-group.ru</a></dd>
+									</div>
+								</dl>
+								<div class="contacts-block__additional">
+									<a class="link-with-icon _icon-mark" href="#">Показать на карте</a>
+								</div>
+							</div>
+						</div>
+					</div>
+				</section>
+
+				<div class="page-inner__section">
+					<div class="_container">
+						<div class="white-blocks">
+							<div class="white-block">
+								<a class="more-link" href="#">Контакты кадровых офисов</a>
+							</div>
+							<div class="white-block">
+								<a class="more-link" href="#">Общественная приемная СКФ</a>
+							</div>
+						</div>
+					</div>
+				</div>
+
+			</div>
+
+		</main>
+		
+		<footer class="footer">
+			<div class="footer__container _container">
+				<div class="footer__body">
+					<div class="footer__row footer__row_1">
+						<figure class="footer__logo logo">
+							<img src="assets/img/main/logo.svg" alt="logo">
+						</figure>
+						<nav class="footer__menu footer-menu">
+							<ul class="footer-menu__list">
+								<li class="footer-menu__item"><a class="footer-menu__link" href="#">Контакты</a></li>
+								<li class="footer-menu__item"><a class="footer-menu__link" href="#">Общественная приемная СКФ</a></li>
+								<li class="footer-menu__item"><a class="footer-menu__link" href="#">Закупки</a></li>
+								<li class="footer-menu__item"><a class="footer-menu__link" href="#">Противодействие коррупции</a></li>
+								<li class="footer-menu__item"><a class="footer-menu__link" href="#">Карта сайта</a></li>
+							</ul>
+						</nav>
+					</div>
+					<div class="footer__row footer__row_2">
+						<div class="footer__socials socials">
+							<a class="socials__social _icon-tg" href="#"></a>
+							<a class="socials__social _icon-vk" href="#"></a>
+						</div>
+					</div>
+					<div class="footer__row footer__row_3">
+						<p class="footer__copy">© ПАО Совкомфлот 2024</p>
+					</div>
+				</div>
+			</div>
+		</footer>
+	</div>
+
+
+	<button class="move-up _fixed-block" type="button" data-move-up data-goto="wrapper"></button>
+	
+
+	<!-- services -->
+	<script src="https://www.google.com/recaptcha/api.js?render=<reCAPTCHA_site_key>&badge=bottomleft"></script>
+	<script src="https://api-maps.yandex.ru/2.1/?lang=ru_RU&amp;apikey=<ваш API-ключ>"></script>
+	
+	<!-- libs -->
+	<script src="assets/js/libs/lazyload.min.js"></script>
+	<script src="assets/js/libs/choices.min.js"></script>
+	<script src="assets/js/libs/nouislider.min.js"></script>
+	<script src="assets/js/libs/inputmask.min.js"></script>
+	<script src="assets/js/libs/justvalidate.min.js"></script>
+	<script src="assets/js/libs/datepicker.min.js"></script>
+	<script src="assets/js/libs/swiper.min.js"></script>
+	<script src="assets/js/libs/lightgallery.min.js"></script>
+	<script src="assets/js/libs/aos.min.js"></script>
+
+	<!-- plugins -->
+	<script src="assets/js/plugins/adapt.js"></script>
+	<script src="assets/js/plugins/menu.js"></script>
+	<script src="assets/js/plugins/modal.js"></script>
+	<script src="assets/js/plugins/tabs.js"></script>
+	<script src="assets/js/plugins/spoiler.js"></script>
+	<script src="assets/js/plugins/rating.js"></script>
+
+	<!-- files -->
+	<script src="assets/js/files/functions.js"></script>
+	<script src="assets/js/files/forms.js"></script>
+	<script src="assets/js/files/sliders.js"></script>
+	<script src="assets/js/files/scroll.js"></script>
+	<script src="assets/js/files/media.js"></script>
+	<script src="assets/js/files/scripts.js"></script>
+
+</body>
+
+</html>

@@ -1,0 +1,236 @@
+.main-slider {
+	position: relative;
+	margin: 0px 0px rem(60) 0px;
+	// .main-slider__slides
+	&__slides {
+	}
+	// .main-slider__slide
+	&__slide {
+	}
+	// .main-slider__arrows
+	&__arrows {
+		position: absolute;
+		z-index: 5;
+		top: 50%;
+		left: 0;
+		width: 100%;
+		display: flex;
+		justify-content: space-between;
+		transform: translate(0, -50%);
+		padding: rem(128) rem(56) 0px;
+		@media (max-width: em($md0)) {
+			padding: rem(128) rem(10) 0px;
+		}
+	}
+	// .main-slider__arrow
+	&__arrow {
+		height: rem(40);
+		width: rem(40);
+		border-radius: 50%;
+		border: rem(1) solid #fff;
+		display: inline-flex;
+		justify-content: center;
+		align-items: center;
+		transition: all 0.3s ease 0s;
+		&::before {
+			font-size: rem(14);
+			color: #fff;
+			transition: all 0.3s ease 0s;
+		}
+		&._disabled {
+			pointer-events: none;
+			opacity: 0.5;
+		}
+		@media (any-hover: hover) {
+			&:hover {
+				border: rem(1) solid var(--color-second);
+				&::before{
+					color: var(--color-second);
+				}
+			}
+		}
+		// .main-slider__arrow_prev
+		&_prev {
+			scale: -1 1;
+		}
+		// .main-slider__arrow_next
+		&_next {
+		}
+	}
+	// .main-slider__pagination
+	&__pagination {
+		position: absolute;
+		display: flex;
+		bottom: rem(32);
+		left: 50%;
+		transform: translate(-50%, 0);
+		gap: rem(8);
+		z-index: 5;
+	}
+	// .main-slider__bullet
+	&__bullet {
+		display: inline-flex;
+		background: #fff;
+		width: rem(8);
+		height: rem(8);
+		border-radius: 50%;
+		opacity: 0.5;
+		transition: all 0.3s ease 0s;
+		cursor: pointer;
+		&._active {
+			opacity: 1;
+			pointer-events: none;
+		}
+	}
+}
+
+//---------------------------------------------------------------
+.main-slide {
+	position: relative;
+	height: 100vh;
+	min-height: rem(500);
+	padding: rem(128) 0px 0px 0px;
+	// .main-slide__container
+	&__container {
+		height: 100%;
+	}
+	// .main-slide__body
+	&__body {
+		height: 100%;
+		padding: rem(30) 0px;
+		display: flex;
+		align-items: center;
+		color: #fff;
+	}
+	// .main-slide__content
+	&__content {
+		padding: 0px 0px 0px rem(57);
+		max-width: rem(500);
+	}
+	// .main-slide__title
+	&__title {
+		margin: 0px 0px rem(16) 0px;
+		color: #fff;
+	}
+	// .main-slide__text
+	&__text {
+		font-size: rem(20);
+		margin: 0px 0px rem(30) 0px;
+	}
+	// .main-slide__btn
+	&__btn {
+	}
+	// .main-slide__bg
+	&__bg {
+		position: absolute;
+		width: 100%;
+		height: 100%;
+		top: 0;
+		left: 0;
+		z-index: -1;
+	}
+}
+
+//===============================================================
+.main-media {
+	margin: 0px 0px rem(60) 0px;
+	// .main-media__container
+	&__container {
+	}
+	// .main-media__head
+	&__head {
+		display: flex;
+		align-items: flex-end;
+		gap: rem(40);
+		margin: 0px 0px rem(25) 0px;
+	}
+	// .main-media__title
+	&__title {
+	}
+	// .main-media__navs
+	&__nav {
+		display: flex;
+		gap: rem(24);
+		padding: 0px 0px rem(5) 0px;
+	}
+	// .main-media__btn
+	&__btn {
+		font-size: rem(18);
+		font-weight: 500;
+		line-height: prc(26, 18);
+		transition: all 0.3s ease 0s;
+		&._active {
+			color: var(--color-main);
+		}
+		@media (any-hover: hover) {
+			&:hover {
+				color: var(--color-main);
+			}
+		}
+	}
+	// .main-media__content
+	&__content {
+	}
+	// .main-media__panel
+	&__panel {
+	}
+	// .main-media__block
+	&__block {
+		display: grid;
+		gap: rem(24);
+		grid-template-columns: repeat(2, 1fr);
+		grid-template-rows: repeat(2, 1fr);
+	}
+	// .main-media__item
+	&__item {
+		&:first-child {
+			grid-row: span 2;
+		}
+	}
+}
+
+//===============================================================
+.activity {
+	margin: 0px 0px rem(60) 0px;
+	// .activity__container
+	&__container {
+	}
+	// .activity__head
+	&__head {
+	}
+	// .activity__title
+	&__title {
+		margin: 0px 0px rem(20) 0px;
+	}
+	// .activity__body
+	&__body {
+		display: grid;
+		grid-template-columns: repeat(3, 1fr);
+		grid-gap: rem(24);
+	}
+	// .activity__item
+	&__item {
+	}
+}
+
+//===============================================================
+.history {
+	margin: 0px 0px rem(60) 0px;
+	// .history__container
+	&__container {
+	}
+	// .history__head
+	&__head {
+	}
+	// .history__title
+	&__title {
+	}
+	// .history__body
+	&__body {
+		display: grid;
+		grid-gap: rem(24);
+	}
+	// .history__item
+	&__item {
+	}
+}
