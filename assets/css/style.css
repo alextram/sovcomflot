@@ -7179,6 +7179,10 @@ textarea.input {
       -ms-flex-align: center;
           align-items: center;
   gap: 0.4375rem;
+  font-size: 0.75rem;
+}
+.header-top__enter::before {
+  font-size: 1rem;
 }
 .header-top-menu__list {
   display: -webkit-box;
@@ -7187,6 +7191,7 @@ textarea.input {
   gap: 1.5rem;
 }
 .header-top-menu__link {
+  font-size: 0.75rem;
   color: #fff;
 }
 
