@@ -7337,7 +7337,7 @@ textarea.input {
   -webkit-transform: translate(0, -50%);
       -ms-transform: translate(0, -50%);
           transform: translate(0, -50%);
-  padding: 8rem 3.5rem 0px;
+  padding: 8rem 1.875rem 0px;
 }
 @media (max-width: 88.875em) {
   .main-slider__arrows {
