@@ -71,12 +71,10 @@
  */
 .menu-icon {
 	display: none;
-	@media (max-width: em($md3)) {
+	@media (max-width: em($md2)) {
 		display: block;
-		position: absolute;
-		top: rem(10);
-		right: rem(140);
-		width: rem(30);
+		position: relative;
+		width: rem(25);
 		height: rem(18);
 		cursor: pointer;
 		z-index: 5;
@@ -87,7 +85,8 @@
 			position: absolute;
 			width: 100%;
 			height: rem(2);
-			background-color: #000;
+			border-radius: rem(2);
+			background-color: #fff;
 			&:first-child {
 				top: 0px;
 			}
@@ -276,7 +275,7 @@
 //===============================================================
 .link-with-icon {
 	color: var(--color-main);
-	display: flex;
+	display: inline-flex;
 	align-items: center;
 	gap: rem(10);
 
@@ -324,5 +323,21 @@
 		content: "\e901";
 		font-family: "icons";
 		@extend %ic;
+	}
+}
+
+//===============================================================
+.right-line {
+	position: relative;
+	padding: 0px 0px 0px rem(13);
+	&::before {
+		content: '';
+		position: absolute;
+		top: 50%;
+		left: 0;
+		height: 70%;
+		translate: 0 -50%;
+		width: rem(3);
+		background: var(--color-second);
 	}
 }

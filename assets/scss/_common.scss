@@ -58,6 +58,9 @@ body {
 	line-height: prc(26, 18);
 	&._lock {
 		overflow: hidden;
+		@media (max-width: em($md4)) {
+			background: rgba(22, 66, 127, 0.9);
+		}
 	}
 
 	//---------------------------------------------------------------

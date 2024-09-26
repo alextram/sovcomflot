@@ -16,19 +16,19 @@
 
 <body>
 	<div class="wrapper">
-		<header class="header">
+		<header class="header" data-fix>
 			<div class="header__container _container">
 				<div class="header__body">
 					<div class="header__top header-top">
 						<nav class="header-top__menu header-top-menu">
-							<ul class="header-top-menu__list">
+							<ul class="header-top-menu__list" data-adapt="menu__content,991">
 								<li class="header-top-menu__item"><a class="header-top-menu__link" href="#">Контакты</a></li>
 								<li class="header-top-menu__item"><a class="header-top-menu__link" href="#">Общественная приемная СКФ</a></li>
 								<li class="header-top-menu__item"><a class="header-top-menu__link" href="#">Закупки</a></li>
 								<li class="header-top-menu__item"><a class="header-top-menu__link" href="#">Противодействие коррупции</a></li>
 							</ul>
 						</nav>
-						<div class="header-top__actions">
+						<div class="header-top__actions" data-adapt="menu__content-wrapper,991">
 							<a class="header-top__enter _icon-enter" href="#">Внутренний портал</a>
 							<div class="header-top__socials socials">
 								<a class="socials__social _icon-tg" href="#"></a>
@@ -42,12 +42,81 @@
 						</a>
 						<div class="header-bottom__menu menu" data-menu="main-menu">
 							<nav class="menu__body" data-menu-container="main-menu">
-								<ul class="menu__list">
-									<li class="menu__item" data-menu-item><a class="menu__link" href="#">О компании</a></li>
-									<li class="menu__item" data-menu-item><a class="menu__link" href="#">Инвесторам и акционерам</a></li>
-									<li class="menu__item" data-menu-item><a class="menu__link" href="#">Работа в СКФ</a></li>
-									<li class="menu__item" data-menu-item><a class="menu__link" href="#">Пресс-релизы</a></li>
-								</ul>
+								<div class="menu__content-wrapper">
+									<div class="menu__content">
+										<button class="menu__close _icon-cross" type="button" data-menu-close></button>
+										<h4 class="menu__title right-line">Меню</h4>
+										<ul class="menu__list">
+											<li class="menu__item" data-menu-item><a class="menu__link" href="#">О компании</a></li>
+											<li class="menu__item" data-menu-item>
+												<button class="menu__control _icon-arrow-4" data-menu-control>Инвесторам и акционерам</button>
+												<div class="menu__sub-menu sub-menu" data-menu-submenu>
+													<div class="sub-menu__content">
+														<h4 class="sub-menu__title right-line">Инвесторам и акционерам</h4>
+														<button class="sub-menu__close _icon-cross" type="button" data-menu-back><span class="_icon-arrow-4">Назад</span></button>
+														<ul class="sub-menu__list">
+															<li class="sub-menu__item" data-menu-item>
+																<button class="sub-menu__control _icon-arrow-4" data-menu-control>Акции</button>
+																<div class="sub-menu__sub-menu sub-sub-menu" data-menu-submenu>
+																	<div class="sub-sub-menu__content">
+																		<h4 class="sub-sub-menu__title right-line">Акции</h4>
+																		<button class="sub-sub-menu__close _icon-cross" type="button" data-menu-back><span class="_icon-arrow-4">Назад</span></button>
+																		<ul class="sub-sub-menu__list">
+																			<li class="sub-sub-menu__item" data-menu-item><a class="sub-sub-menu__link" href="#">test 1</a></li>
+																			<li class="sub-sub-menu__item" data-menu-item><a class="sub-sub-menu__link" href="#">test 2</a></li>
+																			<li class="sub-sub-menu__item" data-menu-item><a class="sub-sub-menu__link" href="#">test 4</a></li>
+																		</ul>
+																	</div>
+																</div>
+															</li>
+															<li class="sub-menu__item" data-menu-item>
+																<button class="sub-menu__control _icon-arrow-4" data-menu-control>Долговые инструменты</button>
+															</li>
+															<li class="sub-menu__item" data-menu-item>
+																<button class="sub-menu__control _icon-arrow-4" data-menu-control>Отчеты и результаты</button>
+															</li>
+															<li class="sub-menu__item" data-menu-item>
+																<button class="sub-menu__control _icon-arrow-4" data-menu-control>Корпоративное управление</button>
+															</li>
+															<li class="sub-menu__item" data-menu-item>
+																<a class="sub-menu__link" href="#">Собрания акционеров</a>
+															</li>
+															<li class="sub-menu__item" data-menu-item>
+																<button class="sub-menu__control _icon-arrow-4" data-menu-control>Раскрытие информации</button>
+																<div class="sub-menu__sub-menu sub-sub-menu" data-menu-submenu>
+																	<div class="sub-sub-menu__content">
+																		<h4 class="sub-sub-menu__title right-line">Раскрытие информации</h4>
+																		<button class="sub-sub-menu__close _icon-cross" type="button" data-menu-back><span class="_icon-arrow-4">Назад</span></button>
+																		<ul class="sub-sub-menu__list">
+																			<li class="sub-sub-menu__item" data-menu-item><a class="sub-sub-menu__link" href="#">Аффилированные лица</a></li>
+																			<li class="sub-sub-menu__item" data-menu-item><a class="sub-sub-menu__link" href="#">Существенные факты</a></li>
+																			<li class="sub-sub-menu__item" data-menu-item><a class="sub-sub-menu__link" href="#">Проспект ценных бумаг</a></li>
+																			<li class="sub-sub-menu__item" data-menu-item><a class="sub-sub-menu__link" href="#">Отчеты эмитента</a></li>
+																			<li class="sub-sub-menu__item" data-menu-item><a class="sub-sub-menu__link" href="#">Финансовая отчетность по МФСО в рублях</a></li>
+																			<li class="sub-sub-menu__item" data-menu-item><a class="sub-sub-menu__link" href="#">Финансовая отчетность по РСБУ</a></li>
+																			<li class="sub-sub-menu__item" data-menu-item><a class="sub-sub-menu__link" href="#">Инсайдерам</a></li>
+																		</ul>
+																	</div>
+																</div>
+															</li>
+															<li class="sub-menu__item" data-menu-item>
+																<a class="sub-menu__link" href="#">Аналитики</a>
+															</li>
+															<li class="sub-menu__item" data-menu-item>
+																<a class="sub-menu__link" href="#">Календарь инвестора</a>
+															</li>
+															<li class="sub-menu__item" data-menu-item>
+																<a class="sub-menu__link" href="#">Контакты для инвесторов</a>
+															</li>
+														</ul>
+													</div>
+												</div>
+											</li>
+											<li class="menu__item" data-menu-item><a class="menu__link" href="#">Работа в СКФ</a></li>
+											<li class="menu__item" data-menu-item><a class="menu__link" href="#">Пресс-релизы</a></li>
+										</ul>
+									</div>
+								</div>
 							</nav>
 						</div>
 						<div class="header-bottom__actions">
@@ -56,12 +125,19 @@
 									<input class="search-form__input input" type="text" name="s" placeholder="Поиск">
 									<button class="search-form__btn _icon-search" type="submit"></button>
 								</form>
-								<button class="search__search-btn _icon-search" type="button">Поиск</button>
+								<button class="search__search-btn _icon-search" type="button"><span>Поиск</span></button>
 							</div>
 							<div class="languages">
-								<a class="languages__language _active" href="#">Русский</a>
-								<a class="languages__language" href="#">English</a>
+								<a class="languages__language _active" href="#">
+									<span class="languages__desc">Русский</span>
+									<span class="languages__mobile">Рус</span>
+								</a>
+								<a class="languages__language" href="#">
+									<span class="languages__desc">English</span>
+									<span class="languages__mobile">Eng</span>
+								</a>
 							</div>
+							<button class="menu-icon" type="button" data-menu-icon="main-menu"></button>
 						</div>
 					</div>
 				</div>
@@ -75,7 +151,7 @@
 						<div class="main-slide__container _container">
 							<div class="main-slide__body">
 								<div class="main-slide__content">
-									<h2 class="main-slide__title">50-летие современного коммерческого флота</h2>
+									<h2 class="main-slide__title h1">50-летие современного коммерческого флота</h2>
 									<p class="main-slide__text">В 2023 году судоходная отрасль России отмечает 50-летие создания в стране современного коммерческого флота</p>
 									<a class="main-slide__btn btn btn_red btn_arrow" href="#">Подробнее</a>
 								</div>
@@ -89,7 +165,7 @@
 						<div class="main-slide__container _container">
 							<div class="main-slide__body">
 								<div class="main-slide__content">
-									<h2 class="main-slide__title">50-летие современного коммерческого флота</h2>
+									<h2 class="main-slide__title h1">50-летие современного коммерческого флота</h2>
 									<p class="main-slide__text">В 2023 году судоходная отрасль России отмечает 50-летие создания в стране современного коммерческого флота</p>
 									<a class="main-slide__btn btn btn_red btn_arrow" href="#">Подробнее</a>
 								</div>

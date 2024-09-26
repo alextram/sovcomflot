@@ -14,6 +14,7 @@ class Menu {
 			closeOnSelect: false,
 			closeOnOutside: true,
 			isOpen: false,
+			alwaysClick: false,
 		};
 
 		this.options = Object.assign(defaultOptions, options);
@@ -44,38 +45,40 @@ class Menu {
 		this.elements.close = this.elements.menu.querySelector('[data-menu-close]');
 		this.elements.backControls = this.elements.menu.querySelectorAll('[data-menu-back]');
 
-		this.#itemsActions();
-		this.#controlsActions();
-		this.#iconActions();
-		this.#backsActions();
-		this.#closeActions();
-		this.#outsideActions();
-		this.#insideActions();
+		this.itemsActions();
+		this.controlsActions();
+		this.iconActions();
+		this.backsActions();
+		this.closeActions();
+		this.outsideActions();
+		this.insideActions();
 		
-		this.#init();
+		this.init();
 	}
 
 
 	/**
 	* Инициализация начального состояния меню
 	*/
-	#init() {
+	init() {
 		const isMenuOpen = this.options.isOpen;
 
-		if (isMenuOpen) this.#openMenu();
+		if (isMenuOpen) this.openMenu();
 
-		this.elements.submenus.forEach(submenu => this.#setSubemenuOpenSideClass(submenu));
+		this.elements.submenus.forEach(submenu => this.setSubemenuOpenSideClass(submenu));
 	}
 
 	
 	/**
 	* Обработка событий пунктов меню
 	*/
-	#itemsActions() {
+	itemsActions() {
+		if (this.options.alwaysClick) return;
+
 		// Действие при наведении курсора мыши на пункт меню
 		const onItemMouseenterAction = (item) => {
-			if (this.#isTouchScreen()) return;
-			if (this.#isLastLevel(item)) return;
+			if (this.isTouchScreen()) return;
+			if (this.isLastLevel(item)) return;
 
 			item.querySelector('[data-menu-control]').classList.add(this.classes.hover);
 			item.querySelector('[data-menu-submenu]').classList.add(this.classes.visible);
@@ -83,8 +86,8 @@ class Menu {
 
 		// Действие на увод курсора мыши с пункта меню
 		const onItemMouseleaveAction = (item) => {
-			if (this.#isTouchScreen()) return;
-			if (this.#isLastLevel(item)) return;
+			if (this.isTouchScreen()) return;
+			if (this.isLastLevel(item)) return;
 			
 			item.querySelector('[data-menu-control]').classList.remove(this.classes.hover);
 			item.querySelector('[data-menu-submenu]').classList.remove(this.classes.visible);
@@ -101,14 +104,14 @@ class Menu {
 	/**
 	* Обработка событий элементов управления подпунктами меню
 	*/
-	#controlsActions() {
+	controlsActions() {
 		// Действие при клике по элементу управления подпунктом меню
 		const onControlClick = (control) => {
-			if (!this.#isTouchScreen()) return;
+			if (!this.isTouchScreen() && !this.options.alwaysClick) return;
 
 			const item = control.closest('[data-menu-item]');
 
-			this.#isItemActive(item) ? this.#closeItem(item) : this.#openItem(item);
+			this.isItemActive(item) ? this.closeItem(item) : this.openItem(item);
 		};
 
 		// Инициализация событий элементов управления подпунктов меню
@@ -121,12 +124,12 @@ class Menu {
 	/**
 	* Обработка событий иконки меню
 	*/
-	#iconActions() {
+	iconActions() {
 		if (!this.elements.icon) return;
 
 		// Действие при клике по иконке меню
 		const onIconClick = () => {
-			this.#isMenuOpen() ? this.#closeMenu() : this.#openMenu();
+			this.isMenuOpen() ? this.closeMenu() : this.openMenu();
 		}
 
 		// Инициализация события иконки меню
@@ -137,12 +140,12 @@ class Menu {
 	/**
 	* Обработка кнопок возврата к предыдущему уровню меню на мобильной версии
 	*/
-	#backsActions() {
+	backsActions() {
 		// Действие при клике по иконке возврата
 		const onBackClick = (backControl) => {
 			const menuItem = backControl.closest('[data-menu-item]');
 			
-			this.#closeItem(menuItem);
+			this.closeItem(menuItem);
 		};
 
 		// Инициализация событий кнопок возврата к предыдущему уровню меню
@@ -155,17 +158,17 @@ class Menu {
 	/**
 	* Обработка кнопки закрытия меню
 	*/
-	#closeActions() {
+	closeActions() {
 		if (!this.elements.close) return;
 
-		this.elements.close.addEventListener('click', () => this.#closeMenu.call(this));
+		this.elements.close.addEventListener('click', () => this.closeMenu.call(this));
 	}
 
 
 	/**
 	* Обработка событий вне области меню или связанных с ним элементов
 	*/
-	#outsideActions() {
+	outsideActions() {
 		// Действие при клике вне области меню
 		const onOutsideClick = (event) => {
 			const isCloseOnOutside = this.options.closeOnOutside;
@@ -173,11 +176,11 @@ class Menu {
 
 			const target = event.target;
 
-			const isTargetOfMenuElement = this.#isMenuElement(target);
+			const isTargetOfMenuElement = this.isMenuElement(target);
 			if (isTargetOfMenuElement) return;
 
-			this.#closeMenu();
-			this.#closeItems();
+			this.closeMenu();
+			this.closeItems();
 		};
 
 		// Инициализация события клика вне области меню
@@ -188,18 +191,18 @@ class Menu {
 	/**
 	* Обработка событий внутри области меню
 	*/
-	#insideActions() {
+	insideActions() {
 		// Действие при клике внутри области меню
 		const onContainerClick = (event) => {
 			const target = event.target;
 
-			const isTargetMenuItem = this.#isMenuItem(target);
+			const isTargetMenuItem = this.isMenuItem(target);
 			if (!isTargetMenuItem) return;
 			
 			const isCloseOnSelect = this.options.closeOnSelect;
 			if (!isCloseOnSelect) return;
 
-			this.#closeMenu();
+			this.closeMenu();
 		};
 
 		// Инициализация события клика внутри области меню
@@ -210,7 +213,7 @@ class Menu {
 	/**
 	 * Открыть меню
 	 */
-	#openMenu() {
+	openMenu() {
 		if (this.isOpen) return;
 
 		this.elements.icon.classList.add(this.classes.active);
@@ -220,14 +223,14 @@ class Menu {
 
 		const isLockOnOpen = this.options.lockOnOpen;
 
-		if (isLockOnOpen) this.#disableScroll();
+		if (isLockOnOpen) this.disableScroll();
 	}
 
 
 	/**
 	 * Закрыть меню
 	 */
-	#closeMenu() {
+	closeMenu() {
 		if (!this.isOpen) return;
 		
 		this.elements.icon.classList.remove(this.classes.active);
@@ -237,56 +240,73 @@ class Menu {
 
 		const isLockOnOpen = this.options.lockOnOpen;
 
-		if (isLockOnOpen) this.#enableScroll();
+		if (isLockOnOpen) this.enableScroll();
 	}
 	
 
 	/**
 	 * Открыть подменю
 	 */
-	#openItem(item) {
-		const { control, submenu } = this.#getItemSubElements(item);
+	openItem(item) {
+		const { control, submenu } = this.getItemSubElements(item);
 
 		item.classList.add(this.classes.active);
 		control.classList.add(this.classes.hover);
 		submenu.classList.add(this.classes.visible);
 
-		this.#closeOtherItems(item);
+		this.closeOtherItems(item);
+		this.closeMemberItems(item);
+
+		this.disableScroll();
 	}
 
 
 	/**
 	 * Закрыть подменю
 	 */
-	#closeItem(item) {
-		const { controls, submenus, items } = this.#getItemSubElementsAll(item);
+	closeItem(item) {
+		const { controls, submenus, items } = this.getItemSubElementsAll(item);
 
 		item.classList.remove(this.classes.active);
 		items.forEach(item => item.classList.remove(this.classes.active));
 		controls.forEach(control => control.classList.remove(this.classes.hover));
 		submenus.forEach(submenu => submenu.classList.remove(this.classes.visible));
+
+		if (!this.isSomeSubMenuOpen() && window.innerWidth > 991) this.enableScroll();
 	}
 
 
 	/**
 	 * Закрыть все подменю
 	 */
-	#closeItems() {
-		const rootItems = this.#getRootItems();
+	closeItems() {
+		const rootItems = this.getRootItems();
 
-		rootItems.forEach(item => this.#closeItem(item));
+		rootItems.forEach(item => this.closeItem(item));
 	}
 
 
 	/**
 	 * Закрыть все элементы меню кроме текущего
 	 */
-	#closeOtherItems(item) {
-		const rootItem = this.#getRootItem(item);
-		const rootItems = this.#getRootItems();
+	closeOtherItems(item) {
+		const rootItem = this.getRootItem(item);
+		const rootItems = this.getRootItems();
 
 		rootItems.forEach(item => {
-			if (!item.isSameNode(rootItem)) this.#closeItem(item);
+			if (!item.isSameNode(rootItem)) this.closeItem(item);
+		});
+	}
+
+
+	/**
+	 * Закрыть все соседние меню кроме текущего
+	 */
+	closeMemberItems(item) {
+		const levelItems = this.getSameLevelItems(item);
+		
+		levelItems?.forEach(levelItem => {
+			if (!levelItem.isSameNode(item)) this.closeItem(levelItem);
 		});
 	}
 
@@ -294,29 +314,37 @@ class Menu {
 	/**
 	 * Получить пункт меню первого уровня относительно текущего элемента
 	 */
-	#getRootItem(item) {
+	getRootItem(item) {
 		const parentItem = item.parentElement.closest('[data-menu-item]');
 
 		if (!parentItem) return item;
 
-		return this.#getRootItem(parentItem);
+		return this.getRootItem(parentItem);
 	}
 
 
 	/**
 	 * Получить все пункты меню первого уровня
 	 */
-	#getRootItems() {
+	getRootItems() {
 		return Object.values(this.elements.items).filter(item => {
 			return !item.parentElement.closest('[data-menu-item]');
 		});
+	}
+
+
+	/**
+	 * Получить элементы меню того-же уровня
+	 */
+	getSameLevelItems(item) {
+		return item.closest('[data-menu-submenu]')?.querySelectorAll('[data-menu-item]');
 	}
 
 	
 	/**
 	 * Получить объект элементов, связанных с подменю текущего пункта меню
 	 */
-	#getItemSubElements(item) {
+	getItemSubElements(item) {
 		const control = item.querySelector('[data-menu-control]');
 		const submenu = item.querySelector('[data-menu-submenu]');
 
@@ -327,7 +355,7 @@ class Menu {
 	/**
 	 * Получить объект элементов, связанных со всеми подменю текущего пункта меню на всю глубину
 	 */
-	#getItemSubElementsAll(item) {
+	getItemSubElementsAll(item) {
 		const controls = item.querySelectorAll('[data-menu-control]');
 		const submenus = item.querySelectorAll('[data-menu-submenu]');
 		const items = item.querySelectorAll('[data-menu-item]');
@@ -339,8 +367,8 @@ class Menu {
 	/**
 	 * Зафиксировать пролистывание страницы
 	 */
-	#disableScroll() {
-		this.#lock();
+	disableScroll() {
+		this.lock();
 		document.body.classList.add(this.classes.lock);
 	}
 
@@ -348,8 +376,8 @@ class Menu {
 	/**
 	 * Отменить фиксацию страницы
 	 */
-	#enableScroll() {
-		this.#unlock();
+	enableScroll() {
+		this.unlock();
 		document.body.classList.remove(this.classes.lock);
 	}
 
@@ -357,7 +385,9 @@ class Menu {
 	/**
 	* Фиксация абсолютно-позиционизируемых элементов содержащих соответствующий атрибут: data-fix, data-fix-m
 	*/
-	#lock() {
+	lock() {
+		if (document.body.classList.contains('_lock')) return;
+
 		const fixBlocks = document.querySelectorAll(`[data-fix]`);
 		const fixBlocksM = document.querySelectorAll(`[data-fix-m]`);
 		const offset = window.innerWidth - document.body.offsetWidth + 'px';
@@ -374,7 +404,7 @@ class Menu {
 	/**
 	* Отмена Фиксации абсолютно-позиционизируемых элементов содержащих соответствующий атрибут: data-fix, data-fix-m
 	*/
-	#unlock() {
+	unlock() {
 		const fixBlocks = document.querySelectorAll(`[data-fix]`);
 		const fixBlocksM = document.querySelectorAll(`[data-fix-m]`);
 		fixBlocks.forEach((el) => {
@@ -390,7 +420,7 @@ class Menu {
 	/**
 	 * Является ли пункт меню активным
 	 */
-	#isItemActive(item) {
+	isItemActive(item) {
 		return item.classList.contains(this.classes.active) ? true : false;
 	}
 
@@ -398,7 +428,7 @@ class Menu {
 	/**
 	 * Является ли нажатый элемент частю меню
 	 */
-	#isMenuElement(target) {
+	isMenuElement(target) {
 		const icon = target.closest('[data-menu-icon]');
 		const container = target.closest('[data-menu-container]');
 		
@@ -412,7 +442,7 @@ class Menu {
 	/**
 	 * Является ли нажатый элемент пунксом меню
 	 */
-	#isMenuItem(target) {
+	isMenuItem(target) {
 		const item = target.closest('[data-menu-item]');
 
 		return item ? true : false;
@@ -422,7 +452,7 @@ class Menu {
 	/**
 	 * Является ли контейнер меню активным
 	 */
-	#isMenuOpen() {
+	isMenuOpen() {
 		return this.isOpen;
 	}
 
@@ -430,7 +460,7 @@ class Menu {
 	/**
 	 * Является ли пункт меню последним по глубине
 	 */
-	#isLastLevel(item) {
+	isLastLevel(item) {
 		const control = item.querySelector('[data-menu-control]');
 		const submenu = item.querySelector('[data-menu-submenu]');
 
@@ -441,7 +471,7 @@ class Menu {
 	/**
 	 * Является ли устройство тачскриновым
 	 */
-	#isTouchScreen() {
+	isTouchScreen() {
 		return (window.matchMedia("(pointer: coarse)").matches) ? true : false;
 	}
 
@@ -449,8 +479,8 @@ class Menu {
 	/**
 	 * Установка элементу подменю класса, соответствущего тому, в какую сторону он будет открываться.
 	 */
-	#setSubemenuOpenSideClass(submenu) {
-		if (this.#isElementOutsideToRight(submenu)) {
+	setSubemenuOpenSideClass(submenu) {
+		if (this.isElementOutsideToRight(submenu)) {
 			submenu.classList.add(this.classes.toleft);
 		} else {
 			submenu.classList.add(this.classes.toright);
@@ -461,10 +491,23 @@ class Menu {
 	/**
 	 * Выходит ли правый край елемента за пределы экрана
 	 */
-	#isElementOutsideToRight(element) {
+	isElementOutsideToRight(element) {
 		const elementRectangle = element.getBoundingClientRect();
 		
 		return elementRectangle.right >= document.documentElement.clientWidth ? true : false;
 	}
 
+
+	/**
+	 * Фиксирование скрола при открытом пункте меню
+	 */
+	isSomeSubMenuOpen() {
+		let isOpen = false;
+
+		this.elements.items.forEach(item => {
+			if (item.classList.contains('_active')) isOpen = true;
+		});
+
+		return isOpen;
+	}
 }

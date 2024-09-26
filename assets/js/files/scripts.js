@@ -5,7 +5,7 @@ new Adapt();
 const modal = new Modal({animation: 'fadeIn'});
 
 // Инициализация главного меню
-new Menu('main-menu');
+new Menu('main-menu', { alwaysClick: true });
 
 // Инициализация табов на главной странице
 new Tabs('main-media');
