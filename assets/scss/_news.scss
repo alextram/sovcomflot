@@ -1,6 +1,9 @@
 .card {
 	position: relative;
 	padding: 0px 0px prc(480, 444) 0px;
+	@media (max-width: em($md3)) {
+		padding: 0px 0px 60% 0px;
+	}
 	// .card__content
 	&__content {
 		position: absolute;
@@ -72,6 +75,9 @@
 	display: block;
 	position: relative;
 	padding: 0px 0px prc(460, 678) 0px;
+	@media (max-width: em($md3)) {
+		margin: 0px 0px rem(30) 0px;
+	}
 	// .new-card__tag
 	&__tag {
 		position: absolute;
@@ -116,6 +122,9 @@
 	position: relative;
 	display: grid;
 	grid-template-columns: 48% 1fr;
+	@media (max-width: em($md3)) {
+		grid-template-columns: 1fr;
+	}
 	// .new-card-row__tag
 	&__tag {
 		position: absolute;
@@ -127,12 +136,18 @@
 	&__img {
 		display: inline-block;
 		height: 100%;
+		@media (max-width: em($md3)) {
+			padding: 0px 0px 50% 0px;
+		}
 	}
 	// .new-card-row__body
 	&__body {
 		display: flex;
 		align-items: flex-end;
 		padding: rem(24);
+		@media (max-width: em($md3)) {
+			padding: rem(24) 0;
+		}
 	}
 	// .new-card-row__content
 	&__content {

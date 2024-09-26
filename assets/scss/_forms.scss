@@ -40,11 +40,11 @@
 	&_arrow {
 		display: inline-flex;
 		flex-direction: row-reverse;
-		gap: rem(8);
+		gap: rem(10);
 		&:before {
 			font-family: "icons";
 			@extend %ic;
-			content: "\e901";
+			content: "\e903";
 		}
 	}
 

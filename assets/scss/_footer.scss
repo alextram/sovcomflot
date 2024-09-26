@@ -16,7 +16,10 @@
 		&_1 {
 			display: flex;
 			align-items: center;
-			gap: rem(80);
+			gap: rem(20) rem(80);
+			@media (max-width: em($md1)) {
+				flex-direction: column;
+			}
 		}
 		// .footer__row_2
 		&_2 {
@@ -43,7 +46,9 @@
 	// .footer-menu__list
 	&__list {
 		display: flex;
-		gap: rem(32);
+		flex-wrap: wrap;
+		justify-content: center;
+		gap: rem(15) rem(32);
 	}
 	// .footer-menu__item
 	&__item {
@@ -51,5 +56,6 @@
 	// .footer-menu__link
 	&__link {
 		color: #fff;
+		white-space: nowrap;
 	}
 }

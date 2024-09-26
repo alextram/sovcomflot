@@ -42,6 +42,8 @@ const mainSlider = new Swiper('.main-slider', {
 	speed: 1500,
 	spaceBetween: 0,
 	slidesPerView: 1,
+	simulateTouch: false,
+	allowTouchMove: false,
 	parallax: true,
 	navigation: {
 		prevEl: '.main-slider__arrow_prev',

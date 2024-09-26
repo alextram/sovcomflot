@@ -312,17 +312,29 @@
 }
 
 //===============================================================
+.blue-block {
+	padding: rem(17) rem(30);
+	background: #DBE3F6;
+	color: var(--color-main);
+	a {
+		font-weight: 500;
+		color: var(--color-main);
+	}
+}
+
+//===============================================================
 .more-link {
 	display: inline-flex;
 	flex-direction: row-reverse;
 	align-items: center;
-	gap: rem(5);
+	gap: rem(10);
 	color: var(--color-main);
 	font-weight: 500;
 	&::before {
-		content: "\e901";
-		font-family: "icons";
+		content: "\e903";
 		@extend %ic;
+		font-family: "icons";
+		color: var(--color-second);
 	}
 }
 
