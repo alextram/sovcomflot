@@ -1,0 +1,288 @@
+.info-section {
+	// .info-section__container
+	&__container {
+	}
+	// .info-section__body
+	&__body {
+		display: grid;
+		gap: rem(24);
+	}
+	// .info-section__row
+	&__row {
+	}
+}
+
+//===============================================================
+.info-row-1 {
+	display: grid;
+	grid-template-columns: repeat(2, 1fr);
+	gap: rem(24);
+	@media (max-width: em($md2)) {
+		grid-template-columns: repeat(1, 1fr);
+	}
+	// .info-row-1__chart
+	&__chart {
+		@media (max-width: em($md2)) {
+			order: 2;
+		}
+	}
+	// .info-row-1__info
+	&__info {
+		@media (max-width: em($md2)) {
+			order: 1;
+		}
+	}
+}
+
+//===============================================================
+.results-info {
+	position: relative;
+	background: #eef4fd;
+	padding: rem(35) rem(30) rem(30) rem(30);
+	display: grid;
+	align-content: start;
+	grid-gap: rem(20);
+	&::before {
+		content: '';
+		position: absolute;
+		top: 0;
+		left: 0;
+		width: 100%;
+		height: rem(5);
+		background: var(--color-main);
+	}
+	@media (max-width: em($md4)) {
+		padding: rem(25) rem(20) rem(20) rem(20);
+	}
+	// .results-info__head
+	&__head {
+		display: grid;
+		grid-gap: rem(15);
+	}
+	// .results-info__title
+	&__title {
+		@include adaptiv-value(font-size, 24, 20, 1);
+	}
+	// .results-info__files
+	&__files {
+		display: grid;
+		gap: rem(15);
+	}
+	// .results-info__file
+	&__file {
+		display: flex;
+		justify-content: space-between;
+	}
+	// .results-info__link
+	&__link {
+		color: var(--color-main);
+		display: inline-flex;
+		align-items: center;
+		gap: rem(10);
+	}
+	// .results-info__file-data
+	&__file-data {
+		color: #9C9C9C;
+	}
+	// .results-info__footer
+	&__footer {
+	}
+	// .results-info__btn
+	&__btn {
+	}
+}
+
+//===============================================================
+.info-row-2 {
+	display: grid;
+	gap: rem(24);
+	grid-template-columns: 3fr 4fr;
+	@media (max-width: em($md2)) {
+		grid-template-columns: repeat(1, 1fr);
+	}
+	// .info-row-2__image-block
+	&__image-block {
+		@media (max-width: em($md2)) {
+			order: 2;
+		}
+	}
+	// .info-row-2__info
+	&__info {
+		@media (max-width: em($md2)) {
+			order: 1;
+		}
+	}
+}
+
+//===============================================================
+.image-block {
+	color: #fff;
+	min-height: rem(324);
+	height: 100%;
+	position: relative;
+	display: flex;
+	align-items: center;
+	padding: rem(15) rem(44);
+	// .image-block__content
+	&__content {
+		position: relative;
+		z-index: 1;
+		display: grid;
+		gap: rem(10);
+	}
+	// .image-block__title
+	&__title {
+		color: #fff;
+	}
+	// .image-block__info
+	&__info {
+		font-size: 24px;
+	}
+	// .image-block__figure
+	&__figure {
+		position: absolute;
+		width: 100%;
+		height: 100%;
+		top: 0;
+		left: 0;
+	}
+}
+
+//===============================================================
+.calendar-info {
+	position: relative;
+	background: #eef4fd;
+	padding: rem(35) rem(30) rem(30) rem(30);
+	display: grid;
+	align-content: start;
+	grid-gap: rem(20);
+	&::before {
+		content: '';
+		position: absolute;
+		top: 0;
+		left: 0;
+		width: 100%;
+		height: rem(5);
+		background: var(--color-main);
+	}
+	@media (max-width: em($md4)) {
+		padding: rem(25) rem(20) rem(20) rem(20);
+	}
+	// .calendar-info__head
+	&__head {
+		display: grid;
+		grid-gap: rem(15);
+	}
+	// .calendar-info__title
+	&__title {
+		@include adaptiv-value(font-size, 24, 20, 1);
+	}
+	// .calendar-info__list
+	&__list {
+		max-width: rem(550);
+		display: grid;
+		gap: rem(20);
+	}
+	// .calendar-info__item
+	&__item {
+		display: flex;
+		align-items: flex-start;
+		gap: rem(22);
+	}
+	// .calendar-info__date
+	&__date {
+		padding: rem(5) 0px 0px 0px;
+		display: flex;
+		align-items: flex-end;
+		color: var(--color-main);
+	}
+	// .calendar-info__day
+	&__day {
+		font-size: rem(36);
+		font-weight: 500;
+		line-height: 1;
+	}
+	// .calendar-info__month
+	&__month {
+		font-weight: 500;
+		line-height: 1;
+		translate: 0 rem(-3);
+		&::before {
+			content: '\\';
+		}
+	}
+	// .calendar-info__content
+	&__content {
+		display: grid;
+		gap: rem(4);
+	}
+	// .calendar-info__label
+	&__label {
+		color: #000;
+		font-size: rem(14);
+	}
+	// .calendar-info__link
+	&__link {
+		color: var(--color-main);
+	}
+}
+
+
+//===============================================================
+.info-row-3 {
+	display: grid;
+	gap: rem(24);
+	grid-template-columns: 8fr 15fr;
+	@media (max-width: em($md2)) {
+		grid-template-columns: repeat(1, 1fr);
+	}
+	// .info-row-3__info
+	&__info {
+	}
+	// .info-row-3__image-block
+	&__image-block {
+	}
+}
+
+//===============================================================
+.links-info {
+	position: relative;
+	background: #eef4fd;
+	padding: rem(35) rem(30) rem(30) rem(30);
+	display: grid;
+	align-content: start;
+	grid-gap: rem(20);
+	&::before {
+		content: '';
+		position: absolute;
+		top: 0;
+		left: 0;
+		width: 100%;
+		height: rem(5);
+		background: var(--color-main);
+	}
+	@media (max-width: em($md4)) {
+		padding: rem(25) rem(20) rem(20) rem(20);
+	}
+	// .links-info__head
+	&__head {
+		display: grid;
+		grid-gap: rem(15);
+	}
+	// .links-info__title
+	&__title {
+		@include adaptiv-value(font-size, 24, 20, 1);
+	}
+	// .links-info__list
+	&__list {
+		display: grid;
+		gap: rem(15);
+	}
+	// .links-info__item
+	&__item {
+	}
+	// .links-info__link
+	&__link {
+		color: var(--color-main);
+	}
+}
