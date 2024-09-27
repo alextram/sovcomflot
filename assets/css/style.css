@@ -7062,7 +7062,9 @@ textarea.input {
 .tag {
   color: #fff;
   background: var(--color-main);
-  padding: 0.5rem 0.75rem;
+  font-size: 0.875rem;
+  line-height: 1.7;
+  padding: 0.25rem 0.75rem;
   min-height: 2rem;
 }
 
