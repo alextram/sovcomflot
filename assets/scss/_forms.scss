@@ -17,7 +17,7 @@
 	transition: background-color 0.3s, color 0.3s, box-shadow 0.1s;
 	@media (any-hover: hover) {
 		&:hover {
-			background: var(--color-main-dark);
+			background: var(--color-second);
 		}
 	}
 	// .btn_red

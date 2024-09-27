@@ -439,7 +439,7 @@
 	&__content {
 		height: 100%;
 		overflow-y: auto;
-		padding: rem(60) rem(80) rem(60) 0px;
+		padding: rem(60) rem(80) rem(200) 0px;
 		background: #F7F9FE;
 		@media (max-width: em($md2)) {
 			padding: rem(60) rem(30) rem(60) 0px;
@@ -574,11 +574,15 @@
 	&__content {
 		height: 100%;
 		overflow-y: auto;
-		padding: rem(60) rem(30);
-		background: #F7F9FE;
+		padding: rem(60) rem(30) rem(200) rem(30);
+		background: #EEF4FD;
+		@media (max-width: em($md2)) {
+			padding: rem(60) rem(30);
+		}
 		@media (max-width: em($md4)) {
 			padding: rem(30) rem(20) rem(30) rem(0);
 			margin: 0px rem(-26) 0px 0px;
+			background: #F7F9FE;
 		}
 	}
 	// .sub-sub-menu__title

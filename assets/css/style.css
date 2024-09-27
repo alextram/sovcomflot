@@ -6282,7 +6282,7 @@ body ._special-styles .table-wrapper {
 }
 @media (any-hover: hover) {
   .btn:hover {
-    background: var(--color-main-dark);
+    background: var(--color-second);
   }
 }
 .btn_red {
@@ -7622,7 +7622,7 @@ textarea.input {
 .sub-menu__content {
   height: 100%;
   overflow-y: auto;
-  padding: 3.75rem 5rem 3.75rem 0px;
+  padding: 3.75rem 5rem 12.5rem 0px;
   background: #F7F9FE;
 }
 @media (max-width: 61.9375em) {
@@ -7767,13 +7767,19 @@ textarea.input {
 .sub-sub-menu__content {
   height: 100%;
   overflow-y: auto;
-  padding: 3.75rem 1.875rem;
-  background: #F7F9FE;
+  padding: 3.75rem 1.875rem 12.5rem 1.875rem;
+  background: #EEF4FD;
+}
+@media (max-width: 61.9375em) {
+  .sub-sub-menu__content {
+    padding: 3.75rem 1.875rem;
+  }
 }
 @media (max-width: 29.9375em) {
   .sub-sub-menu__content {
     padding: 1.875rem 1.25rem 1.875rem 0rem;
     margin: 0px -1.625rem 0px 0px;
+    background: #F7F9FE;
   }
 }
 .sub-sub-menu__title {
