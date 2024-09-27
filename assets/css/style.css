@@ -6288,6 +6288,11 @@ body ._special-styles .table-wrapper {
 .btn_red {
   background: var(--color-second);
 }
+@media (any-hover: hover) {
+  .btn_red:hover {
+    background: var(--color-main);
+  }
+}
 .btn_fw {
   width: 100%;
 }

@@ -23,6 +23,11 @@
 	// .btn_red
 	&_red {
 		background: var(--color-second);
+		@media (any-hover: hover) {
+			&:hover {
+				background: var(--color-main);
+			}
+		}
 	}
 	// .btn_fw
 	&_fw {
