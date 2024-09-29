@@ -38,21 +38,13 @@
 .results-info {
 	position: relative;
 	background: #eef4fd;
-	padding: rem(35) rem(30) rem(30) rem(30);
+	padding: rem(30);
+	border-top: rem(5) solid var(--color-main);
 	display: grid;
 	align-content: start;
 	grid-gap: rem(20);
-	&::before {
-		content: '';
-		position: absolute;
-		top: 0;
-		left: 0;
-		width: 100%;
-		height: rem(5);
-		background: var(--color-main);
-	}
 	@media (max-width: em($md4)) {
-		padding: rem(25) rem(20) rem(20) rem(20);
+		padding: rem(20);
 	}
 	// .results-info__head
 	&__head {
@@ -152,21 +144,13 @@
 .calendar-info {
 	position: relative;
 	background: #eef4fd;
-	padding: rem(35) rem(30) rem(30) rem(30);
+	padding: rem(30);
+	border-top: rem(5) solid var(--color-main);
 	display: grid;
 	align-content: start;
 	grid-gap: rem(20);
-	&::before {
-		content: '';
-		position: absolute;
-		top: 0;
-		left: 0;
-		width: 100%;
-		height: rem(5);
-		background: var(--color-main);
-	}
 	@media (max-width: em($md4)) {
-		padding: rem(25) rem(20) rem(20) rem(20);
+		padding: rem(20);
 	}
 	// .calendar-info__head
 	&__head {
@@ -248,21 +232,13 @@
 .links-info {
 	position: relative;
 	background: #eef4fd;
-	padding: rem(35) rem(30) rem(30) rem(30);
+	padding: rem(30);
+	border-top: rem(5) solid var(--color-main);
 	display: grid;
 	align-content: start;
 	grid-gap: rem(20);
-	&::before {
-		content: '';
-		position: absolute;
-		top: 0;
-		left: 0;
-		width: 100%;
-		height: rem(5);
-		background: var(--color-main);
-	}
 	@media (max-width: em($md4)) {
-		padding: rem(25) rem(20) rem(20) rem(20);
+		padding: rem(20);
 	}
 	// .links-info__head
 	&__head {
@@ -284,5 +260,85 @@
 	// .links-info__link
 	&__link {
 		color: var(--color-main);
+	}
+}
+
+//===============================================================
+.actions-chart {
+	background: linear-gradient(180deg, #9DB7DA 0%, #3264A7 100%);
+	padding: rem(30);
+	border-top: rem(5) solid var(--color-main);
+	display: grid;
+	align-content: start;
+	grid-gap: rem(20);
+	color: #fff;
+	@media (max-width: em($md4)) {
+		padding: rem(20);
+	}
+	// .actions-chart__title
+	&__title {
+		color: #fff;
+		@include adaptiv-value(font-size, 24, 20, 1);
+	}
+	// .actions-chart__main
+	&__main {
+		display: grid;
+		grid-template-columns: 1fr auto;
+		gap: rem(13);
+	}
+	// .actions-chart__chart
+	&__chart {
+	}
+	// .actions-chart__values
+	&__values {
+		padding: rem(5) 0px;
+		display: flex;
+		flex-direction: column;
+		justify-content: space-evenly;
+	}
+	// .actions-chart__value
+	&__value {
+		font-size: rem(12);
+	}
+	// .actions-chart__footer
+	&__footer {
+		display: flex;
+		justify-content: space-between;
+		gap: rem(20);
+	}
+	// .actions-chart__footer-left
+	&__footer-left {
+		display: grid;
+		gap: rem(5);
+	}
+	// .actions-chart__name
+	&__name {
+		font-size: rem(24);
+		font-weight: 500;
+	}
+	// .actions-chart__time
+	&__time {
+	}
+	// .actions-chart__footer-right
+	&__footer-right {
+		display: grid;
+		gap: rem(5);
+	}
+	// .actions-chart__cost
+	&__cost {
+		font-size: rem(24);
+		font-weight: 500;
+	}
+	// .actions-chart__difference
+	&__difference {
+		display: flex;
+		align-items: center;
+		gap: rem(5);
+		&::before {
+			content: '';
+			border: rem(6) solid transparent; 
+			border-bottom: rem(8) solid #fff;
+			translate: 0 rem(-2);
+		}
 	}
 }
