@@ -78,6 +78,7 @@
 		height: rem(18);
 		cursor: pointer;
 		z-index: 5;
+		order: 3;
 		span {
 			transition: all 0.3s ease 0s;
 			top: calc(50% - rem(1));

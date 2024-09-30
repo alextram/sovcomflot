@@ -622,6 +622,9 @@
 
 
 .search {
+	@media (max-width: em($md2)) {
+		order: 2;
+	}
 	// .search__search-form
 	&__search-form {
 	}
@@ -700,6 +703,9 @@
 
 .languages {
 	display: flex;
+	@media (max-width: em($md2)) {
+		order: 1;
+	}
 	// .languages__language
 	&__language {
 		color: #fff;
