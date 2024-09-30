@@ -128,7 +128,7 @@
 		align-items: center;
 		&:not(:last-child)::after {
 			content: "\e900";
-			font-size: rem(12);
+			font-size: rem(10);
 			font-family: "icons";
 			@extend %ic;
 			margin: 0px rem(10);

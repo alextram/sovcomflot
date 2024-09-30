@@ -6920,7 +6920,7 @@ textarea.input {
 }
 .breadcrumbs__item:not(:last-child)::after {
   content: "\e900";
-  font-size: 0.75rem;
+  font-size: 0.625rem;
   font-family: "icons";
   margin: 0px 0.625rem;
   color: var(--color-second);
