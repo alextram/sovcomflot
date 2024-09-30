@@ -49,8 +49,10 @@
 	&__list {
 		display: flex;
 		flex-wrap: wrap;
-		justify-content: flex-start;
 		gap: rem(15) rem(32);
+		@media (max-width: em($md2)) {
+			flex-direction: column;
+		}
 	}
 	// .footer-menu__item
 	&__item {

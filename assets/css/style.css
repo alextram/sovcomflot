@@ -8020,10 +8020,15 @@ textarea.input {
   display: flex;
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
-  -webkit-box-pack: start;
-      -ms-flex-pack: start;
-          justify-content: flex-start;
   gap: 0.9375rem 2rem;
+}
+@media (max-width: 61.9375em) {
+  .footer-menu__list {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
 }
 .footer-menu__link {
   color: #fff;
