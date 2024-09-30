@@ -22,30 +22,17 @@
 	}
 	// .info-row-1__chart
 	&__chart {
-		@media (max-width: em($md2)) {
-			order: 2;
-		}
 	}
 	// .info-row-1__info
 	&__info {
-		@media (max-width: em($md2)) {
-			order: 1;
-		}
 	}
 }
 
 //===============================================================
 .results-info {
-	position: relative;
-	background: #eef4fd;
-	padding: rem(30);
-	border-top: rem(5) solid var(--color-main);
 	display: grid;
 	align-content: start;
 	grid-gap: rem(20);
-	@media (max-width: em($md4)) {
-		padding: rem(20);
-	}
 	// .results-info__head
 	&__head {
 		display: grid;
@@ -94,15 +81,9 @@
 	}
 	// .info-row-2__image-block
 	&__image-block {
-		@media (max-width: em($md2)) {
-			order: 2;
-		}
 	}
 	// .info-row-2__info
 	&__info {
-		@media (max-width: em($md2)) {
-			order: 1;
-		}
 	}
 }
 
@@ -115,6 +96,12 @@
 	display: flex;
 	align-items: center;
 	padding: rem(15) rem(44);
+	@media (max-width: em($md2)) {
+		padding: rem(15) rem(30);
+	}
+	@media (max-width: em($md4)) {
+		padding: rem(15) rem(20);
+	}
 	// .image-block__content
 	&__content {
 		position: relative;
@@ -142,16 +129,9 @@
 
 //===============================================================
 .calendar-info {
-	position: relative;
-	background: #eef4fd;
-	padding: rem(30);
-	border-top: rem(5) solid var(--color-main);
 	display: grid;
 	align-content: start;
 	grid-gap: rem(20);
-	@media (max-width: em($md4)) {
-		padding: rem(20);
-	}
 	// .calendar-info__head
 	&__head {
 		display: grid;
@@ -230,16 +210,9 @@
 
 //===============================================================
 .links-info {
-	position: relative;
-	background: #eef4fd;
-	padding: rem(30);
-	border-top: rem(5) solid var(--color-main);
 	display: grid;
 	align-content: start;
 	grid-gap: rem(20);
-	@media (max-width: em($md4)) {
-		padding: rem(20);
-	}
 	// .links-info__head
 	&__head {
 		display: grid;

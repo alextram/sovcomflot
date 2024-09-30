@@ -24,15 +24,8 @@
 
 //===============================================================
 .contacts-block {
-	position: relative;
-	background: #eef4fd;
-	padding: rem(30);
 	display: grid;
 	grid-gap: rem(15);
-	border-top: rem(5) solid var(--color-main);
-	@media (max-width: em($md4)) {
-		padding: rem(20);
-	}
 	// .contacts-block__head
 	&__head {
 		display: grid;

@@ -24,7 +24,7 @@
 			padding: rem(128) rem(10) 0px;
 		}
 		@media (max-width: em($md3)) {
-			padding: rem(128) 0px 0px;
+			display: none;
 		}
 	}
 	// .main-slider__arrow
@@ -98,9 +98,12 @@
 //---------------------------------------------------------------
 .main-slide {
 	position: relative;
-	height: 100vh;
+	@include adaptiv-value(height, 720, 600, 1);
 	min-height: rem(500);
 	padding: rem(128) 0px 0px 0px;
+	@media (max-width: em($md2)) {
+		padding: rem(80) 0px 0px 0px;
+	}
 	// .main-slide__container
 	&__container {
 		height: 100%;
@@ -130,6 +133,7 @@
 	&__text {
 		font-size: rem(20);
 		margin: 0px 0px rem(30) 0px;
+		font-weight: 300;
 	}
 	// .main-slide__btn
 	&__btn {

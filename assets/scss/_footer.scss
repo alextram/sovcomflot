@@ -19,6 +19,7 @@
 			gap: rem(20) rem(80);
 			@media (max-width: em($md1)) {
 				flex-direction: column;
+				align-items: flex-start;
 			}
 		}
 		// .footer__row_2
@@ -39,6 +40,7 @@
 	}
 	// .footer__copy
 	&__copy {
+		font-size: rem(12);
 	}
 }
 
@@ -47,7 +49,7 @@
 	&__list {
 		display: flex;
 		flex-wrap: wrap;
-		justify-content: center;
+		justify-content: flex-start;
 		gap: rem(15) rem(32);
 	}
 	// .footer-menu__item
