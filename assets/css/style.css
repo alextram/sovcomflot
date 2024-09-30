@@ -8352,6 +8352,11 @@ textarea.input {
   max-width: 40.625rem;
   padding: 5rem 3.5rem;
 }
+@media (max-width: 29.9375em) {
+  .card-big__content {
+    padding: 3.75rem 1.875rem;
+  }
+}
 .card-big__title {
   margin: 0px 0px 1rem 0px;
   color: #fff;

@@ -46,6 +46,9 @@
 	&__content {
 		max-width: rem(650);
 		padding: rem(80) rem(56);
+		@media (max-width: em($md4)) {
+			padding: rem(60) rem(30);
+		}
 	}
 	// .card-big__title
 	&__title {
