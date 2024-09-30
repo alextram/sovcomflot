@@ -112,6 +112,11 @@
 				background: #DBE3F6;
 			}
 		}
+		@media (max-width: em(600)) {
+			&::before {
+				right: rem(-200);
+			}
+		}
 
 		.socials__social {
 			@media (max-width: em($md2)) {
