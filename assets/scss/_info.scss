@@ -112,6 +112,9 @@
 	// .image-block__title
 	&__title {
 		color: #fff;
+		a {
+			color: #fff;
+		}
 	}
 	// .image-block__info
 	&__info {
@@ -250,8 +253,10 @@
 	}
 	// .actions-chart__title
 	&__title {
-		color: #fff;
 		@include adaptiv-value(font-size, 24, 20, 1);
+		a {
+			color: #fff;
+		}
 	}
 	// .actions-chart__main
 	&__main {

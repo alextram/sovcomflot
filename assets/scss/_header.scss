@@ -18,11 +18,11 @@
 			}
 		}
 	}
-	&._down-scroll {
-		@media (min-width: em($md2+1)) {
-			margin-top: rem(-43);
-		}
-	}
+	// &._down-scroll {
+	// 	@media (min-width: em($md2+1)) {
+	// 		margin-top: rem(-43);
+	// 	}
+	// }
 	&::before {
 		content: '';
 		position: absolute;

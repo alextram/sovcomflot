@@ -24,9 +24,9 @@
 		}
 		// .footer__row_2
 		&_2 {
-		}
-		// .footer__row_3
-		&_3 {
+			display: flex;
+			align-items: center;
+			justify-content: space-between;
 		}
 	}
 	// .footer__logo
