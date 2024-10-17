@@ -122,52 +122,74 @@ body {
 
 	
 	//---------------------------------------------------------------
-	._special-styles {
+	._typography {
 
 		h1, h2, h3, h4, h5, h6 {
 			margin: 0px 0px rem(20) 0px;
+			color: var(--color-main);
+		}
+
+		h3 {
+			@include adaptiv-value(font-size, 24, 20, 1);
+			line-height: 116.667%;
 		}
 
 		a {
 			transition: all 0.3s ease 0s;
-			color: var(--color-link);
+			color: var(--color-main);
 			@media (any-hover: hover) {
 				&:hover {
-					color: var(--color-main-dark);
+					color: var(--color-second);
 				}
 			}
 		}
 
 		p {
-			margin: 0px 0px rem(20) 0px;
+			margin: 0px 0px rem(15) 0px;
+			font-weight: 300;
+		}
+
+		blockquote {
+			background: #EEF4FD;
+			padding: rem(25) rem(30);
+			color: var(--color-main);
+			font-size: rem(22);
+			font-style: italic;
+			font-weight: 300;
+			line-height: 136.364%;
+			margin: rem(30) rem(0) rem(40);
 		}
 
 		figure {
 			display: inline-block;
-			margin: 0px 0px rem(20) 0px;
+			margin: 0px 0px rem(30) 0px;
 			img {
-				border-radius: rem(5);
 			}
 		}
 
 		ul {
 			padding: 0px 0px 0px rem(22);
-			margin: 0px 0px rem(10) 0px;
+			margin: 0px 0px rem(34) 0px;
+			display: grid;
+			gap: rem(15);
 			li {
 				position: relative;
 				line-height: 150%;
-				margin: 0px 0px rem(10) 0px;
+				font-weight: 300;
+				a {
+					font-weight: 400;
+				}
 				& > ul, & > ol {
 					padding-top: rem(10);
 				}
 				&::before {
 					content: '';
 					position: absolute;
-					top: em(9);
-					left: em(-18);
-					width: em(6);
-					height: em(6);
-					background: var(--color-main-dark);
+					top: em(13, 18);
+					left: em(-13, 18);
+					width: em(3, 18);
+					height: em(3, 18);
+					background: var(--color-second);
 					border-radius: 50%;
 				}
 			}

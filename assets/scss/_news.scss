@@ -36,6 +36,14 @@
 			background: linear-gradient(0deg, rgba(0,0,0,0.8) 0%, rgba(255,255,255,0) 50%);
 		}
 	}
+
+	// .card_small
+	&_small {
+		.card__title,
+		.card__title a {
+			@include adaptiv-value(font-size, 24, 20, 1);
+		}
+	}
 }
 
 //===============================================================

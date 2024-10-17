@@ -319,8 +319,32 @@
 		@extend %ic;
 		font-family: "icons";
 		color: var(--color-second);
-		font-size: rem(14);
+		font-size: rem(12);
 		translate: 0 rem(-1);
+	}
+}
+
+//===============================================================
+.back-block {
+	display: flex;
+	justify-content: flex-end;
+}
+
+//===============================================================
+.back-link {
+	display: inline-flex;
+	align-items: center;
+	gap: rem(10);
+	color: var(--color-main);
+	font-weight: 500;
+	&::before {
+		content: "\e903";
+		@extend %ic;
+		font-family: "icons";
+		color: var(--color-second);
+		font-size: rem(12);
+		translate: 0 rem(-1);
+		scale: -1 1;
 	}
 }
 
