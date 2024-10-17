@@ -308,22 +308,17 @@
 
 //===============================================================
 .more-link {
-	display: inline-flex;
-	flex-direction: row-reverse;
-	align-items: center;
-	gap: rem(10);
 	color: var(--color-main);
 	font-weight: 500;
-	&::before {
+	&::after {
 		content: "\e903";
 		@extend %ic;
 		font-family: "icons";
 		color: var(--color-second);
 		font-size: rem(12);
-		translate: 0 rem(-1);
+		margin: 0px 0px 0px rem(10);
 	}
 }
-
 //===============================================================
 .back-block {
 	display: flex;

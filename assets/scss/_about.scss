@@ -103,6 +103,7 @@
 		padding: rem(15) rem(30);
 		color: var(--color-main);
 		font-size: rem(18);
+		text-align: left;
 		&::before {
 			rotate: 90deg;
 			transition: all 0.3s ease 0s;
@@ -165,9 +166,10 @@
 		&::before {
 			content: url('../img/scale.svg');
 			position: absolute;
-			bottom: rem(-7);
+			bottom: 0;
 			right: 0;
-			display: inline-flex;
+			width: rem(47);
+			height: rem(47);
 			z-index: 1;
 		}
 	}

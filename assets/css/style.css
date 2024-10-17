@@ -61,7 +61,7 @@
   font-style: normal;
   font-display: block;
 }
-.back-link::before, .more-link::before, .breadcrumbs__item:not(:last-child)::after, .btn_arrow:before, [class^=_icon-]:before,
+.back-link::before, .more-link::after, .breadcrumbs__item:not(:last-child)::after, .btn_arrow:before, [class^=_icon-]:before,
 [class*=" _icon-"]:before, [class^=_system-icon]:before,
 [class*=" _system-icon"]:before {
   font-style: normal;
@@ -7116,26 +7116,15 @@ textarea.input {
 }
 
 .more-link {
-  display: -webkit-inline-box;
-  display: -ms-inline-flexbox;
-  display: inline-flex;
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: reverse;
-      -ms-flex-direction: row-reverse;
-          flex-direction: row-reverse;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  gap: 0.625rem;
   color: var(--color-main);
   font-weight: 500;
 }
-.more-link::before {
+.more-link::after {
   content: "\e903";
   font-family: "icons";
   color: var(--color-second);
   font-size: 0.75rem;
-  translate: 0 -0.0625rem;
+  margin: 0px 0px 0px 0.625rem;
 }
 
 .back-block {
@@ -9024,6 +9013,7 @@ textarea.input {
   padding: 0.9375rem 1.875rem;
   color: var(--color-main);
   font-size: 1.125rem;
+  text-align: left;
 }
 .press-spoiler__control::before {
   rotate: 90deg;
@@ -9080,10 +9070,9 @@ textarea.input {
 .press-gallery__image-wrapper::before {
   content: url("../img/scale.svg");
   position: absolute;
-  bottom: -0.4375rem;
+  bottom: 0;
   right: 0;
-  display: -webkit-inline-box;
-  display: -ms-inline-flexbox;
-  display: inline-flex;
+  width: 2.9375rem;
+  height: 2.9375rem;
   z-index: 1;
 }
