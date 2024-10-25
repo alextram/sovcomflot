@@ -6159,6 +6159,11 @@ body ._typography h1, body ._typography h2, body ._typography h3, body ._typogra
   margin: 0px 0px 1.25rem 0px;
   color: var(--color-main);
 }
+body ._typography h1 span, body ._typography h2 span, body ._typography h3 span, body ._typography h4 span, body ._typography h5 span, body ._typography h6 span {
+  color: #000;
+  font-size: 1.125rem;
+  font-weight: 300;
+}
 body ._typography h3 {
   font-size: 24px;
   line-height: 116.667%;
@@ -6236,8 +6241,9 @@ body ._typography ol li > ul, body ._typography ol li > ol {
 }
 body ._typography table {
   max-width: 100%;
+  width: 100%;
   border-collapse: collapse;
-  margin: 0px 0px 2.5rem 0px;
+  margin: 0px 0px 1.875rem 0px;
 }
 @media (max-width: 767px) {
   body ._typography table {
@@ -6247,15 +6253,29 @@ body ._typography table {
 body ._typography table tr th {
   font-size: 1rem;
   font-weight: 400;
-  background: #111111;
-  padding: 0.3125rem 0.625rem;
-  border: 1px solid #000000;
-  color: #ffffff;
+  background: #C9DDF6;
+  padding: 0.75rem 1.25rem;
+  border: 1px solid #DBE3F6;
+  color: var(--color-main);
+  font-weight: 500;
+  text-align: center;
 }
 body ._typography table tr td {
-  background: #dddddd;
-  border: 1px solid #000000;
-  padding: 0.3125rem 0.625rem;
+  background: #fff;
+  border: 1px solid #DBE3F6;
+  padding: 0.75rem 1.25rem;
+  color: var(--color-main);
+  font-weight: 300;
+  text-align: center;
+}
+body ._typography table tr td:first-child {
+  text-align: left;
+}
+body ._typography table tr td.empty {
+  height: 1.5625rem;
+}
+body ._typography table tr.bold td {
+  font-weight: 500;
 }
 body ._typography .table-wrapper {
   width: 100%;
@@ -9048,20 +9068,19 @@ textarea.input {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   gap: 1.4375rem;
+  margin: 2.5rem 0px;
 }
 @media (max-width: 29.9375em) {
   .press-gallery {
     grid-template-columns: repeat(1, 1fr);
   }
 }
-.press-gallery__figure {
+.press-gallery__item {
   display: grid;
   gap: 0.3125rem;
 }
-.press-gallery__figure figcaption {
-  color: #525253;
-  font-size: 0.875rem;
-  font-weight: 300;
+.press-gallery__figure {
+  margin: 0 !important;
 }
 .press-gallery__image-wrapper {
   padding: 0px 0px 58.8469184891% 0px;
@@ -9075,4 +9094,10 @@ textarea.input {
   width: 2.9375rem;
   height: 2.9375rem;
   z-index: 1;
+}
+.press-gallery__text {
+  color: #525253;
+  font-size: 0.875rem;
+  font-weight: 300;
+  margin: 0 !important;
 }

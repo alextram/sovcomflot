@@ -127,6 +127,11 @@ body {
 		h1, h2, h3, h4, h5, h6 {
 			margin: 0px 0px rem(20) 0px;
 			color: var(--color-main);
+			span {
+				color: #000;
+				font-size: rem(18);
+				font-weight: 300;
+			}
 		}
 
 		h3 {
@@ -209,8 +214,9 @@ body {
 
 		table {
 			max-width: 100%;
+			width: 100%;
 			border-collapse: collapse;
-			margin: 0px 0px rem(40) 0px;
+			margin: 0px 0px rem(30) 0px;
 			@media (max-width: ($md3+'px')) {
 				margin: 0px 0px rem(20) 0px;
 			}
@@ -218,15 +224,32 @@ body {
 				th{
 					font-size: rem(16);
 					font-weight: 400;
-					background: #111111;
-					padding: rem(5) rem(10);
-					border: 1px solid #000000;
-					color: #ffffff;
+					background: #C9DDF6;
+					padding: rem(12) rem(20);
+					border: 1px solid #DBE3F6;
+					color: var(--color-main);
+					font-weight: 500;
+					text-align: center;
 				}
 				td {
-					background: #dddddd;
-					border: 1px solid #000000;
-					padding: rem(5) rem(10);
+					background: #fff;
+					border: 1px solid #DBE3F6;
+					padding: rem(12) rem(20);
+					color: var(--color-main);
+					font-weight: 300;
+					text-align: center;
+					&:first-child {
+						text-align: left;
+					}
+					&.empty {
+						height: rem(25);
+					}
+				}
+
+				&.bold {
+					td {
+						font-weight: 500;
+					}
 				}
 			}
 		}
