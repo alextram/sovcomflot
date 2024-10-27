@@ -331,7 +331,7 @@
 	align-items: center;
 	gap: rem(10);
 	color: var(--color-main);
-	font-weight: 500;
+	font-weight: 400;
 	&::before {
 		content: "\e903";
 		@extend %ic;

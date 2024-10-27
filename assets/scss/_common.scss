@@ -163,6 +163,10 @@ body {
 			font-weight: 300;
 			line-height: 136.364%;
 			margin: rem(30) rem(0) rem(40);
+			&.white {
+				background: #fff;
+				color: #000;
+			}
 		}
 
 		figure {
@@ -216,10 +220,6 @@ body {
 			max-width: 100%;
 			width: 100%;
 			border-collapse: collapse;
-			margin: 0px 0px rem(30) 0px;
-			@media (max-width: ($md3+'px')) {
-				margin: 0px 0px rem(20) 0px;
-			}
 			tr{
 				th{
 					font-weight: 400;
@@ -256,6 +256,10 @@ body {
 		.table-wrapper {
 			width: 100%;
 			overflow-x: auto;
+			margin: 0px 0px rem(30) 0px;
+			@media (max-width: ($md3+'px')) {
+				margin: 0px 0px rem(20) 0px;
+			}
 		}
 	}
 }

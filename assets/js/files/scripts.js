@@ -13,4 +13,5 @@ new Tabs('main-media');
 // Инициализация cпойлера в пресс-релизе
 new Spoiler('press-spoiler');
 
-
+// Инициализация меню архива прессы
+new Menu('press-archive');
