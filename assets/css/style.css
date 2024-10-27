@@ -9124,6 +9124,7 @@ textarea.input {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  gap: 0.625rem 0rem;
 }
 .press-nav__link {
   display: -webkit-inline-box;

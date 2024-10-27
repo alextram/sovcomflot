@@ -14,4 +14,4 @@ new Tabs('main-media');
 new Spoiler('press-spoiler');
 
 // Инициализация меню архива прессы
-new Menu('press-archive');
+new Menu('press-archive', { lockOnOpen: false, closeOnSelect: true });
