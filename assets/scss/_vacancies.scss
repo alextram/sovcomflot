@@ -1,0 +1,24 @@
+.vacancies-section {
+	// .vacancies-section__container
+	&__container {
+	}
+	// .vacancies-section__body
+	&__body {
+		max-width: rem(1029);
+	}
+}
+
+//===============================================================
+.vacancy {
+	display: grid;
+	gap: rem(25);
+	// .vacancy__row
+	&__row {
+	}
+	// .vacancy__title
+	&__title {
+	}
+	// .vacancy__list
+	&__list {
+	}
+}

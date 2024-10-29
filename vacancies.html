@@ -1,0 +1,491 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+	<title>СКФ</title>
+	<meta charset="UTF-8">
+	<meta name="format-detection" content="telephone=no">
+	<link rel="stylesheet" href="assets/css/style.css">
+	<link rel="shortcut icon" href="favicon.ico">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+	<script>
+		const LOCALIZATION = 'Russian'; // English, Spanish... Ключ локализации. При необходимости изменять в соответствии с ответом сервера.
+	</script>
+</head>
+
+<body>
+	<div class="wrapper">
+		<header class="header" data-fix>
+			<div class="header__container _container">
+				<div class="header__body">
+					<div class="header__top header-top">
+						<nav class="header-top__menu header-top-menu">
+							<ul class="header-top-menu__list" data-adapt="menu__content,991">
+								<li class="header-top-menu__item"><a class="header-top-menu__link" href="#">Контакты</a></li>
+								<li class="header-top-menu__item"><a class="header-top-menu__link" href="#">Общественная приемная СКФ</a></li>
+								<li class="header-top-menu__item"><a class="header-top-menu__link" href="#">Закупки</a></li>
+								<li class="header-top-menu__item"><a class="header-top-menu__link" href="#">Противодействие коррупции</a></li>
+							</ul>
+						</nav>
+						<div class="header-top__actions" data-adapt="menu__content-wrapper,991">
+							<a class="header-top__enter _icon-enter" href="#">Внутренний портал</a>
+							<div class="header-top__socials socials">
+								<a class="socials__social _icon-tg" href="#"></a>
+								<a class="socials__social _icon-vk" href="#"></a>
+							</div>
+						</div>
+					</div>
+					<div class="header__bottom header-bottom">
+						<a class="header-bottom__logo logo" href="#">
+							<img src="assets/img/main/logo.svg" alt="logo">
+						</a>
+						<div class="header-bottom__menu menu" data-menu="main-menu">
+							<nav class="menu__body" data-menu-container="main-menu">
+								<div class="menu__content-wrapper">
+									<div class="menu__content">
+										<button class="menu__close _icon-cross" type="button" data-menu-close></button>
+										<h4 class="menu__title right-line">Меню</h4>
+										<ul class="menu__list">
+											<li class="menu__item" data-menu-item>
+												<button class="menu__control _icon-arrow-4" data-menu-control>О компании</button>
+												<div class="menu__sub-menu sub-menu" data-menu-submenu>
+													<div class="sub-menu__content">
+														<h4 class="sub-menu__title right-line">О компании</h4>
+														<button class="sub-menu__close _icon-cross" type="button" data-menu-back><span class="_icon-arrow-4">Назад</span></button>
+														<ul class="sub-menu__list">
+															<li class="sub-menu__item" data-menu-item><a class="sub-menu__link" href="#">Тестовый пункт меню 1</a></li>
+															<li class="sub-menu__item" data-menu-item><a class="sub-menu__link" href="#">Тестовый пункт меню 2</a></li>
+															<li class="sub-menu__item" data-menu-item><a class="sub-menu__link" href="#">Тестовый пункт меню 3</a></li>
+															<li class="sub-menu__item" data-menu-item><a class="sub-menu__link" href="#">Тестовый пункт меню 4</a></li>
+															<li class="sub-menu__item" data-menu-item><a class="sub-menu__link" href="#">Тестовый пункт меню 5</a></li>
+														</ul>
+													</div>
+												</div>
+											</li>
+											<li class="menu__item" data-menu-item>
+												<button class="menu__control _icon-arrow-4" data-menu-control>Инвесторам и акционерам</button>
+												<div class="menu__sub-menu sub-menu" data-menu-submenu>
+													<div class="sub-menu__content">
+														<h4 class="sub-menu__title right-line">Инвесторам и акционерам</h4>
+														<button class="sub-menu__close _icon-cross" type="button" data-menu-back><span class="_icon-arrow-4">Назад</span></button>
+														<ul class="sub-menu__list">
+															<li class="sub-menu__item" data-menu-item>
+																<button class="sub-menu__control _icon-arrow-4" data-menu-control>Акции</button>
+																<div class="sub-menu__sub-menu sub-sub-menu" data-menu-submenu>
+																	<div class="sub-sub-menu__content">
+																		<h4 class="sub-sub-menu__title right-line">Акции</h4>
+																		<button class="sub-sub-menu__close _icon-cross" type="button" data-menu-back><span class="_icon-arrow-4">Назад</span></button>
+																		<ul class="sub-sub-menu__list">
+																			<li class="sub-sub-menu__item" data-menu-item><a class="sub-sub-menu__link" href="#">test 1</a></li>
+																			<li class="sub-sub-menu__item" data-menu-item><a class="sub-sub-menu__link" href="#">test 2</a></li>
+																			<li class="sub-sub-menu__item" data-menu-item><a class="sub-sub-menu__link" href="#">test 4</a></li>
+																		</ul>
+																	</div>
+																</div>
+															</li>
+															<li class="sub-menu__item" data-menu-item>
+																<button class="sub-menu__control _icon-arrow-4" data-menu-control>Долговые инструменты</button>
+																<div class="sub-menu__sub-menu sub-sub-menu" data-menu-submenu>
+																	<div class="sub-sub-menu__content">
+																		<h4 class="sub-sub-menu__title right-line">Долговые инструменты</h4>
+																		<button class="sub-sub-menu__close _icon-cross" type="button" data-menu-back><span class="_icon-arrow-4">Назад</span></button>
+																		<ul class="sub-sub-menu__list">
+																			<li class="sub-sub-menu__item" data-menu-item><a class="sub-sub-menu__link" href="#">test 1</a></li>
+																			<li class="sub-sub-menu__item" data-menu-item><a class="sub-sub-menu__link" href="#">test 2</a></li>
+																			<li class="sub-sub-menu__item" data-menu-item><a class="sub-sub-menu__link" href="#">test 4</a></li>
+																		</ul>
+																	</div>
+																</div>
+															</li>
+															<li class="sub-menu__item" data-menu-item>
+																<button class="sub-menu__control _icon-arrow-4" data-menu-control>Отчеты и результаты</button>
+																<div class="sub-menu__sub-menu sub-sub-menu" data-menu-submenu>
+																	<div class="sub-sub-menu__content">
+																		<h4 class="sub-sub-menu__title right-line">Отчеты и результаты</h4>
+																		<button class="sub-sub-menu__close _icon-cross" type="button" data-menu-back><span class="_icon-arrow-4">Назад</span></button>
+																		<ul class="sub-sub-menu__list">
+																			<li class="sub-sub-menu__item" data-menu-item><a class="sub-sub-menu__link" href="#">test 1</a></li>
+																			<li class="sub-sub-menu__item" data-menu-item><a class="sub-sub-menu__link" href="#">test 2</a></li>
+																			<li class="sub-sub-menu__item" data-menu-item><a class="sub-sub-menu__link" href="#">test 4</a></li>
+																		</ul>
+																	</div>
+																</div>
+															</li>
+															<li class="sub-menu__item" data-menu-item>
+																<button class="sub-menu__control _icon-arrow-4" data-menu-control>Корпоративное управление</button>
+																<div class="sub-menu__sub-menu sub-sub-menu" data-menu-submenu>
+																	<div class="sub-sub-menu__content">
+																		<h4 class="sub-sub-menu__title right-line">Корпоративное управление</h4>
+																		<button class="sub-sub-menu__close _icon-cross" type="button" data-menu-back><span class="_icon-arrow-4">Назад</span></button>
+																		<ul class="sub-sub-menu__list">
+																			<li class="sub-sub-menu__item" data-menu-item><a class="sub-sub-menu__link" href="#">test 1</a></li>
+																			<li class="sub-sub-menu__item" data-menu-item><a class="sub-sub-menu__link" href="#">test 2</a></li>
+																			<li class="sub-sub-menu__item" data-menu-item><a class="sub-sub-menu__link" href="#">test 4</a></li>
+																		</ul>
+																	</div>
+																</div>
+															</li>
+															<li class="sub-menu__item" data-menu-item>
+																<a class="sub-menu__link" href="#">Собрания акционеров</a>
+															</li>
+															<li class="sub-menu__item" data-menu-item>
+																<button class="sub-menu__control _icon-arrow-4" data-menu-control>Раскрытие информации</button>
+																<div class="sub-menu__sub-menu sub-sub-menu" data-menu-submenu>
+																	<div class="sub-sub-menu__content">
+																		<h4 class="sub-sub-menu__title right-line">Раскрытие информации</h4>
+																		<button class="sub-sub-menu__close _icon-cross" type="button" data-menu-back><span class="_icon-arrow-4">Назад</span></button>
+																		<ul class="sub-sub-menu__list">
+																			<li class="sub-sub-menu__item" data-menu-item><a class="sub-sub-menu__link" href="#">Аффилированные лица</a></li>
+																			<li class="sub-sub-menu__item" data-menu-item><a class="sub-sub-menu__link" href="#">Существенные факты</a></li>
+																			<li class="sub-sub-menu__item" data-menu-item><a class="sub-sub-menu__link" href="#">Проспект ценных бумаг</a></li>
+																			<li class="sub-sub-menu__item" data-menu-item><a class="sub-sub-menu__link" href="#">Отчеты эмитента</a></li>
+																			<li class="sub-sub-menu__item" data-menu-item><a class="sub-sub-menu__link" href="#">Финансовая отчетность по МФСО в рублях</a></li>
+																			<li class="sub-sub-menu__item" data-menu-item><a class="sub-sub-menu__link" href="#">Финансовая отчетность по РСБУ</a></li>
+																			<li class="sub-sub-menu__item" data-menu-item><a class="sub-sub-menu__link" href="#">Инсайдерам</a></li>
+																		</ul>
+																	</div>
+																</div>
+															</li>
+															<li class="sub-menu__item" data-menu-item>
+																<a class="sub-menu__link" href="#">Аналитики</a>
+															</li>
+															<li class="sub-menu__item" data-menu-item>
+																<a class="sub-menu__link" href="#">Календарь инвестора</a>
+															</li>
+															<li class="sub-menu__item" data-menu-item>
+																<a class="sub-menu__link" href="#">Контакты для инвесторов</a>
+															</li>
+														</ul>
+													</div>
+												</div>
+											</li>
+											<li class="menu__item" data-menu-item>
+												<button class="menu__control _icon-arrow-4" data-menu-control>Работа в СКФ</button>
+												<div class="menu__sub-menu sub-menu" data-menu-submenu>
+													<div class="sub-menu__content">
+														<h4 class="sub-menu__title right-line">Работа в СКФ</h4>
+														<button class="sub-menu__close _icon-cross" type="button" data-menu-back><span class="_icon-arrow-4">Назад</span></button>
+														<ul class="sub-menu__list">
+															<li class="sub-menu__item" data-menu-item><a class="sub-menu__link" href="#">Тестовый пункт меню 1</a></li>
+															<li class="sub-menu__item" data-menu-item><a class="sub-menu__link" href="#">Тестовый пункт меню 2</a></li>
+														</ul>
+													</div>
+												</div>
+											</li>
+											<li class="menu__item" data-menu-item>
+												<button class="menu__control _icon-arrow-4" data-menu-control>Пресс-релизы</button>
+												<div class="menu__sub-menu sub-menu" data-menu-submenu>
+													<div class="sub-menu__content">
+														<h4 class="sub-menu__title right-line">Пресс-релизы</h4>
+														<button class="sub-menu__close _icon-cross" type="button" data-menu-back><span class="_icon-arrow-4">Назад</span></button>
+														<ul class="sub-menu__list">
+															<li class="sub-menu__item" data-menu-item><a class="sub-menu__link" href="#">Тестовый пункт меню 1</a></li>
+															<li class="sub-menu__item" data-menu-item><a class="sub-menu__link" href="#">Тестовый пункт меню 2</a></li>
+															<li class="sub-menu__item" data-menu-item><a class="sub-menu__link" href="#">Тестовый пункт меню 3</a></li>
+														</ul>
+													</div>
+												</div>
+											</li>
+										</ul>
+									</div>
+								</div>
+							</nav>
+						</div>
+						<div class="header-bottom__actions">
+							<div class="search">
+								<form class="search__search-form search-form" action="#" method="get">
+									<label class="search-form__label" for="search">Поиск:</label>
+									<input class="search-form__input input" id="search" type="text" name="s">
+									<button class="search-form__btn _icon-search" type="submit"></button>
+								</form>
+								<button class="search__search-btn _icon-search" type="button" data-link="search-form"><span>Поиск</span></button>
+							</div>
+							<div class="languages">
+								<a class="languages__language _active" href="#">
+									<span class="languages__desc">Русский</span>
+									<span class="languages__mobile">Рус</span>
+								</a>
+								<a class="languages__language" href="#">
+									<span class="languages__desc">English</span>
+									<span class="languages__mobile">Eng</span>
+								</a>
+							</div>
+							<button class="menu-icon" type="button" data-menu-icon="main-menu"></button>
+						</div>
+					</div>
+				</div>
+			</div>
+		</header>
+		
+		<main class="page">
+			
+			<div class="page__inner page-inner">
+
+				<header class="page-inner__head inner-head">
+					<div class="inner-head__top">
+						<div class="inner-head__container _container">
+							<div class="inner-head__top-body">
+								<h1 class="inner-head__title">Вакансии на флоте СКФ</h1>
+							</div>
+						</div>
+						<figure class="inner-head__bg _ibg">
+							<img src="assets/img/bgs/bg2.jpg" alt="image">
+						</figure>
+					</div>
+					<div class="inner-head__bottom">
+						<div class="inner-head__container _container">
+							<div class="inner-head__bottom-body">
+								<nav class="breadcrumbs">
+									<ul class="breadcrumbs__list">
+										<li class="breadcrumbs__item"><a class="breadcrumbs__link" href="#" title="Главная">Главная</a></li>
+										<li class="breadcrumbs__item"><a class="breadcrumbs__link" href="#" title="Работа в СКФ">Работа в СКФ</a></li>
+										<li class="breadcrumbs__item"><span class="breadcrumbs__current" title="Вакансии на флоте СКФ">Вакансии на флоте СКФ</span></li>
+									</ul>
+								</nav>
+							</div>
+						</div>
+					</div>
+				</header>
+
+				<section class="page-inner__section vacancies-section">
+					<div class="vacancies-section__container _container">
+						<div class="vacancies-section__body">
+							<div class="vacancies-section__content _typography">
+								<p><b>Группа компаний «Совкомфлот»</b> – крупнейшее судоходное предприятие России и один из мировых лидеров по морской транспортировке энергоносителей (сжиженного газа, нефти и нефтепродуктов). Суда СКФ работают по всему миру, от Арктики до Австралии и от Карибского бассейна до Японии.</p>
+								<p>На протяжении многих лет «Совкомфлот» остается одним из наиболее стабильных и привлекательных работодателей в судоходной отрасли России. Компания уделяет серьезное внимание обеспечению благополучия и социальной защищенности сотрудников, в том числе достойных условий оплаты и труда, а также повышению уровня профессиональной подготовки работников.</p>
+								<p>Приоритет «Совкомфлота»: «Безопасность превыше всего». Поэтому для комплектования экипажей компания выбирает специалистов самой высокой квалификации. Мы приветствуем профессионалов, которые хотят работать в «Совкомфлоте» и готовы соответствовать требованиями компании.</p>
+								<p><b>Всего открыто вакансий на флоте: 17</b></p>
+								<br>
+							</div>
+							<div class="_typography">
+								<h3 class="right-line">Танкеры</h3>
+							</div>
+							<div class="spoiler" data-spoiler="spoiler-1">
+								<div class="spoiler__item" data-spoiler-item>
+									<button class="spoiler__control _icon-arrow-5" type="button" data-spoiler-control>Фиттер (токарь/сварщик), танкер DWT 156 697 т.</button>
+									<div class="spoiler__container" data-spoiler-container>
+										<div class="spoiler__content">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Dolores, doloremque?</div>
+									</div>
+								</div>
+								<div class="spoiler__item" data-spoiler-item>
+									<button class="spoiler__control _icon-arrow-5" type="button" data-spoiler-control>Донкерман, танкер DWT 74 548 т.</button>
+									<div class="spoiler__container" data-spoiler-container>
+										<div class="spoiler__content">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Dolores, doloremque?</div>
+									</div>
+								</div>
+								<div class="spoiler__item" data-spoiler-item>
+									<button class="spoiler__control _icon-arrow-5" type="button" data-spoiler-control>Матрос 1 класса, танкер DWT 40 119 т.</button>
+									<div class="spoiler__container" data-spoiler-container>
+										<div class="spoiler__content">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Dolores, doloremque?</div>
+									</div>
+								</div>
+								<div class="spoiler__item" data-spoiler-item>
+									<button class="spoiler__control _icon-arrow-5" type="button" data-spoiler-control>Матрос 1 класса, танкер DWT 47 125 т.</button>
+									<div class="spoiler__container" data-spoiler-container>
+										<div class="spoiler__content">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Dolores, doloremque?</div>
+									</div>
+								</div>
+								<div class="spoiler__item" data-spoiler-item>
+									<button class="spoiler__control _icon-arrow-5" type="button" data-spoiler-control>Донкерман , танкер DWT 111 107 т.</button>
+									<div class="spoiler__container" data-spoiler-container>
+										<div class="spoiler__content">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Dolores, doloremque?</div>
+									</div>
+								</div>
+								<div class="spoiler__item" data-spoiler-item>
+									<button class="spoiler__control _icon-arrow-5" type="button" data-spoiler-control>Старший Механик, танкер DWT 50 955 т.</button>
+									<div class="spoiler__container" data-spoiler-container>
+										<div class="spoiler__content">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Dolores, doloremque?</div>
+									</div>
+								</div>
+							</div>
+							<div class="_typography">
+								<h3 class="right-line">Газовозы</h3>
+							</div>
+							<div class="spoiler" data-spoiler="spoiler-2">
+								<div class="spoiler__item" data-spoiler-item>
+									<button class="spoiler__control _icon-arrow-5" type="button" data-spoiler-control>Капитан, танкер-газовоз DWT 92 482 т.</button>
+									<div class="spoiler__container" data-spoiler-container>
+										<div class="spoiler__content">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Dolores, doloremque?</div>
+									</div>
+								</div>
+								<div class="spoiler__item" data-spoiler-item>
+									<button class="spoiler__control _icon-arrow-5" type="button" data-spoiler-control>Старший помощник капитана, танкер-газовоз DWT 92 482 т.</button>
+									<div class="spoiler__container" data-spoiler-container>
+										<div class="spoiler__content">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Dolores, doloremque?</div>
+									</div>
+								</div>
+								<div class="spoiler__item" data-spoiler-item>
+									<button class="spoiler__control _icon-arrow-5" type="button" data-spoiler-control>Второй помощник капитана, танкер-газовоз DWT 92 482 т.</button>
+									<div class="spoiler__container" data-spoiler-container>
+										<div class="spoiler__content">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Dolores, doloremque?</div>
+									</div>
+								</div>
+								<div class="spoiler__item" data-spoiler-item>
+									<button class="spoiler__control _icon-arrow-5" type="button" data-spoiler-control>Третий помощник капитана, танкер-газовоз DWT 92 482 т.</button>
+									<div class="spoiler__container" data-spoiler-container>
+										<div class="spoiler__content">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Dolores, doloremque?</div>
+									</div>
+								</div>
+								<div class="spoiler__item" data-spoiler-item>
+									<button class="spoiler__control _icon-arrow-5" type="button" data-spoiler-control>Старший механик, танкер-газовоз DWT 92 482 т.</button>
+									<div class="spoiler__container" data-spoiler-container>
+										<div class="spoiler__content">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Dolores, doloremque?</div>
+									</div>
+								</div>
+								<div class="spoiler__item" data-spoiler-item>
+									<button class="spoiler__control _icon-arrow-5" type="button" data-spoiler-control>Третий механик, танкер-газовоз DWT 92 482 т.</button>
+									<div class="spoiler__container" data-spoiler-container>
+										<div class="spoiler__content">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Dolores, doloremque?</div>
+									</div>
+								</div>
+								<div class="spoiler__item" data-spoiler-item>
+									<button class="spoiler__control _icon-arrow-5" type="button" data-spoiler-control>Четвертый механик, танкер-газовоз DWT 92 482 т.</button>
+									<div class="spoiler__container" data-spoiler-container>
+										<div class="spoiler__content">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Dolores, doloremque?</div>
+									</div>
+								</div>
+								<div class="spoiler__item" data-spoiler-item>
+									<button class="spoiler__control _icon-arrow-5" type="button" data-spoiler-control>Газовый механик, танкер-газовоз DWT 92 482 т.</button>
+									<div class="spoiler__container" data-spoiler-container>
+										<div class="spoiler__content">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Dolores, doloremque?</div>
+									</div>
+								</div>
+								<div class="spoiler__item" data-spoiler-item data-spoiler-open>
+									<button class="spoiler__control _icon-arrow-5" type="button" data-spoiler-control>Старший электромеханик, танкер-газовоз DWT 92 482 т.</button>
+									<div class="spoiler__container" data-spoiler-container>
+										<div class="spoiler__content">
+											<div class="vacancy">
+												<div class="vacancy__row">
+													<p>В группу компаний «Совкомфлот» требуется Старший электромеханик</p>
+												</div>
+												<div class="vacancy__row">
+													<h5 class="vacancy__title">Тип судна:</h5>
+													<p>Танкер-газовоз, 92 482 DWT</p>
+												</div>
+												<div class="vacancy__row">
+													<h5 class="vacancy__title">Требования:</h5>
+													<ul class="vacancy__list">
+														<li>- наличие конвенционных документов по должности;</li>
+														<li>- опыт работы в должности на танкерах-газовозах.</li>
+													</ul>
+												</div>
+												<div class="vacancy__row">
+													<h5 class="vacancy__title">Длительность контракта:</h5>
+													<p>4+/-1</p>
+												</div>
+												<div class="vacancy__row">
+													<h5 class="vacancy__title">Дата отправки:</h5>
+													<p>15.09.2024</p>
+												</div>
+												<div class="vacancy__row">
+													<h5 class="vacancy__title">Экипаж:</h5>
+													<p>Граждане РФ</p>
+												</div>
+												<div class="vacancy__row">
+													<a class="vacancy__link btn btn_arrow" href="#">Откликнуться</a>
+												</div>
+											</div>
+										</div>
+									</div>
+								</div>
+								<div class="spoiler__item" data-spoiler-item>
+									<button class="spoiler__control _icon-arrow-5" type="button" data-spoiler-control>Электромеханик, танкер-газовоз DWT 92 482 т.</button>
+									<div class="spoiler__container" data-spoiler-container>
+										<div class="spoiler__content">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Dolores, doloremque?</div>
+									</div>
+								</div>
+							</div>
+							<div class="_typography">
+								<h3 class="right-line">Сухогрузы</h3>
+							</div>
+							<div class="spoiler">
+								<div class="white-block white-block_gray">Вакансии отсутствуют на данный момент</div>
+							</div>
+
+							<div class="page-inner__section">
+								<div class="white-blocks">
+									<div class="blue-block">
+										<a class="more-link" href="#">Первая ссылка</a>
+									</div>
+									<div class="blue-block">
+										<a class="more-link" href="#">Первая ссылка</a>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</section>
+
+
+			</div>
+
+		</main>
+		
+		<footer class="footer">
+			<div class="footer__container _container">
+				<div class="footer__body">
+					<div class="footer__row footer__row_1">
+						<figure class="footer__logo logo">
+							<img src="assets/img/main/logo.svg" alt="logo">
+						</figure>
+						<nav class="footer__menu footer-menu">
+							<ul class="footer-menu__list">
+								<li class="footer-menu__item"><a class="footer-menu__link" href="#">Контакты</a></li>
+								<li class="footer-menu__item"><a class="footer-menu__link" href="#">Общественная приемная СКФ</a></li>
+								<li class="footer-menu__item"><a class="footer-menu__link" href="#">Закупки</a></li>
+								<li class="footer-menu__item"><a class="footer-menu__link" href="#">Противодействие коррупции</a></li>
+								<li class="footer-menu__item"><a class="footer-menu__link" href="#">Карта сайта</a></li>
+							</ul>
+						</nav>
+					</div>
+					<div class="footer__row footer__row_2">
+						<div class="footer__socials socials">
+							<a class="socials__social _icon-tg" href="#"></a>
+							<a class="socials__social _icon-vk" href="#"></a>
+						</div>
+						<p class="footer__copy">© ПАО Совкомфлот 2024</p>
+					</div>
+				</div>
+			</div>
+		</footer>
+	</div>
+
+
+	<button class="move-up _icon-arrow-3" type="button" data-move-up data-goto="wrapper"></button>
+	
+
+	<!-- services -->
+	<script src="https://www.google.com/recaptcha/api.js?render=<reCAPTCHA_site_key>&badge=bottomleft"></script>
+	<script src="https://api-maps.yandex.ru/2.1/?lang=ru_RU&amp;apikey=<ваш API-ключ>"></script>
+	
+	<!-- libs -->
+	<script src="assets/js/libs/lazyload.min.js"></script>
+	<script src="assets/js/libs/choices.min.js"></script>
+	<script src="assets/js/libs/nouislider.min.js"></script>
+	<script src="assets/js/libs/inputmask.min.js"></script>
+	<script src="assets/js/libs/justvalidate.min.js"></script>
+	<script src="assets/js/libs/datepicker.min.js"></script>
+	<script src="assets/js/libs/swiper.min.js"></script>
+	<script src="assets/js/libs/lightgallery.min.js"></script>
+	<script src="assets/js/libs/aos.min.js"></script>
+
+	<!-- plugins -->
+	<script src="assets/js/plugins/adapt.js"></script>
+	<script src="assets/js/plugins/menu.js"></script>
+	<script src="assets/js/plugins/modal.js"></script>
+	<script src="assets/js/plugins/tabs.js"></script>
+	<script src="assets/js/plugins/spoiler.js"></script>
+	<script src="assets/js/plugins/rating.js"></script>
+
+	<!-- files -->
+	<script src="assets/js/files/functions.js"></script>
+	<script src="assets/js/files/forms.js"></script>
+	<script src="assets/js/files/sliders.js"></script>
+	<script src="assets/js/files/scroll.js"></script>
+	<script src="assets/js/files/media.js"></script>
+	<script src="assets/js/files/scripts.js"></script>
+
+</body>
+
+</html>

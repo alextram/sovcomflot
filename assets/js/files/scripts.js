@@ -15,3 +15,7 @@ new Spoiler('press-spoiler');
 
 // Инициализация меню архива прессы
 new Menu('press-archive', { lockOnOpen: false, closeOnSelect: true });
+
+// Инициализация cпойлеров
+new Spoiler('spoiler-1');
+new Spoiler('spoiler-2');

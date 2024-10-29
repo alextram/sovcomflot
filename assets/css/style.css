@@ -6200,6 +6200,7 @@ body ._typography blockquote {
 body ._typography blockquote.white {
   background: #fff;
   color: #000;
+  font-size: 1.125rem;
 }
 body ._typography figure {
   display: inline-block;
@@ -7127,6 +7128,9 @@ textarea.input {
   font-weight: 500;
   color: var(--color-main);
 }
+.white-block_gray {
+  color: #9C9C9C;
+}
 
 .blue-block {
   padding: 1.0625rem 1.875rem;
@@ -7227,6 +7231,58 @@ textarea.input {
 @media (max-width: 29.9375em) {
   .line-block {
     padding: 1.5625rem 1.25rem 1.25rem 1.25rem;
+  }
+}
+
+.spoiler {
+  display: grid;
+  gap: 0.625rem;
+  margin: 0px 0px 2.5rem 0px;
+}
+.spoiler__item {
+  background: #fff;
+}
+.spoiler__control {
+  width: 100%;
+  padding: 0.875rem 1.875rem;
+  font-size: 1.125rem;
+  color: var(--color-main);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: reverse;
+      -ms-flex-direction: row-reverse;
+          flex-direction: row-reverse;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  text-align: left;
+  gap: 1.25rem;
+}
+.spoiler__control._active::before {
+  rotate: 180deg;
+}
+.spoiler__control::before {
+  -webkit-transition: all 0.3s ease 0s;
+  transition: all 0.3s ease 0s;
+  font-size: 0.5rem;
+}
+@media (max-width: 47.9375em) {
+  .spoiler__control {
+    padding: 0.875rem;
+  }
+}
+.spoiler__content {
+  padding: 0.375rem 1.875rem 0.875rem;
+  font-weight: 300;
+}
+@media (max-width: 47.9375em) {
+  .spoiler__content {
+    padding: 0.875rem;
   }
 }
 
@@ -9255,4 +9311,13 @@ textarea.input {
 }
 .press-list__title a {
   color: var(--color-main);
+}
+
+.vacancies-section__body {
+  max-width: 64.3125rem;
+}
+
+.vacancy {
+  display: grid;
+  gap: 1.5625rem;
 }
