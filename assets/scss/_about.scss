@@ -216,7 +216,15 @@
 		}
 		span {
 			display: inline-block;
-			border-bottom: rem(2) dashed #7d98c2;
+			border-bottom: rem(1) dashed #7d98c2;
+			transition: all 0.3s ease 0s;
+		}
+		@media (any-hover: hover) {
+			&:hover {
+				span {
+					border-bottom: rem(1) dashed var(--color-second);
+				}
+			}
 		}
 	}
 	// .press-nav__archive
@@ -257,7 +265,7 @@
 		}
 		span {
 			display: inline-block;
-			border-bottom: rem(2) dashed #7d98c2;
+			border-bottom: rem(1) dashed #7d98c2;
 			transition: all 0.3s ease 0s;
 		}
 		&::before {

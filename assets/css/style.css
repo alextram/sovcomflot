@@ -7013,12 +7013,68 @@ textarea.input {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
+  gap: 0.4375rem;
+}
+.pagging__arrow {
+  border: 0.0625rem solid var(--color-main);
+  padding: 0.3125rem 0.3125rem;
+  color: var(--color-main);
+  font-size: 0.875rem;
+  font-weight: 500;
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  height: 1.875rem;
+  min-width: 1.875rem;
+  -webkit-transition: all 0.3s ease 0s;
+  transition: all 0.3s ease 0s;
+}
+.pagging__arrow._active {
+  background: var(--color-second);
+  color: #fff;
+  border: 0.0625rem solid var(--color-second);
+}
+.pagging__arrow_prev {
+  scale: -1 1;
 }
 .pagging__list {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  gap: 0.4375rem;
 }
+.pagging__link {
+  border: 0.0625rem solid var(--color-main);
+  padding: 0.3125rem 0.3125rem;
+  color: var(--color-main);
+  font-size: 0.875rem;
+  font-weight: 500;
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  height: 1.875rem;
+  min-width: 1.875rem;
+  -webkit-transition: all 0.3s ease 0s;
+  transition: all 0.3s ease 0s;
+}
+.pagging__link._active {
+  background: var(--color-second);
+  color: #fff;
+  border: 0.0625rem solid var(--color-second);
+}
+
 /**
  * Стили иконки возврата к началу страницы
  */
@@ -9206,7 +9262,14 @@ textarea.input {
 }
 .press-nav__link span {
   display: inline-block;
-  border-bottom: 0.125rem dashed #7d98c2;
+  border-bottom: 0.0625rem dashed #7d98c2;
+  -webkit-transition: all 0.3s ease 0s;
+  transition: all 0.3s ease 0s;
+}
+@media (any-hover: hover) {
+  .press-nav__link:hover span {
+    border-bottom: 0.0625rem dashed var(--color-second);
+  }
 }
 .press-archive {
   position: relative;
@@ -9252,7 +9315,7 @@ textarea.input {
 }
 .press-archive__control span {
   display: inline-block;
-  border-bottom: 0.125rem dashed #7d98c2;
+  border-bottom: 0.0625rem dashed #7d98c2;
   -webkit-transition: all 0.3s ease 0s;
   transition: all 0.3s ease 0s;
 }
@@ -9320,4 +9383,112 @@ textarea.input {
 .vacancy {
   display: grid;
   gap: 1.5625rem;
+}
+.doc-list {
+  display: grid;
+  gap: 0.625rem;
+  margin: 0px 0px 1.25rem 0px;
+}
+.doc-item {
+  background: #fff;
+  padding: 1.25rem 1.875rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 1.25rem 3.125rem;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+@media (max-width: 47.9375em) {
+  .doc-item {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+}
+@media (max-width: 29.9375em) {
+  .doc-item {
+    padding: 1.25rem 1.875rem;
+  }
+}
+.doc-item__title {
+  position: relative;
+  -webkit-box-flex: 1;
+      -ms-flex: 1 1 auto;
+          flex: 1 1 auto;
+  padding: 0px 0px 0px 1.875rem;
+}
+.doc-item__title a {
+  color: var(--color-main);
+}
+.doc-item__title a::before {
+  position: absolute;
+  top: 0.1875rem;
+  left: 0;
+}
+.doc-item__info {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 3.75rem;
+  color: #9C9C9C;
+}
+@media (max-width: 29.9375em) {
+  .doc-item__info {
+    gap: 1.25rem;
+  }
+}
+.doc-item__date {
+  white-space: nowrap;
+}
+.doc-item__size {
+  white-space: nowrap;
+}
+
+.pagin-block {
+  display: grid;
+  gap: 1.875rem;
+  margin: 0px 0px 3.75rem 0px;
+}
+.pagin-block__count {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+}
+.counting {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  gap: 0.9375rem;
+}
+.counting__label {
+  color: var(--color-main);
+  font-size: 1rem;
+}
+.counting__links {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 0.3125rem;
+}
+.counting__link {
+  font-size: 1rem;
+  line-height: 1;
+  padding: 0.3125rem 0.3125rem;
+  background: transparent;
+  -webkit-transition: all 0.3s ease 0s;
+  transition: all 0.3s ease 0s;
+  color: var(--color-main);
+}
+.counting__link._active {
+  background: var(--color-main);
+  color: #fff;
 }
