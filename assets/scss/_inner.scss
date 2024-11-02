@@ -9,6 +9,34 @@
 }
 
 //===============================================================
+.inner-section {
+	// .inner-section__container
+	&__container {
+	}
+	// .inner-section__body
+	&__body {
+		max-width: rem(1030);
+	}
+	// .inner-section__title
+	&__title {
+		margin: 0px 0px rem(20) 0px;
+		color: #000;
+		@include adaptiv-value(font-size, 28, 22, 1);
+		font-weight: 400;
+		line-height: 128.571%;
+		// .inner-section__title_blue
+		&_blue {
+			color: var(--color-main);
+			font-weight: 500;
+		}
+	}
+	// .inner-section__content
+	&__content {
+		margin: 0px 0px rem(60) 0px;
+	}
+}
+
+//===============================================================
 .inner-head {
 	// .inner-head__top
 	&__top {

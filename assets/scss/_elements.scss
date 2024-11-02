@@ -388,7 +388,7 @@
 }
 
 //===============================================================
-.right-line {
+.left-line {
 	position: relative;
 	padding: 0px 0px 0px rem(13);
 	&::before {
@@ -481,4 +481,59 @@
 			padding: rem(14);
 		}
 	}
+}
+
+//===============================================================
+.tabs {
+	// .tabs__nav
+	&__nav {
+		display: flex;
+		flex-wrap: wrap;
+		align-items: center;
+		gap: rem(10) rem(5);
+		margin: 0px 0px rem(20) 0px;
+	}
+	// .tabs__btn
+	&__btn {
+		display: inline-flex;
+		padding: rem(5) rem(15) rem(3);
+		justify-content: center;
+		align-items: center;
+		color: var(--color-main);
+		font-size: rem(16);
+		line-height: 1.7;
+		transition: all 0.0s ease 0s;
+		&._active {
+			color: #fff;
+			background: var(--color-main);
+			pointer-events: none;
+			span {
+				border-color: transparent;
+			}
+		}
+		span {
+			display: inline-block;
+			border-bottom: rem(1) dashed #7d98c2;
+			transition: all 0.3s ease 0s;
+		}
+		@media (any-hover: hover) {
+			&:hover {
+				color: var(--color-second);
+				span {
+					border-bottom: rem(1) dashed var(--color-second);
+				}
+			}
+		}
+	}
+	// .tabs__content
+	&__content {
+	}
+	// .tabs__panel
+	&__panel {
+	}
+}
+
+//===============================================================
+.rattings-docblock {
+	margin: rem(60) 0px;
 }

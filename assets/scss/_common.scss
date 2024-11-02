@@ -221,8 +221,8 @@ body {
 			max-width: 100%;
 			width: 100%;
 			border-collapse: collapse;
-			tr{
-				th{
+			tr {
+				th {
 					font-weight: 400;
 					background: #C9DDF6;
 					padding: rem(12) rem(20);
@@ -250,6 +250,19 @@ body {
 					td {
 						font-weight: 500;
 					}
+				}
+			}
+
+			&.small {
+				th {
+					font-size: rem(14);
+					padding: rem(11) rem(10);
+					line-height: 128.571%;
+				}
+				td {
+					font-size: rem(14);
+					padding: rem(16) rem(12);
+					line-height: 128.571%;
 				}
 			}
 		}

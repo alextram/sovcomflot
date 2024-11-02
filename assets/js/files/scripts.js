@@ -10,6 +10,9 @@ new Menu('main-menu', { alwaysClick: true });
 // Инициализация табов на главной странице
 new Tabs('main-media');
 
+// Инициализация табов дивидендов
+new Tabs('dividends');
+
 // Инициализация cпойлера в пресс-релизе
 new Spoiler('press-spoiler');
 

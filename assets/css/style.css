@@ -6275,6 +6275,16 @@ body ._typography table tr td.empty {
 body ._typography table tr.bold td {
   font-weight: 500;
 }
+body ._typography table.small th {
+  font-size: 0.875rem;
+  padding: 0.6875rem 0.625rem;
+  line-height: 128.571%;
+}
+body ._typography table.small td {
+  font-size: 0.875rem;
+  padding: 1rem 0.75rem;
+  line-height: 128.571%;
+}
 body ._typography .table-wrapper {
   width: 100%;
   overflow-x: auto;
@@ -7239,11 +7249,11 @@ textarea.input {
   scale: -1 1;
 }
 
-.right-line {
+.left-line {
   position: relative;
   padding: 0px 0px 0px 0.8125rem;
 }
-.right-line::before {
+.left-line::before {
   content: "";
   position: absolute;
   top: 50%;
@@ -7340,6 +7350,61 @@ textarea.input {
   .spoiler__content {
     padding: 0.875rem;
   }
+}
+
+.tabs__nav {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  gap: 0.625rem 0.3125rem;
+  margin: 0px 0px 1.25rem 0px;
+}
+.tabs__btn {
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  padding: 0.3125rem 0.9375rem 0.1875rem;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  color: var(--color-main);
+  font-size: 1rem;
+  line-height: 1.7;
+  -webkit-transition: all 0s ease 0s;
+  transition: all 0s ease 0s;
+}
+.tabs__btn._active {
+  color: #fff;
+  background: var(--color-main);
+  pointer-events: none;
+}
+.tabs__btn._active span {
+  border-color: transparent;
+}
+.tabs__btn span {
+  display: inline-block;
+  border-bottom: 0.0625rem dashed #7d98c2;
+  -webkit-transition: all 0.3s ease 0s;
+  transition: all 0.3s ease 0s;
+}
+@media (any-hover: hover) {
+  .tabs__btn:hover {
+    color: var(--color-second);
+  }
+  .tabs__btn:hover span {
+    border-bottom: 0.0625rem dashed var(--color-second);
+  }
+}
+.rattings-docblock {
+  margin: 3.75rem 0px;
 }
 
 .header {
@@ -8471,6 +8536,29 @@ textarea.input {
   margin: 0px 0px 3.75rem 0px;
 }
 
+.inner-section__body {
+  max-width: 64.375rem;
+}
+.inner-section__title {
+  margin: 0px 0px 1.25rem 0px;
+  color: #000;
+  font-size: 28px;
+  font-weight: 400;
+  line-height: 128.571%;
+}
+@media (max-width: 1410px) {
+  .inner-section__title {
+    font-size: calc(22px + 6 * (100vw - 320px) / 1090);
+  }
+}
+.inner-section__title_blue {
+  color: var(--color-main);
+  font-weight: 500;
+}
+.inner-section__content {
+  margin: 0px 0px 3.75rem 0px;
+}
+
 .inner-head__top {
   position: relative;
   padding: 14.4375rem 0rem 5.8125rem;
@@ -9491,4 +9579,8 @@ textarea.input {
 .counting__link._active {
   background: var(--color-main);
   color: #fff;
+}
+
+.chart {
+  margin: 0px 0px 1.25rem 0px;
 }
