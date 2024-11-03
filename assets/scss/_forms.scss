@@ -84,14 +84,14 @@ textarea {
 .input {
 	display: block;
 	width: 100%;
-	font-size: rem(16);
-	line-height: prc(20, 16);
-	padding: em(10) em(12);
-	height: em(43, 16);
-	color: #000000;
+	font-size: rem(18);
+	line-height: prc(20, 18);
+	padding: em(10, 18) em(20, 18);
+	height: em(54, 18);
+	color: var(--color-main);
+	font-weight: 300;
 	background: #ffffff;
-	border: rem(1) solid #cccccc;
-	border-radius: rem(4);
+	border: rem(1) solid #DBE3F6;
 	transition: border 0.3s ease 0s;
 	&:focus {
 		border: rem(1) solid var(--color-focus);
@@ -124,8 +124,12 @@ textarea {
  */
 textarea.input {
 	resize: none;
-	padding: em(10);
-	min-height: em(60);
+	padding: em(15, 18) em(20, 18);
+	min-height: em(243, 18);
+	line-height: 144.444%;
+	@media (max-width: em($md3)) {
+		min-height: em(150, 18);
+	}
 }
 
 
@@ -227,6 +231,7 @@ textarea.input {
 
 	// .check__mark
 	&__mark {
+		font-weight: 300;
 	}
 
 	// .check_default
@@ -237,34 +242,32 @@ textarea.input {
 			&::before {
 				content: '';
 				position: absolute;
-				top: em(-2);
-				left: em(-30);
-				width: em(20);
-				height: em(20);
+				top: em(-2, 18);
+				left: em(-30, 18);
+				width: em(24, 18);
+				height: em(24, 18);
 				background: #ffffff;
-				border: rem(1) solid #cccccc;
-				border-radius: rem(4);
+				border: rem(1) solid var(--color-main);
 				transition: all 0.3s ease 0s;
 			}
 			&::after {
 				content: '';
 				position: absolute;
-				top: em(0);
-				left: em(-23);
-				width: em(7);
-				height: em(12);
-				border-width: 0 em(2) em(2) 0;
-				border-color: #ffffff;
+				top: em(2, 18);
+				left: em(-21, 18);
+				width: em(7, 18);
+				height: em(12, 18);
+				border-width: 0 em(2, 18) em(2, 18) 0;
+				border-color: var(--color-main);
 				border-style: solid;
 				display: block;
 				opacity: 0;
 				transform: rotate(45deg);
+				transition: all 0.1s ease 0s;
 			}
 		}
 		&._checked {
 			.check__mark::before {
-				background: var(--color-main);
-				border: rem(1) solid var(--color-main);
 			}
 			.check__mark::after {
 				opacity: 1;
@@ -471,12 +474,14 @@ textarea.input {
  */
 .form {
 	display: grid;
-	grid-gap: rem(22) rem(32);
+	grid-gap: rem(60) rem(32);
 	span.form__label-title {
 		display: inline-block;
 	}
 	// .form__section
 	&__section {
+		display: grid;
+		gap: rem(30);
 	}
 	// .form__title
 	&__title {
@@ -486,7 +491,7 @@ textarea.input {
 	// .form__row
 	&__row {
 		display: grid;
-		grid-gap: rem(16) rem(32);
+		grid-gap: rem(16) rem(23);
 		min-width: 0;
 		grid-template-columns: repeat(1, 1fr);
 		// .form__row_1
@@ -529,8 +534,10 @@ textarea.input {
 	// .form__label-title
 	&__label-title {
 		cursor: pointer;
-		margin: 0px 0px em(5) 0px;
-		color: #000000;
+		margin: 0px 0px em(10) 0px;
+		font-weight: 500;
+		color: var(--color-main);
+		line-height: 1;
 		&::after {
 			content: attr(data-req);
 			color: var(--color-error);
@@ -544,6 +551,23 @@ textarea.input {
 	}
 	// .form__actions
 	&__actions {
+	}
+	// .form__test-code
+	&__test-code {
+		display: flex;
+		gap: rem(14);
+		margin: 0px 0px rem(20) 0px;
+		div {
+			flex: 1 1 auto;
+		}
+	}
+	// .form__message
+	&__message {
+		background: #fff;
+		padding: rem(25) rem(30);
+		@media (max-width: em($md4)) {
+			padding: rem(10) rem(10);
+		}
 	}
 
 	//===============================================================

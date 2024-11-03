@@ -82,6 +82,8 @@
 	height: rem(25);
 	width: rem(1);
 	background: #cccccc;
+	opacity: 0;
+	visibility: hidden;
 }
 .choices[data-type*=select-one]::after {
 	content: "";
@@ -159,12 +161,13 @@
 	align-items: center;
 	width: 100%;
 	background-color: #ffffff;
-	padding: rem(5) rem(45) rem(5) rem(12);
-	border: rem(1) solid #cccccc;
-	border-radius: rem(4);
-	font-size: rem(16);
-	min-height: rem(43);
+	padding: rem(5) rem(45) rem(5) rem(20);
+	border: rem(1) solid #DBE3F6;
+	font-size: rem(18);
+	min-height: rem(54);
 	overflow: hidden;
+	color: var(--color-main);
+	font-weight: 300;
 	&._error {
 		border: rem(1) solid var(--color-error);
 		background-image: url("data:image/svg+xml;charset=utf-8,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='12' fill='none' stroke='%23B81111'%3E%3Ccircle cx='6' cy='6' r='4.5'/%3E%3Cpath stroke-linejoin='round' d='M5.8 3.6h.4L6 6.5z'/%3E%3Ccircle cx='6' cy='8.2' r='.6' fill='%23B81111' stroke='none'/%3E%3C/svg%3E");
@@ -365,7 +368,7 @@
 }
 
 .choices__placeholder {
-	opacity: 0.5;
+	color: #9C9C9C;
 }
 
 /* =====  End of Choices  ====== */
