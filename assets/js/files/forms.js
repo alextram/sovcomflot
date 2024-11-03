@@ -765,6 +765,7 @@ function validateForm(form) {
 		errorLabelCssClass: 'form__error-label',
 	}, getValidatorLocalizations());
 
+	window.validator = validator;
 
 	// Установка локализации валидатора
 	validator.setCurrentLocale(LOCALIZATION);

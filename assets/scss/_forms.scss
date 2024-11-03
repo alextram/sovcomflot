@@ -236,14 +236,14 @@ textarea.input {
 
 	// .check_default
 	&_default {
-		padding: 0px 0px 0px rem(30);
+		padding: 0px 0px 0px rem(40);
 		.check__mark {
 			position: relative;
 			&::before {
 				content: '';
 				position: absolute;
 				top: em(-2, 18);
-				left: em(-30, 18);
+				left: em(-40, 18);
 				width: em(24, 18);
 				height: em(24, 18);
 				background: #ffffff;
@@ -254,7 +254,7 @@ textarea.input {
 				content: '';
 				position: absolute;
 				top: em(2, 18);
-				left: em(-21, 18);
+				left: em(-31, 18);
 				width: em(7, 18);
 				height: em(12, 18);
 				border-width: 0 em(2, 18) em(2, 18) 0;
@@ -483,6 +483,15 @@ textarea.input {
 		display: grid;
 		gap: rem(30);
 	}
+	// .form__main
+	&__main {
+		display: grid;
+		gap: rem(30);
+		display: none;
+		&._active {
+			display: grid;
+		}
+	}
 	// .form__title
 	&__title {
 		color: #000000;
@@ -515,7 +524,10 @@ textarea.input {
 	}
 	// .form__column
 	&__column {
-		min-width: 0;
+	}
+	// .form__validate-error
+	&__validate-error {
+		display: none;
 	}
 	// .form__single
 	&__single {

@@ -1497,7 +1497,7 @@ swiper-container .swiper-notification {
 .choices__list--dropdown .choices__list,
 .choices__list[aria-expanded] .choices__list {
   position: relative;
-  max-height: 18.75rem;
+  max-height: 21.875rem;
   overflow: auto;
   -webkit-overflow-scrolling: touch;
   will-change: scroll-position;
@@ -6574,7 +6574,7 @@ textarea.input {
   font-weight: 300;
 }
 .check_default {
-  padding: 0px 0px 0px 1.875rem;
+  padding: 0px 0px 0px 2.5rem;
 }
 .check_default .check__mark {
   position: relative;
@@ -6583,7 +6583,7 @@ textarea.input {
   content: "";
   position: absolute;
   top: -0.1111111111em;
-  left: -1.6666666667em;
+  left: -2.2222222222em;
   width: 1.3333333333em;
   height: 1.3333333333em;
   background: #ffffff;
@@ -6595,7 +6595,7 @@ textarea.input {
   content: "";
   position: absolute;
   top: 0.1111111111em;
-  left: -1.1666666667em;
+  left: -1.7222222222em;
   width: 0.3888888889em;
   height: 0.6666666667em;
   border-width: 0 0.1111111111em 0.1111111111em 0;
@@ -6784,6 +6784,14 @@ textarea.input {
   display: grid;
   gap: 1.875rem;
 }
+.form__main {
+  display: grid;
+  gap: 1.875rem;
+  display: none;
+}
+.form__main._active {
+  display: grid;
+}
 .form__title {
   color: #000000;
   margin: 0px 0px 0.625rem 0px;
@@ -6813,8 +6821,8 @@ textarea.input {
     grid-template-columns: repeat(1, 1fr);
   }
 }
-.form__column {
-  min-width: 0;
+.form__validate-error {
+  display: none;
 }
 .form__single {
   padding: 0.3125rem 0px 0px 0px;
@@ -9623,4 +9631,13 @@ textarea.input {
 
 .reception__text {
   margin: 0px 0px 2.5rem 0px;
+}
+.reception__tel {
+  font-weight: 500;
+  color: #000 !important;
+}
+@media (any-hover: hover) {
+  .reception__tel:hover {
+    color: var(--color-main) !important;
+  }
 }

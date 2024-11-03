@@ -226,7 +226,7 @@
 					<div class="inner-head__top">
 						<div class="inner-head__container _container">
 							<div class="inner-head__top-body">
-								<h1 class="inner-head__title">Контакты</h1>
+								<h1 class="inner-head__title">Общественная приемная</h1>
 							</div>
 						</div>
 						<figure class="inner-head__bg _ibg">
@@ -239,7 +239,7 @@
 								<nav class="breadcrumbs">
 									<ul class="breadcrumbs__list">
 										<li class="breadcrumbs__item"><a class="breadcrumbs__link" href="#" title="Главная">Главная</a></li>
-										<li class="breadcrumbs__item"><span class="breadcrumbs__current" title="Контакты">Контакты</span></li>
+										<li class="breadcrumbs__item"><span class="breadcrumbs__current" title="Общественная приемная">Общественная приемная</span></li>
 									</ul>
 								</nav>
 							</div>
@@ -254,7 +254,7 @@
 								<div class="reception__text _typography">
 									<p>Сообщения, направленные в компанию с помощью данной формы, поступают руководителям основных подразделений СКФ по заведованию (в зависимости от выбранной темы).</p>
 									<p>Компания оставляет за собой право не отвечать на запросы, не соответствующие заявленной теме и не относящиеся к деятельности СКФ.</p>
-									<p>Вы также можете связаться с нами по телефону горячей линии <b><a href="tel:+74956604009">+7 (495) 660-4009</a></b>, а также  любым другим удобным для вас способом. <a href="#">Перейти в раздел «Контакты»</a></p>
+									<p>Вы также можете связаться с нами по телефону горячей линии <a class="reception__tel" href="tel:+74956604009">+7 (495) 660-4009</a>, а также  любым другим удобным для вас способом. <a href="#">Перейти в раздел «Контакты»</a></p>
 									<p>По вопросам трудоустройства следует обращаться в <a href="#">кадровые офисы</a> группы СКФ.</p>
 								</div>
 								<form class="reception__form form" name="form" action="./" method="post" data-form data-validation data-autocomplete-off>
@@ -277,54 +277,56 @@
 												</label>
 											</div>
 										</div>
-										<div class="form__row form__row_2">
-											<div class="form__column">
-												<label class="form__label">
-													<span class="form__label-title" data-req="*">Имя</span>
-													<input class="form__input input" type="text" name="name" required>
-												</label>
+										<div class="form__main">
+											<div class="form__row form__row_2">
+												<div class="form__column">
+													<label class="form__label" data-changable>
+														<span class="form__label-title" data-req="*">Имя</span>
+														<input class="form__input input" type="text" name="name" required>
+													</label>
+												</div>
+												<div class="form__column">
+													<label class="form__label" data-changable>
+														<span class="form__label-title" data-req="*">Фамилия</span>
+														<input class="form__input input" type="text" name="surname" required>
+													</label>
+												</div>
 											</div>
-											<div class="form__column">
-												<label class="form__label">
-													<span class="form__label-title" data-req="*">Фамилия</span>
-													<input class="form__input input" type="text" name="surname" required>
-												</label>
+											<div class="form__row form__row_2">
+												<div class="form__column">
+													<label class="form__label" data-changable>
+														<span class="form__label-title" data-req="*">Email</span>
+														<input class="form__input input" type="email" name="Email" required>
+													</label>
+												</div>
+												<div class="form__column">
+													<label class="form__label">
+														<span class="form__label-title">Контактный телефон</span>
+														<input class="form__input input" type="tel" name="Phone" data-mask="+7 (999) 999-9999" data-mask-placeholder="_" data-mask-between="2">
+													</label>
+												</div>
 											</div>
-										</div>
-										<div class="form__row form__row_2">
-											<div class="form__column">
-												<label class="form__label">
-													<span class="form__label-title" data-req="*">Email</span>
-													<input class="form__input input" type="email" name="Email" required>
-												</label>
+											<div class="form__row">
+												<div class="form__column">
+													<label class="form__label">
+														<span class="form__label-title" data-req="*">Сообщение</span>
+														<textarea class="form__input input" name="message" required></textarea>
+													</label>
+												</div>
 											</div>
-											<div class="form__column">
-												<label class="form__label">
-													<span class="form__label-title">Контактный телефон</span>
-													<input class="form__input input" type="tel" name="Phone" data-mask="+7 (999) 999-9999" data-mask-placeholder="_" data-mask-between="2">
-												</label>
-											</div>
-										</div>
-										<div class="form__row">
-											<div class="form__column">
-												<label class="form__label">
-													<span class="form__label-title" data-req="*">Сообщение</span>
-													<textarea class="form__input input" name="message" required></textarea>
-												</label>
-											</div>
-										</div>
-										<div class="form__row form__row_2">
-											<div class="form__column">
-												<label class="form__label">
-													<span class="form__label-title" data-req="*">Введите код с картинки</span>
-													<div class="form__test-code">
-														<img src="assets/img/code.jpg" alt="code">
-														<div>
-															<input class="form__input input" type="email" name="Email" required>
+											<div class="form__row form__row_2">
+												<div class="form__column">
+													<label class="form__label">
+														<span class="form__label-title" data-req="*">Введите код с картинки</span>
+														<div class="form__test-code">
+															<img src="assets/img/code.jpg" alt="code">
+															<div>
+																<input class="form__input input" type="text" name="text-code" required>
+															</div>
 														</div>
-													</div>
-												</label>
-												<input type="checkbox" name="agrement" value="1" data-check required data-label="Я согласен на обработку моих персональных данных. *">
+													</label>
+													<input type="checkbox" name="agrement" value="1" data-check required data-label="Я согласен на обработку моих персональных данных. *">
+												</div>
 											</div>
 										</div>
 										<div class="form__actions">

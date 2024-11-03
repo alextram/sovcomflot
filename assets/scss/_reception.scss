@@ -3,6 +3,15 @@
 	&__text {
 		margin: 0px 0px rem(40) 0px;
 	}
+	&__tel {
+		font-weight: 500;
+		color: #000 !important;
+		@media (any-hover: hover) {
+			&:hover {
+				color: var(--color-main) !important;
+			}
+		}
+	}
 	// .reception__form
 	&__form {
 	}

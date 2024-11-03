@@ -258,7 +258,7 @@
 .choices__list--dropdown .choices__list,
 .choices__list[aria-expanded] .choices__list {
 	position: relative;
-	max-height: rem(300);
+	max-height: rem(350);
 	overflow: auto;
 	-webkit-overflow-scrolling: touch;
 	will-change: scroll-position;
