@@ -9755,6 +9755,11 @@ textarea.input {
   font-size: 1rem;
   color: var(--color-main);
   cursor: pointer;
+  -webkit-transition: all 0.3s ease 0s;
+  transition: all 0.3s ease 0s;
+}
+.calendars__arrow._disabled {
+  opacity: 0.5;
 }
 .calendars__arrow_prev {
   scale: -1 1;
