@@ -1,0 +1,37 @@
+.trade {
+	margin: 0px 0px rem(60) 0px;
+	// .trade__charts
+	&__charts {
+	}
+	// .trade__content
+	&__content {
+		font-size: rem(16);
+	}
+	// .trade__section
+	&__section {
+		&._typography {
+			margin: 0px 0px rem(15) 0px;
+		}
+	}
+	// .trade__title
+	&__title {
+		color: var(--color-main);
+		@include adaptiv-value(font-size, 24, 18, 1);
+		font-weight: 500;
+		margin: 0px 0px rem(20) 0px;
+	}
+	// .trade__items
+	&__items {
+		display: grid;
+		gap: rem(20);
+	}
+	// .trade__item
+	&__item {
+		p {
+			font-weight: 300;
+		}
+		a {
+			color: var(--color-main);
+		}
+	}
+}

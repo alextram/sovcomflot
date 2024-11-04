@@ -6335,8 +6335,17 @@ body ._typography table tr td:first-child {
 body ._typography table tr td.empty {
   height: 1.5625rem;
 }
+body ._typography table tr td.green {
+  color: #58B761;
+}
+body ._typography table tr td.red {
+  color: #e43d3d;
+}
 body ._typography table tr.bold td {
   font-weight: 500;
+}
+body ._typography table.numbers td {
+  white-space: nowrap;
 }
 body ._typography table.small th {
   font-size: 0.875rem;
@@ -9656,6 +9665,8 @@ textarea.input {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
@@ -9664,11 +9675,14 @@ textarea.input {
 .counting__label {
   color: var(--color-main);
   font-size: 1rem;
+  white-space: nowrap;
 }
 .counting__links {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
   gap: 0.3125rem;
 }
 .counting__link {
@@ -9825,4 +9839,35 @@ textarea.input {
           align-items: center;
   gap: 0.625rem;
   word-break: break-all;
+}
+
+.trade {
+  margin: 0px 0px 3.75rem 0px;
+}
+.trade__content {
+  font-size: 1rem;
+}
+.trade__section._typography {
+  margin: 0px 0px 0.9375rem 0px;
+}
+.trade__title {
+  color: var(--color-main);
+  font-size: 24px;
+  font-weight: 500;
+  margin: 0px 0px 1.25rem 0px;
+}
+@media (max-width: 1410px) {
+  .trade__title {
+    font-size: calc(18px + 6 * (100vw - 320px) / 1090);
+  }
+}
+.trade__items {
+  display: grid;
+  gap: 1.25rem;
+}
+.trade__item p {
+  font-weight: 300;
+}
+.trade__item a {
+  color: var(--color-main);
 }

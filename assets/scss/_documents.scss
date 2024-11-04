@@ -68,16 +68,19 @@
 
 .counting {
 	display: flex;
+	flex-wrap: wrap;
 	align-items: center;
 	gap: rem(15);
 	// .counting__label
 	&__label {
 		color: var(--color-main);
 		font-size: rem(16);
+		white-space: nowrap;
 	}
 	// .counting__links
 	&__links {
 		display: flex;
+		flex-wrap: wrap;
 		gap: rem(5);
 	}
 	// .counting__link
