@@ -65,14 +65,17 @@ const calendarsSlider = new Swiper('.calendars-slider', {
 	speed: 1500,
 	spaceBetween: 24,
 	slidesPerView: 3,
-	// navigation: {
-	// 	prevEl: '.main-slider__arrow_prev',
-	// 	nextEl: '.main-slider__arrow_next',
-	// 	disabledClass: "_disabled",
-	// },
+	navigation: {
+		prevEl: '.calendars__arrow_prev',
+		nextEl: '.calendars__arrow_next',
+		disabledClass: "_disabled",
+	},
+	breakpoints: {
+		320: { slidesPerView: 1 },
+		768: { slidesPerView: 2 },
+    1051: { slidesPerView: 3 },
+	}
 });
-
-
 
 
 

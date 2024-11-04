@@ -20,11 +20,11 @@ class CustomDatepicker {
 	}
 
 	init() {
+		this.elements.calendar.classList.add('calendar');
+
 		const header = this.buildHeader();
 		const days = this.buildDays();
 		const dates = this.buildDates();
-		
-		this.elements.calendar.classList.add('calendar');
 
 		this.elements.calendar.append(header);
 		this.elements.calendar.append(days);
@@ -35,11 +35,11 @@ class CustomDatepicker {
 		const header = document.createElement('div');
 		header.classList.add('calendar__header');
 
-		const month = document.createElement('div');
+		const month = document.createElement('span');
 		month.classList.add('calendar__month');
 		month.innerText = dateFns.format(this.options.currentDate, 'LLLL', { locale: dateFns.locale.ru });
 
-		const year = document.createElement('div');
+		const year = document.createElement('span');
 		year.classList.add('calendar__year');
 		year.innerText = dateFns.format(this.options.currentDate, 'yyyy');
 		

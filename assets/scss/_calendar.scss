@@ -1,0 +1,123 @@
+.calendars {
+	display: flex;
+	gap: rem(25);
+	margin: 0px 0px rem(40) 0px;
+	@media (max-width: em($md4)) {
+		display: block;
+	}
+	// .calendars__slider
+	&__slider {
+		flex: 1 1 auto;
+		@media (max-width: em($md4)) {
+			margin: 0px 0px rem(15) 0px;
+		}
+	}
+	// .calendars__arrows
+	&__arrows {
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		gap: rem(30);
+		align-self: flex-start;
+	}
+	// .calendars__arrow
+	&__arrow {
+		font-size: rem(16);
+		color: var(--color-main);
+		cursor: pointer;
+		// .calendars__arrow_prev
+		&_prev {
+			scale: -1 1;
+		}
+		// .calendars__arrow_next
+		&_next {
+		}
+	}
+}
+
+//===============================================================
+.calendars-slider {
+	// .calendars-slider__slides
+	&__slides {
+	}
+	// .calendars-slider__slide
+	&__slide {
+	}
+}
+
+//===============================================================
+.events {
+	display: grid;
+	gap: rem(40);
+	// .events__section
+	&__section {
+	}
+	// .events__title
+	&__title {
+		color: var(--color-main);
+		@include adaptiv-value(font-size, 24, 18, 1);
+		font-weight: 500;
+		margin: 0px 0px rem(20) 0px;
+	}
+	// .events__items
+	&__items {
+		display: grid;
+		gap: rem(10);
+	}
+	// .events__item
+	&__item {
+	}
+}
+
+//===============================================================
+.events-item {
+	background: #fff;
+	padding: rem(20) rem(30);
+	border: rem(2) solid #fff;
+	transition: all 0.3s ease 0s;
+	&:hover {
+		border: rem(2) solid #DBE3F6;
+	}
+	// .events-item__head
+	&__head {
+		display: flex;
+		flex-wrap: wrap;
+		gap: rem(20);
+		align-items: center;
+		color: #7f8080;
+		margin: 0px 0px rem(8) 0px;
+	}
+	// .events-item__date-time
+	&__date-time {
+		display: flex;
+		gap: rem(10);
+		span {
+			white-space: nowrap;
+		}
+	}
+	// .events-item__place
+	&__place {
+		display: inline-flex;
+		justify-content: center;
+		align-items: center;
+		gap: rem(5);
+	}
+	// .events-item__main
+	&__main {
+		& > *:last-child {
+			margin: 0 !important;
+		}
+	}
+	// .events-item__title
+	&__title {
+		margin: 0px 0px rem(3) 0px;
+	}
+	// .events-item__link
+	&__link {
+		color: var(--color-main);
+		display: inline-flex;
+		align-items: center;
+		gap: rem(10);
+		word-break: break-all;
+	}
+}

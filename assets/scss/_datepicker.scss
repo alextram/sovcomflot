@@ -1,6 +1,6 @@
 .air-datepicker-cell.-year-.-other-decade-,
 .air-datepicker-cell.-day-.-other-month- {
-	color: var(--adp-color-other-month);
+	color: #DBE3F6;
 }
 .air-datepicker-cell.-year-.-other-decade-:hover,
 .air-datepicker-cell.-day-.-other-month-:hover {
@@ -34,7 +34,7 @@
 	border: none;
 }
 .air-datepicker-cell {
-	border-radius: var(--adp-cell-border-radius);
+	// border-radius: var(--adp-cell-border-radius);
 	box-sizing: border-box;
 	cursor: pointer;
 	display: flex;
@@ -42,12 +42,16 @@
 	align-items: center;
 	justify-content: center;
 	z-index: 1;
+	color: var(--color-main);
+	min-width: rem(38);
+
 }
 .air-datepicker-cell.-focus- {
 	background: var(--adp-cell-background-color-hover);
 }
 .air-datepicker-cell.-current- {
-	color: var(--adp-color-current-date);
+	color: #fff;
+	background: var(--color-main);
 }
 .air-datepicker-cell.-current-.-focus- {
 	color: var(--adp-color);
@@ -71,6 +75,19 @@
 .air-datepicker-cell.-in-range- {
 	background: var(--adp-cell-background-color-in-range);
 	border-radius: 0;
+}
+.air-datepicker-cell.-highlight- {
+	position: relative;
+	&::before {
+		content: '';
+		position: absolute;
+		bottom: 0;
+		left: 50%;
+		width: rem(16);
+		height: rem(2);
+		background: var(--color-second);
+		translate: -50% 0;
+	}
 }
 .air-datepicker-cell.-in-range-:hover {
 	background: var(--adp-cell-background-color-in-range-hover);
@@ -102,6 +119,7 @@
 }
 .air-datepicker-body {
 	transition: all var(--adp-transition-duration) var(--adp-transition-ease);
+	margin: 0 rem(-11);
 }
 .air-datepicker-body.-hidden- {
 	display: none;
@@ -109,17 +127,15 @@
 .air-datepicker-body--day-names {
 	display: grid;
 	grid-template-columns: repeat(7, var(--adp-day-cell-width));
-	margin: 8px 0 3px;
 }
 .air-datepicker-body--day-name {
-	color: var(--adp-day-name-color);
+	color: #9DB7DA;
 	display: flex;
 	align-items: center;
 	justify-content: center;
 	flex: 1;
 	text-align: center;
-	text-transform: uppercase;
-	font-size: 0.8em;
+	font-size: rem(16);
 }
 .air-datepicker-body--day-name.-clickable- {
 	cursor: pointer;
@@ -145,10 +161,8 @@
 .air-datepicker-nav {
 	display: flex;
 	justify-content: space-between;
-	border-bottom: 1px solid var(--adp-border-color-inner);
-	min-height: var(--adp-nav-height);
-	padding: var(--adp-padding);
 	box-sizing: content-box;
+	padding: rem(20) rem(25) rem(15);
 }
 .-only-timepicker- .air-datepicker-nav {
 	display: none;
@@ -175,6 +189,7 @@
 }
 .air-datepicker-nav--action.-disabled- {
 	visibility: hidden;
+	display: none;
 }
 .air-datepicker-nav--action svg {
 	width: 32px;
@@ -187,7 +202,11 @@
 }
 .air-datepicker-nav--title {
 	border-radius: var(--adp-border-radius);
-	padding: 0 8px;
+	pointer-events: none;
+	color: var(--color-main);
+	// font-family: "Fira Sans";
+	font-weight: 500;
+	font-size: rem(18);
 }
 .air-datepicker-nav--title i {
 	font-style: normal;
@@ -264,7 +283,7 @@
 .air-datepicker-time--current-minutes {
 	line-height: 1;
 	font-size: 19px;
-	font-family: "Century Gothic", CenturyGothic, AppleGothic, sans-serif;
+	// font-family: "Century Gothic", CenturyGothic, AppleGothic, sans-serif;
 	position: relative;
 	z-index: 1;
 }
@@ -486,16 +505,15 @@
 	background: var(--adp-background-color);
 	border: 1px solid var(--adp-border-color);
 	box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
-	border-radius: var(--adp-border-radius);
 	box-sizing: content-box;
 	display: grid;
 	grid-template-columns: 1fr;
 	grid-template-rows: repeat(4, max-content);
 	grid-template-areas: var(--adp-grid-areas);
-	font-family: var(--adp-font-family), sans-serif;
+	// font-family: var(--adp-font-family), sans-serif;
 	font-size: var(--adp-font-size);
 	color: var(--adp-color);
-	width: var(--adp-width);
+	width: auto;
 	position: absolute;
 	transition: opacity var(--adp-transition-duration) var(--adp-transition-ease),
 		transform var(--adp-transition-duration) var(--adp-transition-ease);
@@ -661,8 +679,9 @@
 }
 .air-datepicker--content {
 	box-sizing: content-box;
-	padding: var(--adp-padding);
 	grid-area: body;
+	padding: rem(0) rem(25) rem(20);
+	min-height: rem(218);
 }
 .-only-timepicker- .air-datepicker--content {
 	display: none;

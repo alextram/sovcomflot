@@ -1,23 +1,51 @@
 .calendar {
+	border: rem(1) solid #DBE3F6;
+	background: #FFF;
+	padding: rem(20) rem(15);
 	// .calendar__header
 	&__header {
+		color: var(--color-main);
+		font-weight: 500;
+		display: flex;
+		gap: rem(5);
+		padding: 0px rem(10);
+		margin: 0px 0px rem(15) 0px;
 	}
 	// .calendar__month
 	&__month {
+		text-transform: capitalize;
 	}
 	// .calendar__year
 	&__year {
 	}
 	// .calendar__days
 	&__days {
+		display: grid;
+		grid-template-columns: repeat(7, 1fr);
+		margin: 0px 0px rem(10) 0px;
 	}
 	// .calendar__day
 	&__day {
+		text-align: center;
+		font-size: rem(16);
+		padding: rem(3) rem(10);
+		color: #9DB7DA;
 	}
 	// .calendar__dates
 	&__dates {
+		display: grid;
+		grid-template-columns: repeat(7, 1fr);
+		gap: rem(5) rem(0);
 	}
 	// .calendar__date
 	&__date {
+		text-align: center;
+		font-size: rem(16);
+		padding: rem(3) rem(10);
+		color: var(--color-main);
+		&._acitve {
+			background: var(--color-main);
+			color: #fff;
+		}
 	}
 }
