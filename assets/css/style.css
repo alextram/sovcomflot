@@ -9748,6 +9748,7 @@ textarea.input {
 .events {
   display: grid;
   gap: 2.5rem;
+  margin: 0px 0px 1.25rem 0px;
 }
 .events__title {
   color: var(--color-main);
