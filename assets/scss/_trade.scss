@@ -12,6 +12,9 @@
 		&._typography {
 			margin: 0px 0px rem(35) 0px;
 		}
+		b {
+			font-weight: 500;
+		}
 	}
 	// .trade__title
 	&__title {
@@ -32,6 +35,7 @@
 		}
 		a {
 			color: var(--color-main);
+			word-break: break-all;
 		}
 	}
 }

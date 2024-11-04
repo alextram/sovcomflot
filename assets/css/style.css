@@ -9850,6 +9850,9 @@ textarea.input {
 .trade__section._typography {
   margin: 0px 0px 2.1875rem 0px;
 }
+.trade__section b {
+  font-weight: 500;
+}
 .trade__title {
   color: var(--color-main);
   font-size: 24px;
@@ -9870,4 +9873,5 @@ textarea.input {
 }
 .trade__item a {
   color: var(--color-main);
+  word-break: break-all;
 }
