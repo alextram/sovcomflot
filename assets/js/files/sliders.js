@@ -58,6 +58,20 @@ const mainSlider = new Swiper('.main-slider', {
 	},
 });
 
+/**
+ * Инициализация слайдера
+ */
+const calendarsSlider = new Swiper('.calendars-slider', {
+	speed: 1500,
+	spaceBetween: 24,
+	slidesPerView: 3,
+	// navigation: {
+	// 	prevEl: '.main-slider__arrow_prev',
+	// 	nextEl: '.main-slider__arrow_next',
+	// 	disabledClass: "_disabled",
+	// },
+});
+
 
 
 

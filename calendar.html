@@ -217,20 +217,20 @@
 				</div>
 			</div>
 		</header>
-		
+
 		<main class="page">
-			
+
 			<div class="page__inner page-inner">
 
 				<header class="page-inner__head inner-head">
 					<div class="inner-head__top">
 						<div class="inner-head__container _container">
 							<div class="inner-head__top-body">
-								<h1 class="inner-head__title">Общественная приемная</h1>
+								<h1 class="inner-head__title">Календарь инвестора</h1>
 							</div>
 						</div>
 						<figure class="inner-head__bg _ibg">
-							<img src="assets/img/bgs/bg1.jpg" alt="image">
+							<img src="assets/img/bgs/bg3-2.jpg" alt="image">
 						</figure>
 					</div>
 					<div class="inner-head__bottom">
@@ -239,7 +239,8 @@
 								<nav class="breadcrumbs">
 									<ul class="breadcrumbs__list">
 										<li class="breadcrumbs__item"><a class="breadcrumbs__link" href="#" title="Главная">Главная</a></li>
-										<li class="breadcrumbs__item"><span class="breadcrumbs__current" title="Общественная приемная">Общественная приемная</span></li>
+										<li class="breadcrumbs__item"><a class="breadcrumbs__link" href="#" title="Инвесторам и акционерам">Инвесторам и акционерам</a></li>
+										<li class="breadcrumbs__item"><span class="breadcrumbs__current" title="Календарь инвестора">Календарь инвестора</span></li>
 									</ul>
 								</nav>
 							</div>
@@ -250,102 +251,46 @@
 				<section class="page-inner__section inner-section">
 					<div class="inner-section__container _container">
 						<div class="inner-section__body">
-							<div class="inner-section__content reception">
-								<div class="reception__text _typography">
-									<p>Сообщения, направленные в компанию с помощью данной формы, поступают руководителям основных подразделений СКФ по заведованию (в зависимости от выбранной темы).</p>
-									<p>Компания оставляет за собой право не отвечать на запросы, не соответствующие заявленной теме и не относящиеся к деятельности СКФ.</p>
-									<p>Вы также можете связаться с нами по телефону горячей линии <a class="reception__tel" href="tel:+74956604009">+7 (495) 660-4009</a>, а также  любым другим удобным для вас способом. <a href="#">Перейти в раздел «Контакты»</a></p>
-									<p>По вопросам трудоустройства следует обращаться в <a href="#">кадровые офисы</a> группы СКФ.</p>
-								</div>
-								<form class="reception__form form" name="form" action="./" method="post" data-form data-validation data-autocomplete-off>
-									<div class="form__section">
-										<div class="form__row">
-											<div class="form__column">
-												<label class="form__label">
-													<span class="form__label-title" data-req="*">Тема сообщения</span>
-													<select name="theme" data-choice>
-														<option value="" selected disabled>Выберите тему</option>
-														<option value="1">Международное сотрудничество</option>
-														<option value="2">Безопасность мореплавания и защита окружающей среды</option>
-														<option value="3">Инновационное развитие и рацпредложения</option>
-														<option value="4">Отзывы о работе кадровых офисов</option>
-														<option value="5">Подготовка и переподготовка кадров</option>
-														<option value="6">Социальные программы</option>
-														<option value="7">Выявление фактов коррупции</option>
-														<option value="8">Другое</option>
-													</select>
-												</label>
-											</div>
-										</div>
-										<div class="form__main">
-											<div class="form__row form__row_2">
-												<div class="form__column">
-													<label class="form__label" data-changable>
-														<span class="form__label-title" data-req="*">Имя</span>
-														<input class="form__input input" type="text" name="name" required>
-													</label>
-												</div>
-												<div class="form__column">
-													<label class="form__label" data-changable>
-														<span class="form__label-title" data-req="*">Фамилия</span>
-														<input class="form__input input" type="text" name="surname" required>
-													</label>
-												</div>
-											</div>
-											<div class="form__row form__row_2">
-												<div class="form__column">
-													<label class="form__label" data-changable>
-														<span class="form__label-title" data-req="*">Email</span>
-														<input class="form__input input" type="email" name="Email" required>
-													</label>
-												</div>
-												<div class="form__column">
-													<label class="form__label">
-														<span class="form__label-title">Контактный телефон</span>
-														<input class="form__input input" type="tel" name="Phone" data-mask="+7 (999) 999-9999" data-mask-placeholder="_" data-mask-between="2">
-													</label>
-												</div>
-											</div>
-											<div class="form__row">
-												<div class="form__column">
-													<label class="form__label">
-														<span class="form__label-title" data-req="*">Сообщение</span>
-														<textarea class="form__input input" name="message" required></textarea>
-													</label>
-												</div>
-											</div>
-											<div class="form__row form__row_2">
-												<div class="form__column">
-													<label class="form__label">
-														<span class="form__label-title" data-req="*">Введите код с картинки</span>
-														<div class="form__test-code">
-															<img src="assets/img/code.jpg" alt="code">
-															<div>
-																<input class="form__input input" type="text" name="text-code" required>
-															</div>
+							<div class="inner-section__content">
+								<div class="tabs" data-tabs="calendars">
+									<div class="tabs__nav" data-tabs-controls>
+										<button class="tabs__btn" type="button"><span>Предстоящие</span></button>
+										<button class="tabs__btn" type="button"><span>Прошедшие события</span></button>
+									</div>
+									<div class="tabs__content" data-tabs-container>
+										<div class="tabs__panel">
+											<div class="calendars">
+												<div class="calendars-slider" data-swiper>
+													<div class="calendars-slider__slides">
+														<div class="calendars-slider__slide">
+															<div id="datepicker-1"></div>
 														</div>
-													</label>
-													<input type="checkbox" name="agrement" value="1" data-check required data-label="Я согласен на обработку моих персональных данных. *">
+														<div class="calendars-slider__slide">
+															<div id="datepicker-2"></div>
+														</div>
+														<div class="calendars-slider__slide">
+															<div id="datepicker-3"></div>
+														</div>
+														<div class="calendars-slider__slide">
+															<div id="datepicker-4"></div>
+														</div>
+													</div>
+													<div class="calendars-slider__arrows">
+														<div class="calendars-slider__arrow slider__arrow_prev"></div>
+														<div class="calendars-slider__arrow slider__arrow_next"></div>
+													</div>
 												</div>
 											</div>
 										</div>
-										<div class="form__actions">
-											<button class="form__btn btn btn_arrow" type="submit">Отправить сообщение</button>
+										<div class="tabs__panel">
+											Lorem, ipsum dolor sit amet consectetur adipisicing elit.
 										</div>
 									</div>
-									<div class="form__section">
-										<div class="form__message">* – поля обязательные к заполнению</div>
-									</div>
-								</form>
+								</div>
 							</div>
-							<div class="page-inner__section">
-								<div class="white-blocks">
-									<div class="blue-block">
-										<a class="more-link" href="#">Первая ссылка</a>
-									</div>
-									<div class="blue-block">
-										<a class="more-link" href="#">Вторая ссылка</a>
-									</div>
+							<div class="white-blocks">
+								<div class="blue-block">
+									<a class="more-link" href="#">Контакты для инвестора</a>
 								</div>
 							</div>
 						</div>
@@ -354,7 +299,7 @@
 			</div>
 
 		</main>
-		
+
 		<footer class="footer">
 			<div class="footer__container _container">
 				<div class="footer__body">
@@ -386,18 +331,19 @@
 
 
 	<button class="move-up _icon-arrow-3" type="button" data-move-up data-goto="wrapper"></button>
-	
+
 
 	<!-- services -->
 	<script src="https://www.google.com/recaptcha/api.js?render=<reCAPTCHA_site_key>&badge=bottomleft"></script>
 	<script src="https://api-maps.yandex.ru/2.1/?lang=ru_RU&amp;apikey=<ваш API-ключ>"></script>
-	
+
 	<!-- libs -->
 	<script src="assets/js/libs/lazyload.min.js"></script>
 	<script src="assets/js/libs/choices.min.js"></script>
 	<script src="assets/js/libs/nouislider.min.js"></script>
 	<script src="assets/js/libs/inputmask.min.js"></script>
 	<script src="assets/js/libs/justvalidate.min.js"></script>
+	<script src="assets/js/libs/date-fns.min.js"></script>
 	<script src="assets/js/libs/datepicker.min.js"></script>
 	<script src="assets/js/libs/swiper.min.js"></script>
 	<script src="assets/js/libs/lightgallery.min.js"></script>
@@ -410,6 +356,7 @@
 	<script src="assets/js/plugins/tabs.js"></script>
 	<script src="assets/js/plugins/spoiler.js"></script>
 	<script src="assets/js/plugins/rating.js"></script>
+	<script src="assets/js/plugins/custom-datepicker.js"></script>
 
 	<!-- files -->
 	<script src="assets/js/files/functions.js"></script>

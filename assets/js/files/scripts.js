@@ -2,7 +2,7 @@
 new Adapt();
 
 // Инициализация модального окна
-const modal = new Modal({animation: 'fadeIn'});
+const modal = new Modal({ animation: 'fadeIn' });
 
 // Инициализация главного меню
 new Menu('main-menu', { alwaysClick: true });
@@ -12,6 +12,9 @@ new Tabs('main-media');
 
 // Инициализация табов дивидендов
 new Tabs('dividends');
+
+// Инициализация табов календарей
+new Tabs('calendars');
 
 // Инициализация cпойлера в пресс-релизе
 new Spoiler('press-spoiler');
@@ -52,3 +55,84 @@ themeSelector?.addEventListener('change', (event) => {
 
 	validateForm(form);
 });
+
+
+
+
+
+// // Инициализация календарей
+new CustomDatepicker('#datepicker-1');
+
+
+
+// new AirDatepicker('#datepicker-1', {
+// 	inline: true,
+// 	startDate: dateFns.startOfMonth(dateFns.addMonths(new Date(), 0)),
+// 	minDate: dateFns.startOfMonth(dateFns.addMonths(new Date(), 0)),
+// 	maxDate: dateFns.endOfMonth(dateFns.addMonths(new Date(), 0)),
+// 	navTitles: {
+// 		days: 'MMMM yyyy',
+// 	},
+// 	onRenderCell({ date, cellType }) {
+// 		// Можно здесь отметить нужные дни, например, добавить класс для конкретных дат
+// 		if (cellType === 'day' && [6, 27].includes(date.getDate())) {
+// 			return {
+// 				classes: 'highlight'
+// 			};
+// 		}
+// 	}
+// });
+
+// new AirDatepicker('#datepicker-2', {
+// 	inline: true,
+// 	startDate: dateFns.startOfMonth(dateFns.addMonths(new Date(), 1)),
+// 	minDate: dateFns.startOfMonth(dateFns.addMonths(new Date(), 1)),
+// 	maxDate: dateFns.endOfMonth(dateFns.addMonths(new Date(), 1)),
+// 	navTitles: {
+// 		days: 'MMMM yyyy',
+// 	},
+// 	onRenderCell({ date, cellType }) {
+// 		// Можно здесь отметить нужные дни, например, добавить класс для конкретных дат
+// 		if (cellType === 'day' && [13].includes(date.getDate())) {
+// 			return {
+// 				classes: 'highlight'
+// 			};
+// 		}
+// 	}
+// });
+
+// new AirDatepicker('#datepicker-3', {
+// 	inline: true,
+// 	startDate: dateFns.startOfMonth(dateFns.addMonths(new Date(), 2)),
+// 	minDate: dateFns.startOfMonth(dateFns.addMonths(new Date(), 2)),
+// 	maxDate: dateFns.endOfMonth(dateFns.addMonths(new Date(), 2)),
+// 	navTitles: {
+// 		days: 'MMMM yyyy',
+// 	},
+// 	onRenderCell({ date, cellType }) {
+// 		// Можно здесь отметить нужные дни, например, добавить класс для конкретных дат
+// 		if (cellType === 'day' && [18, 29].includes(date.getDate())) {
+// 			return {
+// 				classes: 'highlight'
+// 			};
+// 		}
+// 	}
+// });
+
+// new AirDatepicker('#datepicker-4', {
+// 	inline: true,
+// 	startDate: dateFns.startOfMonth(dateFns.addMonths(new Date(), 3)),
+// 	minDate: dateFns.startOfMonth(dateFns.addMonths(new Date(), 3)),
+// 	maxDate: dateFns.endOfMonth(dateFns.addMonths(new Date(), 3)),
+// 	navTitles: {
+// 		days: 'MMMM yyyy',
+// 	},
+// 	onRenderCell({ date, cellType }) {
+// 		// Можно здесь отметить нужные дни, например, добавить класс для конкретных дат
+// 		if (cellType === 'day' && [].includes(date.getDate())) {
+// 			return {
+// 				classes: 'highlight'
+// 			};
+// 		}
+// 	}
+// });
