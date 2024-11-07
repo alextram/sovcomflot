@@ -1,6 +1,15 @@
 .footer {
 	background: var(--color-main);
 	color: #fff;
+	a {
+		color: #fff !important;
+		@media (any-hover: hover) {
+			color: #fff !important;
+			&:hover {
+				opacity: 0.8;
+			}
+		}
+	}
 	// .footer__container
 	&__container {
 	}
@@ -59,7 +68,27 @@
 	}
 	// .footer-menu__link
 	&__link {
+		position: relative;
 		color: #fff;
 		white-space: nowrap;
+		&::after {
+			content: '';
+			position: absolute;
+			width: 100%;
+			height: rem(2);
+			background: #fff;
+			opacity: 0.8;
+			bottom: rem(-5);
+			left: 0;
+			opacity: 0;
+			transition: all 0.3s ease 0s;
+		}
+		@media (any-hover: hover) {
+			&:hover {
+				&::after {
+					opacity: 1;
+				}
+			}
+		}
 	}
 }

@@ -192,6 +192,11 @@
 			color: #fff;
 			border: rem(1) solid var(--color-second);
 		}
+		@media (any-hover: hover) {
+			&:hover {
+				color: var(--color-main);
+			}
+		}
 		// .pagging__arrow_prev
 		&_prev {
 			scale: -1 1;
@@ -226,6 +231,11 @@
 			color: #fff;
 			border: rem(1) solid var(--color-second);
 		}
+		@media (any-hover: hover) {
+			&:hover {
+				color: var(--color-main);
+			}
+		}
 	}
 }
 
@@ -239,6 +249,9 @@
 	border-radius: 50%;
 	background-color: #9DB7DA;
 	position: fixed;
+	display: flex;
+	justify-content: center;
+	align-items: center;
 	bottom: rem(20);
 	right: rem(20);
 	color: #ffffff;
@@ -249,7 +262,7 @@
 	font-size: rem(23);
 	@media (any-hover: hover) {
 		&:hover {
-			background-color: var(--color-main-dark);
+			background-color: #7da7e0;
 		}
 	}
 	&._scroll {
@@ -394,10 +407,9 @@
 	&::before {
 		content: '';
 		position: absolute;
-		top: 50%;
+		top: rem(3);
 		left: 0;
-		height: 70%;
-		translate: 0 -50%;
+		height: rem(20);
 		width: rem(3);
 		background: var(--color-second);
 	}

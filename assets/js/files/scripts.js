@@ -53,17 +53,40 @@ themeSelector?.addEventListener('change', (event) => {
 
 	const form = themeSelector.closest('form');
 
+	const reqInputs = form.querySelectorAll('input[required], textarea[required]');
+	const btn = form.querySelector('button[type="submit"]');
+
+	reqInputs.forEach(input => {
+		input.oninput = () => {
+			let isDisabled = false;
+
+			reqInputs.forEach(reqInput => {
+				if (!reqInput.hasAttribute('required')) return;
+
+				if (reqInput.type !== 'checkbox') {
+					if (!reqInput.value) isDisabled = true;
+				}
+				
+				if (reqInput.type === 'checkbox') {
+					if (!reqInput.checked) isDisabled = true;
+				}
+			});
+
+			console.log('isDisabled', isDisabled);
+			isDisabled ? btn.setAttribute('disabled', '') : btn.removeAttribute('disabled');
+		};
+	});
+
 	validateForm(form);
+
+	btn.setAttribute('disabled', '');
 });
 
-
-
+//===============================================================
 
 
 // // // Инициализация календарей
 // new CustomDatepicker('[data-datepicker="1"]');
-
-
 
 new AirDatepicker('[data-datepicker="1"]', {
 	inline: true,
@@ -156,3 +179,6 @@ new AirDatepicker('[data-datepicker="4"]', {
 		return params;
 	}
 });
+
+
+//===============================================================

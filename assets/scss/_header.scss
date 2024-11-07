@@ -93,6 +93,12 @@
 		&::before {
 			font-size: rem(16);
 		}
+		@media (any-hover: hover) {
+			&:hover {
+				color: #fff;
+				opacity: 0.8;
+			}
+		}
 		@media (max-width: em($md2)) {
 			display: none;
 		}
@@ -119,6 +125,12 @@
 		}
 
 		.socials__social {
+			@media (any-hover: hover) {
+				&:hover {
+					color: #fff;
+					opacity: 0.8;
+				}
+			}
 			@media (max-width: em($md2)) {
 				color: var(--color-main);
 				&:nth-child(1) {
@@ -148,9 +160,32 @@
 	}
 	// .header-top-menu__link
 	&__link {
+		position: relative;
 		font-size: rem(12);
 		color: #fff;
 		white-space: nowrap;
+		@media (min-width: em($md2+1)) {
+			&::after {
+				content: '';
+				position: absolute;
+				width: 100%;
+				height: rem(2);
+				background: #fff;
+				bottom: rem(-5);
+				left: 0;
+				opacity: 0;
+				transition: all 0.3s ease 0s;
+			}
+			@media (any-hover: hover) {
+				&:hover {
+					color: #fff;
+					opacity: 0.8;
+					&::after {
+						opacity: 1;
+					}
+				}
+			}
+		}
 		@media (max-width: em($md2)) {
 			width: 100%;
 			font-size: rem(18);
@@ -308,6 +343,28 @@
 		// font-weight: 500;
 		line-height: 24px;
 		transition: all 0.3s ease 0s;
+		@media (min-width: em($md2+1)) {
+			&::after {
+				content: '';
+				position: absolute;
+				width: 100%;
+				height: rem(2);
+				background: #fff;
+				bottom: rem(-5);
+				left: 0;
+				opacity: 0;
+				transition: all 0.3s ease 0s;
+			}
+			@media (any-hover: hover) {
+				&:hover {
+					color: #fff !important;
+					opacity: 0.8;
+					&::after {
+						opacity: 1;
+					}
+				}
+			}
+		}
 		&._hover {
 			&::after {
 				opacity: 1;
@@ -635,6 +692,7 @@
 	}
 	// .search__search-btn
 	&__search-btn {
+		position: relative;
 		font-size: rem(16);
 		display: flex;
 		flex-direction: row-reverse;
@@ -642,9 +700,22 @@
 		gap: rem(10);
 		color: #fff;
 		transition: all 0.3s ease 0s;
+		&::after {
+			content: '';
+			position: absolute;
+			width: 100%;
+			height: rem(2);
+			background: #fff;
+			bottom: rem(-5);
+			left: 0;
+			opacity: 0;
+			transition: all 0.3s ease 0s;
+		}
 		@media (any-hover: hover) {
 			&:hover {
-				color: var(--color-second);
+				&::after {
+					opacity: 1;
+				}
 			}
 		}
 
@@ -729,8 +800,7 @@
 		}
 		@media (any-hover: hover) {
 			&:hover {
-				border: rem(1) solid var(--color-second);
-				background: var(--color-second);
+				background: #33609c;
 				color: #fff;
 			}
 		}

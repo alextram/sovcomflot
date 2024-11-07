@@ -110,6 +110,12 @@
 		color: var(--color-main);
 		font-size: rem(18);
 		text-align: left;
+		transition: all 0.3s ease 0s;
+		@media (any-hover: hover) {
+			&:hover {
+				color: var(--color-second);
+			}
+		}
 		&::before {
 			rotate: 90deg;
 			transition: all 0.3s ease 0s;
@@ -167,6 +173,7 @@
 	}
 	// .press-gallery__image-wrapper
 	&__image-wrapper {
+		overflow: hidden;
 		padding: 0px 0px prc(296, 503) 0px;
 		position: relative;
 		&::before {
@@ -177,6 +184,24 @@
 			width: rem(47);
 			height: rem(47);
 			z-index: 1;
+			transition: all 0.3s ease 0s;
+		}
+
+		@media (any-hover: hover) {
+			&:hover::before {
+				filter: hue-rotate(125deg);
+			}
+		}
+
+		img {
+			transition: all 0.5s ease 0s;
+			scale: 1.001;
+		}
+
+		@media (any-hover: hover) {
+			.press-gallery__item:hover & img {
+				scale: 1.05;
+			}
 		}
 	}
 	// .press-gallery__text
