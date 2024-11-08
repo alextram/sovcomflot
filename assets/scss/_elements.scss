@@ -149,7 +149,7 @@
 		font-size: rem(14);
 		@media (any-hover: hover) {
 			&:hover {
-				color: var(--color-green);
+				color: var(--color-second);
 			}
 		}
 	}
@@ -290,7 +290,7 @@
 	// .socials__social
 	&__social {
 		color: #fff;
-		font-size: rem(22);
+		font-size: rem(26);
 		&._icon-vk {
 			font-size: rem(18);
 		}

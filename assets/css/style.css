@@ -7120,7 +7120,7 @@ textarea.input {
 }
 @media (any-hover: hover) {
   .breadcrumbs__link:hover {
-    color: var(--color-green);
+    color: var(--color-second);
   }
 }
 .breadcrumbs__current {
@@ -7278,7 +7278,7 @@ textarea.input {
 }
 .socials__social {
   color: #fff;
-  font-size: 1.375rem;
+  font-size: 1.625rem;
 }
 .socials__social._icon-vk {
   font-size: 1.125rem;
