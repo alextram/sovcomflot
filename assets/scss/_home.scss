@@ -180,12 +180,13 @@
 		font-weight: 500;
 		line-height: prc(26, 18);
 		transition: all 0.3s ease 0s;
+		color: var(--color-main);
 		&._active {
-			color: var(--color-main);
+			color: var(--color-second);
 		}
 		@media (any-hover: hover) {
 			&:hover {
-				color: var(--color-main);
+				color: var(--color-second);
 			}
 		}
 	}

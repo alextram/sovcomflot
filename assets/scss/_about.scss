@@ -121,6 +121,7 @@
 			transition: all 0.3s ease 0s;
 		}
 		&._active {
+			color: var(--color-second);
 			&::before {
 				scale: -1 1;
 			}
@@ -242,7 +243,7 @@
 		span {
 			display: inline-block;
 			border-bottom: rem(1) dashed #7d98c2;
-			transition: all 0.3s ease 0s;
+			transition: all 0.1s ease 0s;
 		}
 		@media (any-hover: hover) {
 			&:hover {
@@ -291,10 +292,15 @@
 		span {
 			display: inline-block;
 			border-bottom: rem(1) dashed #7d98c2;
-			transition: all 0.3s ease 0s;
+			transition: all 0.1s ease 0s;
 		}
 		&::before {
 			font-size: rem(6);
+		}
+		@media (any-hover: hover) {
+			&:hover {
+				color: var(--color-second);
+			}
 		}
 	}
 	// .press-archive__body

@@ -61,7 +61,7 @@
   font-style: normal;
   font-display: block;
 }
-.back-link::before, .more-link::after, .breadcrumbs__item:not(:last-child)::after, .btn_arrow:before, [class^=_icon-]:before,
+.card__title:after, .hov-arrow:after, .back-link::before, .more-link::after, .breadcrumbs__item:not(:last-child)::after, .btn_arrow:before, [class^=_icon-]:before,
 [class*=" _icon-"]:before, [class^=_system-icon]:before,
 [class*=" _system-icon"]:before {
   font-style: normal;
@@ -2122,21 +2122,6 @@ swiper-container .swiper-notification {
 
 .air-datepicker-cell.-range-to-.-range-from- {
   border-radius: var(--adp-cell-border-radius);
-}
-
-.air-datepicker-cell.-selected- {
-  color: #fff;
-  border: none;
-  background: var(--adp-cell-background-color-selected);
-}
-
-.air-datepicker-cell.-selected-.-current- {
-  color: #fff;
-  background: var(--adp-cell-background-color-selected);
-}
-
-.air-datepicker-cell.-selected-.-focus- {
-  background: var(--adp-cell-background-color-selected-hover);
 }
 
 .air-datepicker-body {
@@ -7213,6 +7198,11 @@ textarea.input {
   border: 0.0625rem solid var(--color-second);
 }
 @media (any-hover: hover) {
+  .pagging__link._active:hover {
+    color: #fff;
+  }
+}
+@media (any-hover: hover) {
   .pagging__link:hover {
     color: var(--color-main);
   }
@@ -7469,6 +7459,11 @@ textarea.input {
           align-items: center;
   text-align: left;
   gap: 1.25rem;
+  -webkit-transition: all 0.3s ease 0s;
+  transition: all 0.3s ease 0s;
+}
+.spoiler__control._active {
+  color: var(--color-second);
 }
 .spoiler__control._active::before {
   rotate: 180deg;
@@ -7481,6 +7476,11 @@ textarea.input {
 @media (max-width: 47.9375em) {
   .spoiler__control {
     padding: 0.875rem;
+  }
+}
+@media (any-hover: hover) {
+  .spoiler__control:hover {
+    color: var(--color-second);
   }
 }
 .spoiler__content {
@@ -7546,6 +7546,23 @@ textarea.input {
 }
 .rattings-docblock {
   margin: 3.75rem 0px;
+}
+
+.hov-arrow:after {
+  content: "\e900";
+  font-family: "icons";
+  font-size: 1.25rem;
+  padding: 0px 0px 0px 1.25rem;
+  opacity: 0;
+  visibility: hidden;
+  -webkit-transition: all 0.3s ease 0s;
+  transition: all 0.3s ease 0s;
+}
+@media (any-hover: hover) {
+  .hov-arrow:hover::after {
+    opacity: 1;
+    visibility: visible;
+  }
 }
 
 .header {
@@ -7646,7 +7663,7 @@ textarea.input {
 @media (any-hover: hover) {
   .header-top__enter:hover {
     color: #fff;
-    opacity: 0.8;
+    opacity: 0.7;
   }
 }
 @media (max-width: 61.9375em) {
@@ -7677,7 +7694,7 @@ textarea.input {
 @media (any-hover: hover) {
   .header-top__socials .socials__social:hover {
     color: #fff;
-    opacity: 0.8;
+    opacity: 0.7;
   }
 }
 @media (max-width: 61.9375em) {
@@ -7727,7 +7744,7 @@ textarea.input {
 @media (min-width: 62em) and (any-hover: hover) {
   .header-top-menu__link:hover {
     color: #fff;
-    opacity: 0.8;
+    opacity: 0.7;
   }
   .header-top-menu__link:hover::after {
     opacity: 1;
@@ -7931,7 +7948,7 @@ textarea.input {
 @media (min-width: 62em) and (any-hover: hover) {
   .menu__control:hover {
     color: #fff !important;
-    opacity: 0.8;
+    opacity: 0.7;
   }
   .menu__control:hover::after {
     opacity: 1;
@@ -8337,20 +8354,32 @@ textarea.input {
   opacity: 1;
   visibility: visible;
 }
+.search-form._is-focus::before {
+  opacity: 0;
+}
+.search-form::before {
+  content: "Оставьте запрос";
+  color: #fff;
+  position: absolute;
+  top: 0.9375rem;
+  left: 0.9375rem;
+  opacity: 0.8;
+  pointer-events: none;
+}
 .search-form__label {
   position: absolute;
   left: 0;
-  top: 50%;
-  translate: 0 -50%;
+  top: -3.125rem;
   color: #fff;
+  font-size: 1.5rem;
 }
 .search-form__input {
   background: transparent;
   border: none;
   border-radius: 0;
   border-bottom: 0.125rem solid #fff;
-  color: #fff;
-  padding: 0px 3.125rem 0px 4.375rem;
+  color: rgba(255, 255, 255, 0.8);
+  padding: 0px 3.125rem 0px 0.9375rem;
 }
 .search-form__input:focus {
   border: none;
@@ -8360,8 +8389,18 @@ textarea.input {
   color: #fff;
   position: absolute;
   top: 50%;
-  right: 0.625rem;
+  right: -0.625rem;
   translate: 0 -50%;
+  padding: 1.25rem;
+}
+.search-form__close {
+  position: absolute;
+  top: -3.125rem;
+  right: -1.875rem;
+  font-size: 1.125rem;
+  color: #fff;
+  pointer-events: none;
+  cursor: pointer;
 }
 
 .languages {
@@ -8400,7 +8439,7 @@ textarea.input {
 }
 @media (any-hover: hover) {
   .languages__language:hover {
-    background: #33609c;
+    background: rgba(255, 255, 255, 0.2);
     color: #fff;
   }
 }
@@ -8446,7 +8485,7 @@ textarea.input {
     color: #fff !important;
   }
   .footer a:hover {
-    opacity: 0.8;
+    opacity: 0.7;
   }
 }
 .footer__body {
@@ -8516,7 +8555,6 @@ textarea.input {
   width: 100%;
   height: 0.125rem;
   background: #fff;
-  opacity: 0.8;
   bottom: -0.3125rem;
   left: 0;
   opacity: 0;
@@ -8525,7 +8563,7 @@ textarea.input {
 }
 @media (any-hover: hover) {
   .footer-menu__link:hover::after {
-    opacity: 1;
+    opacity: 0.7;
   }
 }
 
@@ -8726,13 +8764,14 @@ textarea.input {
   line-height: 144.4444444444%;
   -webkit-transition: all 0.3s ease 0s;
   transition: all 0.3s ease 0s;
+  color: var(--color-main);
 }
 .main-media__btn._active {
-  color: var(--color-main);
+  color: var(--color-second);
 }
 @media (any-hover: hover) {
   .main-media__btn:hover {
-    color: var(--color-main);
+    color: var(--color-second);
   }
 }
 .main-media__block {
@@ -8842,8 +8881,24 @@ textarea.input {
   width: 100%;
   padding: 1.5rem;
 }
-.card__title a {
+.card__title {
   color: #fff;
+}
+.card__title:after {
+  content: "\e900";
+  font-family: "icons";
+  font-size: 1.25rem;
+  padding: 0px 0px 0px 1.25rem;
+  opacity: 0;
+  visibility: hidden;
+  -webkit-transition: all 0.3s ease 0s;
+  transition: all 0.3s ease 0s;
+}
+@media (any-hover: hover) {
+  .card:hover .card__title::after {
+    opacity: 1;
+    visibility: visible;
+  }
 }
 .card__img {
   overflow: hidden;
@@ -9179,6 +9234,12 @@ textarea.input {
 .results-info__file-data {
   color: #9C9C9C;
 }
+@media (any-hover: hover) {
+  .results-info__btn:hover {
+    background-color: var(--color-second);
+  }
+}
+
 .info-row-2 {
   display: grid;
   gap: 1.5rem;
@@ -9218,11 +9279,8 @@ textarea.input {
   display: grid;
   gap: 0.625rem;
 }
-.image-block__title {
-  color: #fff;
-}
 .image-block__title a {
-  color: #fff;
+  color: #fff !important;
 }
 .image-block__info {
   font-size: 24px;
@@ -9363,7 +9421,7 @@ textarea.input {
   }
 }
 .actions-chart__title a {
-  color: #fff;
+  color: #fff !important;
 }
 .actions-chart__main {
   display: grid;
@@ -9528,6 +9586,9 @@ textarea.input {
   -webkit-transition: all 0.3s ease 0s;
   transition: all 0.3s ease 0s;
 }
+.press-spoiler__control._active {
+  color: var(--color-second);
+}
 .press-spoiler__control._active::before {
   scale: -1 1;
 }
@@ -9650,8 +9711,8 @@ textarea.input {
 .press-nav__link span {
   display: inline-block;
   border-bottom: 0.0625rem dashed #7d98c2;
-  -webkit-transition: all 0.3s ease 0s;
-  transition: all 0.3s ease 0s;
+  -webkit-transition: all 0.1s ease 0s;
+  transition: all 0.1s ease 0s;
 }
 @media (any-hover: hover) {
   .press-nav__link:hover span {
@@ -9703,11 +9764,16 @@ textarea.input {
 .press-archive__control span {
   display: inline-block;
   border-bottom: 0.0625rem dashed #7d98c2;
-  -webkit-transition: all 0.3s ease 0s;
-  transition: all 0.3s ease 0s;
+  -webkit-transition: all 0.1s ease 0s;
+  transition: all 0.1s ease 0s;
 }
 .press-archive__control::before {
   font-size: 0.375rem;
+}
+@media (any-hover: hover) {
+  .press-archive__control:hover {
+    color: var(--color-second);
+  }
 }
 .press-archive__body {
   position: absolute;
@@ -9773,6 +9839,11 @@ textarea.input {
 }
 .vacancy__link {
   margin: 0px 0px 0.625rem 0px;
+}
+@media (any-hover: hover) {
+  .vacancy__link:hover {
+    background-color: var(--color-second);
+  }
 }
 
 .doc-list {

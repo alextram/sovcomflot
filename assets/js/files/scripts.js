@@ -72,7 +72,6 @@ themeSelector?.addEventListener('change', (event) => {
 				}
 			});
 
-			console.log('isDisabled', isDisabled);
 			isDisabled ? btn.setAttribute('disabled', '') : btn.removeAttribute('disabled');
 		};
 	});
@@ -182,3 +181,20 @@ new AirDatepicker('[data-datepicker="4"]', {
 
 
 //===============================================================
+const input = document.querySelector('.search-form__input');
+
+input?.addEventListener('focus', () => {
+	if (input.value) return;
+	
+	const form = input.closest('form');
+	
+	form.classList.add('_is-focus');
+});
+
+input?.addEventListener('blur', () => {
+	if (input.value) return;
+
+	const form = input.closest('form');
+	
+	form.classList.remove('_is-focus');
+});

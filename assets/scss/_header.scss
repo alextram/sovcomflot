@@ -96,7 +96,7 @@
 		@media (any-hover: hover) {
 			&:hover {
 				color: #fff;
-				opacity: 0.8;
+				opacity: 0.7;
 			}
 		}
 		@media (max-width: em($md2)) {
@@ -128,7 +128,7 @@
 			@media (any-hover: hover) {
 				&:hover {
 					color: #fff;
-					opacity: 0.8;
+					opacity: 0.7;
 				}
 			}
 			@media (max-width: em($md2)) {
@@ -179,7 +179,7 @@
 			@media (any-hover: hover) {
 				&:hover {
 					color: #fff;
-					opacity: 0.8;
+					opacity: 0.7;
 					&::after {
 						opacity: 1;
 					}
@@ -358,7 +358,7 @@
 			@media (any-hover: hover) {
 				&:hover {
 					color: #fff !important;
-					opacity: 0.8;
+					opacity: 0.7;
 					&::after {
 						opacity: 1;
 					}
@@ -746,13 +746,27 @@
 		opacity: 1;
 		visibility: visible;
 	}
+	&._is-focus {
+		&::before {
+			opacity: 0;
+		}
+	}
+	&::before {
+		content: 'Оставьте запрос';
+		color: #fff;
+		position: absolute;
+		top: rem(15);
+		left: rem(15);
+		opacity: 0.8;
+		pointer-events: none;
+	}
 	// .search-form__label
 	&__label {
 		position: absolute;
 		left: 0;
-		top: 50%;
-		translate: 0 -50%;
+		top: rem(-50);
 		color: #fff;
+		font-size: rem(24);
 	}
 	// .search-form__input
 	&__input {
@@ -760,8 +774,8 @@
 		border: none;
 		border-radius: 0;
 		border-bottom: rem(2) solid #fff;
-		color: #fff;
-		padding: 0px rem(50) 0px rem(70);
+		color: rgba(255, 255, 255, 0.8);
+		padding: 0px rem(50) 0px rem(15);
 		&:focus {
 			border: none;
 			border-bottom: rem(2) solid var(--color-focus);
@@ -772,8 +786,19 @@
 		color: #fff;
 		position: absolute;
 		top: 50%;
-		right: rem(10);
-		translate: 0 -50%
+		right: rem(-10);
+		translate: 0 -50%;
+		padding: rem(20);
+	}
+	// .search-form__close
+	&__close {
+		position: absolute;
+		top: rem(-50);
+		right: rem(-30);
+		font-size: rem(18);
+		color: #fff;
+		pointer-events: none;
+		cursor: pointer;
 	}
 }
 
@@ -800,7 +825,7 @@
 		}
 		@media (any-hover: hover) {
 			&:hover {
-				background: #33609c;
+				background: rgba(255, 255, 255, 0.2);
 				color: #fff;
 			}
 		}

@@ -230,6 +230,11 @@
 			background: var(--color-second);
 			color: #fff;
 			border: rem(1) solid var(--color-second);
+			@media (any-hover: hover) {
+				&:hover {
+					color: #fff;
+				}
+			}
 		}
 		@media (any-hover: hover) {
 			&:hover {
@@ -469,7 +474,9 @@
 		align-items: center;
 		text-align: left;
 		gap: rem(20);
+		transition: all 0.3s ease 0s;
 		&._active {
+			color: var(--color-second);
 			&::before {
 				rotate: 180deg;
 			}
@@ -480,6 +487,11 @@
 		}
 		@media (max-width: em($md3)) {
 			padding: rem(14);
+		}
+		@media (any-hover: hover) {
+			&:hover {
+				color: var(--color-second);
+			}
 		}
 	}
 	// .spoiler__container
@@ -548,4 +560,26 @@
 //===============================================================
 .rattings-docblock {
 	margin: rem(60) 0px;
+}
+
+//===============================================================
+.hov-arrow {
+	&:after {
+		content: "\e900";
+		font-family: "icons";
+		@extend %ic;
+		font-size: rem(20);
+		padding: 0px 0px 0px rem(20);
+		opacity: 0;
+		visibility: hidden;
+		transition: all 0.3s ease 0s;
+	}
+	@media (any-hover: hover) {
+		&:hover {
+			&::after {
+				opacity: 1;
+				visibility: visible;
+			}
+		}
+	}
 }

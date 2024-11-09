@@ -68,6 +68,11 @@
 	}
 	// .results-info__btn
 	&__btn {
+		@media (any-hover: hover) {
+			&:hover {
+				background-color: var(--color-second);
+			}
+		}
 	}
 }
 
@@ -111,9 +116,8 @@
 	}
 	// .image-block__title
 	&__title {
-		color: #fff;
 		a {
-			color: #fff;
+			color: #fff !important;
 		}
 	}
 	// .image-block__info
@@ -255,7 +259,7 @@
 	&__title {
 		@include adaptiv-value(font-size, 24, 20, 1);
 		a {
-			color: #fff;
+			color: #fff !important;
 		}
 	}
 	// .actions-chart__main
