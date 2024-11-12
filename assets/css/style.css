@@ -61,7 +61,7 @@
   font-style: normal;
   font-display: block;
 }
-.card__title:after, .hov-arrow:after, .back-link::before, .more-link::after, .breadcrumbs__item:not(:last-child)::after, .btn_arrow:before, [class^=_icon-]:before,
+.image-block__title:after, .card__title:after, .hov-arrow:after, .back-link::before, .more-link::after, .breadcrumbs__item:not(:last-child)::after, .btn_arrow:before, [class^=_icon-]:before,
 [class*=" _icon-"]:before, [class^=_system-icon]:before,
 [class*=" _system-icon"]:before {
   font-style: normal;
@@ -7160,7 +7160,7 @@ textarea.input {
 }
 @media (any-hover: hover) {
   .pagging__arrow:hover {
-    color: var(--color-main);
+    color: var(--color-second);
   }
 }
 .pagging__arrow_prev {
@@ -7204,7 +7204,7 @@ textarea.input {
 }
 @media (any-hover: hover) {
   .pagging__link:hover {
-    color: var(--color-main);
+    color: var(--color-second);
   }
 }
 
@@ -8321,8 +8321,11 @@ textarea.input {
   transition: all 0.3s ease 0s;
 }
 @media (any-hover: hover) {
+  .search__search-btn:hover {
+    opacity: 0.8;
+  }
   .search__search-btn:hover::after {
-    opacity: 1;
+    opacity: 0.8;
   }
 }
 @media (max-width: 75em) {
@@ -9010,6 +9013,7 @@ textarea.input {
   position: absolute;
   top: 1.125rem;
   left: 1.125rem;
+  z-index: 1;
 }
 .new-card__content {
   position: absolute;
@@ -9017,6 +9021,7 @@ textarea.input {
   left: 0;
   width: 100%;
   padding: 1.125rem;
+  z-index: 1;
 }
 .new-card__date {
   color: #fff;
@@ -9035,7 +9040,6 @@ textarea.input {
   height: 100%;
   top: 0;
   left: 0;
-  z-index: -1;
 }
 .new-card__img::after {
   content: "";
@@ -9279,11 +9283,28 @@ textarea.input {
   display: grid;
   gap: 0.625rem;
 }
-.image-block__title a {
-  color: #fff !important;
+.image-block__title {
+  color: #fff;
+}
+.image-block__title:after {
+  content: "\e900";
+  font-family: "icons";
+  font-size: 1.25rem;
+  padding: 0px 0px 0px 1.25rem;
+  opacity: 0;
+  visibility: hidden;
+  -webkit-transition: all 0.3s ease 0s;
+  transition: all 0.3s ease 0s;
+}
+@media (any-hover: hover) {
+  .image-block:hover .image-block__title::after {
+    opacity: 1;
+    visibility: visible;
+  }
 }
 .image-block__info {
   font-size: 24px;
+  color: #fff;
 }
 .image-block__figure {
   position: absolute;
@@ -10052,7 +10073,7 @@ textarea.input {
   -webkit-transition: all 0.3s ease 0s;
   transition: all 0.3s ease 0s;
 }
-.events-item:hover {
+.events-item._active {
   border: 0.125rem solid #DBE3F6;
 }
 .events-item__head {

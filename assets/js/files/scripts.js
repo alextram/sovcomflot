@@ -89,16 +89,16 @@ themeSelector?.addEventListener('change', (event) => {
 
 new AirDatepicker('[data-datepicker="1"]', {
 	inline: true,
-	startDate: dateFns.startOfMonth(dateFns.addMonths(new Date(), 0)),
-	minDate: dateFns.startOfMonth(dateFns.addMonths(new Date(), 0)),
-	maxDate: dateFns.endOfMonth(dateFns.addMonths(new Date(), 0)),
+	startDate: dateFns.startOfMonth(new Date(2024, 7)),
+	minDate: dateFns.startOfMonth(new Date(2024, 7)),
+	maxDate: dateFns.endOfMonth(new Date(2024, 7)),
 	navTitles: {
 		days: 'MMMM yyyy',
 	},
 	onRenderCell({ date, cellType }) {
 		const params = {};
 		// Можно здесь отметить нужные дни, например, добавить класс для конкретных дат
-		if (cellType === 'day' && [6, 27].includes(date.getDate())) {
+		if (cellType === 'day' && [16, 27].includes(date.getDate()) && dateFns.isSameMonth(date, new Date(2024, 7))) {
 			params.classes = '-highlight-';
 		}
 
@@ -107,21 +107,24 @@ new AirDatepicker('[data-datepicker="1"]', {
 		}
 
 		return params;
+	},
+	onSelect({ date }) {
+		dateClickHandler(date);
 	}
 });
 
 new AirDatepicker('[data-datepicker="2"]', {
 	inline: true,
-	startDate: dateFns.startOfMonth(dateFns.addMonths(new Date(), 1)),
-	minDate: dateFns.startOfMonth(dateFns.addMonths(new Date(), 1)),
-	maxDate: dateFns.endOfMonth(dateFns.addMonths(new Date(), 1)),
+	startDate: dateFns.startOfMonth(new Date(2024, 8)),
+	minDate: dateFns.startOfMonth(new Date(2024, 8)),
+	maxDate: dateFns.endOfMonth(new Date(2024, 8)),
 	navTitles: {
 		days: 'MMMM yyyy',
 	},
 	onRenderCell({ date, cellType }) {
 		const params = {};
 		// Можно здесь отметить нужные дни, например, добавить класс для конкретных дат
-		if (cellType === 'day' && [13].includes(date.getDate())) {
+		if (cellType === 'day' && [13].includes(date.getDate()) && dateFns.isSameMonth(date, new Date(2024, 8))) {
 			params.classes = '-highlight-';
 		}
 
@@ -130,21 +133,25 @@ new AirDatepicker('[data-datepicker="2"]', {
 		}
 
 		return params;
+	},
+	onSelect({ date }) {
+		dateClickHandler(date);
 	}
 });
 
 new AirDatepicker('[data-datepicker="3"]', {
 	inline: true,
-	startDate: dateFns.startOfMonth(dateFns.addMonths(new Date(), 2)),
-	minDate: dateFns.startOfMonth(dateFns.addMonths(new Date(), 2)),
-	maxDate: dateFns.endOfMonth(dateFns.addMonths(new Date(), 2)),
+	startDate: dateFns.startOfMonth(new Date(2024, 9)),
+	minDate: dateFns.startOfMonth(new Date(2024, 9)),
+	maxDate: dateFns.endOfMonth(new Date(2024, 9)),
 	navTitles: {
 		days: 'MMMM yyyy',
 	},
 	onRenderCell({ date, cellType }) {
 		const params = {};
+
 		// Можно здесь отметить нужные дни, например, добавить класс для конкретных дат
-		if (cellType === 'day' && [18, 29].includes(date.getDate())) {
+		if (cellType === 'day' && [18, 29].includes(date.getDate()) && dateFns.isSameMonth(date, new Date(2024, 9))) {
 			params.classes = '-highlight-';
 		}
 
@@ -153,21 +160,24 @@ new AirDatepicker('[data-datepicker="3"]', {
 		}
 
 		return params;
+	},
+	onSelect({ date }) {
+		dateClickHandler(date);
 	}
 });
 
 new AirDatepicker('[data-datepicker="4"]', {
 	inline: true,
-	startDate: dateFns.startOfMonth(dateFns.addMonths(new Date(), 3)),
-	minDate: dateFns.startOfMonth(dateFns.addMonths(new Date(), 3)),
-	maxDate: dateFns.endOfMonth(dateFns.addMonths(new Date(), 3)),
+	startDate: dateFns.startOfMonth(new Date(2024, 10)),
+	minDate: dateFns.startOfMonth(new Date(2024, 10)),
+	maxDate: dateFns.endOfMonth(new Date(2024, 10)),
 	navTitles: {
 		days: 'MMMM yyyy',
 	},
 	onRenderCell({ date, cellType }) {
 		const params = {};
 		// Можно здесь отметить нужные дни, например, добавить класс для конкретных дат
-		if (cellType === 'day' && [].includes(date.getDate())) {
+		if (cellType === 'day' && [].includes(date.getDate()) && dateFns.isSameMonth(date, new Date(2024, 10))) {
 			params.classes = '-highlight-';
 		}
 
@@ -176,6 +186,9 @@ new AirDatepicker('[data-datepicker="4"]', {
 		}
 
 		return params;
+	},
+	onSelect({ date }) {
+		dateClickHandler(date);
 	}
 });
 
@@ -198,3 +211,25 @@ input?.addEventListener('blur', () => {
 	
 	form.classList.remove('_is-focus');
 });
+
+
+
+//===============================================================
+function dateClickHandler(date) {
+	clearActiveDateEvent();
+
+	const dateFormat = dateFns.format(date, 'dd-MM-yyyy');
+
+	const eventElement = document.querySelector(`.events-item[data-date="${dateFormat}"]`);
+
+	if (!eventElement) return;
+
+	eventElement.classList.add('_active');
+
+	scrollTo(eventElement, 300);
+}
+
+//===============================================================
+function clearActiveDateEvent() {
+	document.querySelectorAll('.events-item._active').forEach(elem => elem.classList.remove('_active'));
+}

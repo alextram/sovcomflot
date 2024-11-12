@@ -143,6 +143,7 @@
 		position: absolute;
 		top: rem(18);
 		left: rem(18);
+		z-index: 1;
 	}
 	// .new-card__content
 	&__content {
@@ -151,6 +152,7 @@
 		left: 0;
 		width: 100%;
 		padding: rem(18);
+		z-index: 1;
 	}
 	// .new-card__date
 	&__date {
@@ -174,7 +176,6 @@
 		height: 100%;
 		top: 0;
 		left: 0;
-		z-index: -1;
 		&::after {
 			content: '';
 			position: absolute;

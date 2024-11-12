@@ -80,7 +80,7 @@
 	padding: rem(20) rem(30);
 	border: rem(2) solid #fff;
 	transition: all 0.3s ease 0s;
-	&:hover {
+	&._active {
 		border: rem(2) solid #DBE3F6;
 	}
 	// .events-item__head
