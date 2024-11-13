@@ -61,7 +61,7 @@
   font-style: normal;
   font-display: block;
 }
-.image-block__title:after, .card__title:after, .hov-arrow:after, .back-link::before, .more-link::after, .breadcrumbs__item:not(:last-child)::after, .btn_arrow:before, [class^=_icon-]:before,
+.image-block__title:after, .new-card__title a:after, .card__title:after, .hov-arrow:after, .back-link::before, .more-link::after, .breadcrumbs__item:not(:last-child)::after, .btn_arrow:before, [class^=_icon-]:before,
 [class*=" _icon-"]:before, [class^=_system-icon]:before,
 [class*=" _system-icon"]:before {
   font-style: normal;
@@ -9031,7 +9031,23 @@ textarea.input {
   margin: 0px 0px 0.5rem 0px;
 }
 .new-card__title a {
-  color: #fff;
+  color: #fff !important;
+}
+.new-card__title a:after {
+  content: "\e900";
+  font-family: "icons";
+  font-size: 0.875rem;
+  padding: 0px 0px 0px 1.25rem;
+  opacity: 0;
+  visibility: hidden;
+  -webkit-transition: all 0.3s ease 0s;
+  transition: all 0.3s ease 0s;
+}
+@media (any-hover: hover) {
+  .new-card:hover .new-card__title a::after {
+    opacity: 1;
+    visibility: visible;
+  }
 }
 .new-card__img {
   overflow: hidden;
@@ -9307,11 +9323,22 @@ textarea.input {
   color: #fff;
 }
 .image-block__figure {
+  overflow: hidden;
   position: absolute;
   width: 100%;
   height: 100%;
   top: 0;
   left: 0;
+}
+.image-block__figure img {
+  scale: 1.001;
+  -webkit-transition: all 0.5s ease 0s;
+  transition: all 0.5s ease 0s;
+}
+@media (any-hover: hover) {
+  .image-block:hover .image-block__figure img {
+    scale: 1.03;
+  }
 }
 
 .calendar-info {

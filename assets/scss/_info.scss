@@ -141,11 +141,21 @@
 	}
 	// .image-block__figure
 	&__figure {
+		overflow: hidden;
 		position: absolute;
 		width: 100%;
 		height: 100%;
 		top: 0;
 		left: 0;
+		img {
+			scale: 1.001;
+			transition: all 0.5s ease 0s;
+			@media (any-hover: hover) {
+				.image-block:hover & {
+					scale: 1.03;
+				}
+			}
+		}
 	}
 }
 
