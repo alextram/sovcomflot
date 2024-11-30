@@ -1,0 +1,40 @@
+.videos-section {
+	margin: 0px 0px rem(40) 0px;
+	// .videos-section__title
+	&__title {
+		color: var(--color-main);
+		@include adaptiv-value(font-size, 24, 18, 1);
+		line-height: 1.1;
+		margin: 0px 0px rem(24) 0px;
+	}
+}
+//===============================================================
+.videos {
+	display: grid;
+	grid-template-columns: repeat(2, 1fr);
+	gap: rem(24);
+	// .videos__item
+	&__item {
+	}
+}
+//===============================================================
+.video-card {
+	// .video-card__date
+	&__date {
+		margin: 0px 0px rem(8) 0px;
+		color: var(--color-font-gray);
+	}
+	// .video-card__title
+	&__title {
+		margin: 0px 0px rem(17) 0px;
+		color: var(--color-main);
+		font-size: rem(18);
+		font-weight: 500;
+	}
+	// .video-card__preview
+	&__preview {
+		display: block;
+		width: 100%;
+		padding: 0px 0px prc(302, 502) 0px;
+	}
+}

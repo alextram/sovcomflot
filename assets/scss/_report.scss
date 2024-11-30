@@ -1,6 +1,5 @@
 .reports-section {
 	padding-top: rem(20);
-	margin: 0px 0px rem(20) 0px;
 	// .reports-section__title
 	&__title {
 		font-size: 18px;
@@ -14,7 +13,7 @@
 	display: grid;
 	grid-template-columns: repeat(3, 1fr);
 	gap: rem(24);
-	margin: 0px 0px rem(60) 0px;
+	margin: 0px 0px rem(20) 0px;
 	@media (max-width: em($md3)) {
 		grid-template-columns: repeat(1, 1fr);
 	}

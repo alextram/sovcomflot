@@ -148,3 +148,32 @@
 	-webkit-line-clamp: var(--max-lines);
 	overflow: hidden;
 }
+
+//---------------------------------------------------------------
+._disc {
+	position: relative;
+	&::before {
+		content: '';
+		position: absolute;
+		top: em(10, 18);
+		left: em(-16, 18);
+		width: em(6, 18);
+		height: em(6, 18);
+		background: var(--color-second);
+		border-radius: 50%;
+	}
+}
+
+._circle {
+	position: relative;
+	&::before {
+		content: '';
+		position: absolute;
+		top: em(10, 18);
+		left: em(-13, 18);
+		width: em(6, 18);
+		height: em(6, 18);
+		border: rem(1.5) solid var(--color-second);
+		border-radius: 50%;
+	}
+}

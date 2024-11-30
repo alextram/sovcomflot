@@ -6073,6 +6073,34 @@ body[data-aos-easing=ease-in-out-quart] [data-aos] {
   overflow: hidden;
 }
 
+._disc {
+  position: relative;
+}
+._disc::before {
+  content: "";
+  position: absolute;
+  top: 0.5555555556em;
+  left: -0.8888888889em;
+  width: 0.3333333333em;
+  height: 0.3333333333em;
+  background: var(--color-second);
+  border-radius: 50%;
+}
+
+._circle {
+  position: relative;
+}
+._circle::before {
+  content: "";
+  position: absolute;
+  top: 0.5555555556em;
+  left: -0.7222222222em;
+  width: 0.3333333333em;
+  height: 0.3333333333em;
+  border: 0.09375rem solid var(--color-second);
+  border-radius: 50%;
+}
+
 :root {
   --color-error:	#b81111;
   --color-warning:	#ffc107;
@@ -8871,6 +8899,98 @@ textarea.input {
 .inner-head__bottom {
   padding: 1.25rem 0px;
 }
+.page404 {
+  display: grid;
+  grid-template-columns: auto 1fr;
+  gap: 1.875rem 0px;
+  padding: 3.125rem 0px;
+}
+@media (max-width: 47.9375em) {
+  .page404 {
+    grid-template-columns: 1fr;
+    padding: 1.25rem 0px;
+  }
+}
+.page404__left {
+  color: var(--color-main);
+  font-size: 8rem;
+  font-weight: 700;
+  line-height: 1;
+  padding: 0px 8.3125rem;
+}
+@media (max-width: 61.9375em) {
+  .page404__left {
+    padding: 0px 3.125rem 0px 0px;
+  }
+}
+@media (max-width: 47.9375em) {
+  .page404__left {
+    padding: 0px 0px 0px 0px;
+    text-align: center;
+  }
+}
+.page404__right a {
+  font-weight: 300 !important;
+}
+
+.sitemap {
+  display: grid;
+  gap: 1.25rem;
+  grid-template-columns: repeat(3, 1fr);
+}
+@media (max-width: 61.9375em) {
+  .sitemap {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+@media (max-width: 47.9375em) {
+  .sitemap {
+    grid-template-columns: repeat(1, 1fr);
+  }
+}
+.sitemap__column {
+  display: grid;
+  gap: 1.25rem;
+  -ms-flex-line-pack: start;
+      align-content: start;
+}
+.sitemap__link {
+  color: var(--color-main);
+  display: inline-block;
+}
+.sitemap__link_1 {
+  font-size: 24px;
+  font-weight: 500;
+  line-height: 1;
+}
+@media (max-width: 1410px) {
+  .sitemap__link_1 {
+    font-size: calc(20px + 4 * (100vw - 320px) / 1090);
+  }
+}
+.sitemap__link_2 {
+  font-size: 20px;
+  font-weight: 500;
+  line-height: 1;
+}
+@media (max-width: 1410px) {
+  .sitemap__link_2 {
+    font-size: calc(18px + 2 * (100vw - 320px) / 1090);
+  }
+}
+.sitemap__link_3 {
+  font-weight: 300;
+  line-height: 1;
+}
+.sitemap__list {
+  display: grid;
+  gap: 0.625rem;
+  padding-left: 1rem;
+}
+.sitemap__sub-list {
+  padding-top: 0.625rem;
+  padding-left: 1.25rem;
+}
 .card {
   position: relative;
   padding: 0px 0px 108.1081081081% 0px;
@@ -9940,6 +10060,15 @@ textarea.input {
   top: 0.1875rem;
   left: 0;
 }
+.doc-item__text {
+  padding: 0.5rem 0px 0px 1.875rem;
+  color: var(--color-font-gray);
+}
+@media (max-width: 47.9375em) {
+  .doc-item__text {
+    padding: 0.5rem 0px 0px 0rem;
+  }
+}
 .doc-item__info {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -10194,7 +10323,6 @@ textarea.input {
 
 .reports-section {
   padding-top: 1.25rem;
-  margin: 0px 0px 1.25rem 0px;
 }
 .reports-section__title {
   font-size: 18px;
@@ -10206,7 +10334,7 @@ textarea.input {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   gap: 1.5rem;
-  margin: 0px 0px 3.75rem 0px;
+  margin: 0px 0px 1.25rem 0px;
 }
 @media (max-width: 47.9375em) {
   .reports {
@@ -10329,4 +10457,40 @@ textarea.input {
 }
 .report-card__link {
   color: var(--color-main);
+}
+
+.videos-section {
+  margin: 0px 0px 2.5rem 0px;
+}
+.videos-section__title {
+  color: var(--color-main);
+  font-size: 24px;
+  line-height: 1.1;
+  margin: 0px 0px 1.5rem 0px;
+}
+@media (max-width: 1410px) {
+  .videos-section__title {
+    font-size: calc(18px + 6 * (100vw - 320px) / 1090);
+  }
+}
+
+.videos {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1.5rem;
+}
+.video-card__date {
+  margin: 0px 0px 0.5rem 0px;
+  color: var(--color-font-gray);
+}
+.video-card__title {
+  margin: 0px 0px 1.0625rem 0px;
+  color: var(--color-main);
+  font-size: 1.125rem;
+  font-weight: 500;
+}
+.video-card__preview {
+  display: block;
+  width: 100%;
+  padding: 0px 0px 60.1593625498% 0px;
 }

@@ -19,6 +19,9 @@
 	@media (max-width: em($md4)) {
 		padding: rem(20) rem(30);
 	}
+	// .doc-item__content
+	&__content {
+	}
 	// .doc-item__title
 	&__title {
 		position: relative;
@@ -31,6 +34,14 @@
 				top: rem(3);
 				left: 0;
 			}
+		}
+	}
+	// .doc-item__text
+	&__text {
+		padding: rem(8) 0px 0px rem(30);
+		color: var(--color-font-gray);
+		@media (max-width: em($md3)) {
+			padding: rem(8) 0px 0px rem(0);
 		}
 	}
 	// .doc-item__info
