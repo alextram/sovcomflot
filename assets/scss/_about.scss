@@ -57,7 +57,7 @@
 	&__info {
 		display: grid;
 		gap: rem(5);
-		color: #525253;
+		color: var(--color-font-gray);
 		font-size: rem(16);
 		line-height: 125%;
 		margin: 0px 0px rem(15) 0px;
@@ -358,7 +358,7 @@
 	}
 	// .press-list__date
 	&__date {
-		color: rgba(0, 0, 0, 0.50);
+		color: var(--color-font-gray);
 		font-size: rem(16);
 		
 	}

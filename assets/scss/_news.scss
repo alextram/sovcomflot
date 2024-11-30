@@ -264,8 +264,7 @@
 	}
 	// .new-card-row__date
 	&__date {
-		color: #000;
-		opacity: 0.5;
+		color: var(--color-font-gray);
 		font-size: rem(16);
 		line-height: prc(20, 16);
 		margin: 0px 0px rem(8) 0px;

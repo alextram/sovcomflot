@@ -161,7 +161,7 @@
 		max-width: 250px;
 		font-size: rem(14);
 		text-overflow: ellipsis;
-		color: #9C9C9C;
+		color: var(--color-font-light);
 	}
 }
 
@@ -353,7 +353,7 @@
 
 	// .white-block_gray
 	&_gray {
-		color: #9C9C9C;
+		color: var(--color-font-gray);
 	}
 }
 

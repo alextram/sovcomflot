@@ -37,7 +37,7 @@
 	&__info {
 		display: flex;
 		gap: rem(60);
-		color: #9C9C9C;
+		color: var(--color-font-gray);
 		@media (max-width: em($md4)) {
 			gap: rem(20);
 		}

@@ -5940,6 +5940,7 @@ body[data-aos-easing=ease-in-out-quart] [data-aos] {
 ._ibg {
   position: relative;
 }
+._ibg video,
 ._ibg img {
   position: absolute;
   width: 100%;
@@ -6085,6 +6086,8 @@ body[data-aos-easing=ease-in-out-quart] [data-aos] {
   --color-second-dark: #720004;
   --color-body-background: #F7F9FE;
   --color-font: #000000;
+  --color-font-gray: #7A7A7B;
+  --color-font-light: #9C9C9C;
   --color-link: #000000;
   --color-link-hover: #BD0007;
   --color-titles: #000000;
@@ -7115,7 +7118,7 @@ textarea.input {
   max-width: 250px;
   font-size: 0.875rem;
   text-overflow: ellipsis;
-  color: #9C9C9C;
+  color: var(--color-font-light);
 }
 
 /**
@@ -7327,7 +7330,7 @@ textarea.input {
   color: var(--color-main);
 }
 .white-block_gray {
-  color: #9C9C9C;
+  color: var(--color-font-gray);
 }
 
 .blue-block {
@@ -9129,8 +9132,7 @@ textarea.input {
   }
 }
 .new-card-row__date {
-  color: #000;
-  opacity: 0.5;
+  color: var(--color-font-gray);
   font-size: 1rem;
   line-height: 125%;
   margin: 0px 0px 0.5rem 0px;
@@ -9176,7 +9178,7 @@ textarea.input {
   }
 }
 .contacts-block__label {
-  color: #9C9C9C;
+  color: var(--color-font-gray);
 }
 .contacts-block__list {
   display: grid;
@@ -9252,7 +9254,7 @@ textarea.input {
   gap: 0.625rem;
 }
 .results-info__file-data {
-  color: #9C9C9C;
+  color: var(--color-font-gray);
 }
 @media (any-hover: hover) {
   .results-info__btn:hover {
@@ -9577,7 +9579,7 @@ textarea.input {
 .press-section__info {
   display: grid;
   gap: 0.3125rem;
-  color: #525253;
+  color: var(--color-font-gray);
   font-size: 1rem;
   line-height: 125%;
   margin: 0px 0px 0.9375rem 0px;
@@ -9870,7 +9872,7 @@ textarea.input {
   gap: 0.5rem;
 }
 .press-list__date {
-  color: rgba(0, 0, 0, 0.5);
+  color: var(--color-font-gray);
   font-size: 1rem;
 }
 .press-list__title a {
@@ -9943,7 +9945,7 @@ textarea.input {
   display: -ms-flexbox;
   display: flex;
   gap: 3.75rem;
-  color: #9C9C9C;
+  color: var(--color-font-gray);
 }
 @media (max-width: 29.9375em) {
   .doc-item__info {
@@ -10113,7 +10115,7 @@ textarea.input {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  color: #7f8080;
+  color: var(--color-font-gray);
   margin: 0px 0px 0.5rem 0px;
 }
 .events-item__date-time {
