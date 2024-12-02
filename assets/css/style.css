@@ -8742,7 +8742,12 @@ textarea.input {
   height: 100vh;
   padding: 8rem 0px 0px 0px;
 }
-.main-slide::after {
+@media (max-width: 61.9375em) {
+  .main-slide {
+    padding: 5rem 0px 0px 0px;
+  }
+}
+.main-slide_video::after {
   content: "";
   position: absolute;
   width: 100%;
@@ -8751,11 +8756,6 @@ textarea.input {
   left: 0;
   background: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, 0.7)), color-stop(40%, rgba(0, 0, 0, 0)));
   background: linear-gradient(180deg, rgba(0, 0, 0, 0.7) 0%, rgba(0, 0, 0, 0) 40%);
-}
-@media (max-width: 61.9375em) {
-  .main-slide {
-    padding: 5rem 0px 0px 0px;
-  }
 }
 .main-slide__container {
   height: 100%;
@@ -8797,7 +8797,6 @@ textarea.input {
   left: 0;
   z-index: -1;
 }
-
 .main-media {
   margin: 0px 0px 3.75rem 0px;
 }
