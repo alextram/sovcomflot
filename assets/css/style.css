@@ -6307,8 +6307,8 @@ body ._typography ul li::before {
   position: absolute;
   top: 0.7222222222em;
   left: -0.7222222222em;
-  width: 0.1666666667em;
-  height: 0.1666666667em;
+  width: 0.3333333333em;
+  height: 0.3333333333em;
   background: var(--color-second);
   border-radius: 50%;
 }
@@ -6666,7 +6666,7 @@ textarea.input {
   position: relative;
 }
 .check__mark {
-  font-weight: 300;
+  font-weight: 400;
 }
 .check_default {
   padding: 0px 0px 0px 2.5rem;
@@ -6694,7 +6694,7 @@ textarea.input {
   width: 0.3888888889em;
   height: 0.6666666667em;
   border-width: 0 0.1111111111em 0.1111111111em 0;
-  border-color: var(--color-main);
+  border-color: #fff;
   border-style: solid;
   display: block;
   opacity: 0;
@@ -6703,6 +6703,9 @@ textarea.input {
           transform: rotate(45deg);
   -webkit-transition: all 0.1s ease 0s;
   transition: all 0.1s ease 0s;
+}
+.check_default._checked .check__mark::before {
+  background: var(--color-main);
 }
 .check_default._checked .check__mark::after {
   opacity: 1;
@@ -7594,6 +7597,33 @@ textarea.input {
     opacity: 1;
     visibility: visible;
   }
+}
+
+.list {
+  padding-left: 0.9375rem;
+  display: grid;
+  gap: 1rem;
+}
+.list_gray {
+  color: var(--color-font-gray);
+}
+.list a {
+  font-weight: 400;
+  text-decoration: underline;
+}
+
+.sub-list {
+  padding: 0.625rem 0px 0px 0px;
+  padding-left: 0.9375rem;
+  display: grid;
+  gap: 1rem;
+}
+.sub-list_gray {
+  color: var(--color-font-gray);
+}
+
+.list-block {
+  color: var(--color-font-gray);
 }
 
 .header {
@@ -10493,4 +10523,42 @@ textarea.input {
   display: block;
   width: 100%;
   padding: 0px 0px 60.1593625498% 0px;
+}
+
+.survey-section {
+  display: grid;
+  gap: 2.5rem;
+}
+.survey-section__accept {
+  color: #525253;
+  font-size: 20px;
+  font-weight: 500;
+  margin: 0px 0px 1.5rem 0px;
+}
+@media (max-width: 1410px) {
+  .survey-section__accept {
+    font-size: calc(18px + 2 * (100vw - 320px) / 1090);
+  }
+}
+.survey-section__check {
+  display: grid;
+  grid-template-columns: auto 1fr;
+  margin: 0px 0px 1.5rem 0px;
+  color: var(--color-main);
+}
+.survey-section__check .check__mark::before {
+  top: 0.625rem;
+}
+.survey-section__check .check__mark::after {
+  top: 0.9375rem;
+}
+.survey-section__title {
+  font-size: 24px;
+  color: var(--color-main);
+  margin: 0px 0px 1.25rem 0px;
+}
+@media (max-width: 1410px) {
+  .survey-section__title {
+    font-size: calc(20px + 4 * (100vw - 320px) / 1090);
+  }
 }

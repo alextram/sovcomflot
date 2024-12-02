@@ -1,0 +1,38 @@
+.survey-section {
+	display: grid;
+	gap: rem(40);
+	// .survey-section__section
+	&__section {
+	}
+	// .survey-section__accept
+	&__accept {
+		color: #525253;
+		@include adaptiv-value(font-size, 20, 18, 1);
+		font-weight: 500;
+		margin: 0px 0px rem(24) 0px;
+	}
+	// .survey-section__check
+	&__check {
+		display: grid;
+		grid-template-columns: auto 1fr;
+		margin: 0px 0px rem(24) 0px;
+		color: var(--color-main);
+		.check__mark {
+			&::before {
+				top: rem(10);
+			}
+			&::after {
+				top: rem(15);
+			}
+		}
+	}
+	// .survey-section__text
+	&__text {
+	}
+	// .survey-section__title
+	&__title {
+		@include adaptiv-value(font-size, 24, 20, 1);
+		color: var(--color-main);
+		margin: 0px 0px rem(20) 0px;
+	}
+}

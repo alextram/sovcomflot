@@ -583,3 +583,37 @@
 		}
 	}
 }
+
+//===============================================================
+.list {
+	padding-left: rem(15);
+	display: grid;
+	gap: rem(16);
+
+	// .list_gray
+	&_gray {
+		color: var(--color-font-gray);
+	}
+
+	a {
+		font-weight: 400;
+		text-decoration: underline;
+	}
+}
+
+.sub-list {
+	padding: rem(10) 0px 0px 0px;
+	padding-left: rem(15);
+	display: grid;
+	gap: rem(16);
+
+	// .sub-list_gray
+	&_gray {
+		color: var(--color-font-gray);
+	}
+}
+
+//===============================================================
+.list-block {
+	color: var(--color-font-gray);
+}

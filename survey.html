@@ -1,0 +1,404 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+	<title>СКФ</title>
+	<meta charset="UTF-8">
+	<meta name="format-detection" content="telephone=no">
+	<link rel="stylesheet" href="assets/css/style.css">
+	<link rel="shortcut icon" href="favicon.ico">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+	<script>
+		const LOCALIZATION = 'Russian'; // English, Spanish... Ключ локализации. При необходимости изменять в соответствии с ответом сервера.
+	</script>
+</head>
+
+<body>
+	<div class="wrapper">
+		<header class="header" data-fix>
+			<div class="header__container _container">
+				<div class="header__body">
+					<div class="header__top header-top">
+						<nav class="header-top__menu header-top-menu">
+							<ul class="header-top-menu__list" data-adapt="menu__content,991">
+								<li class="header-top-menu__item"><a class="header-top-menu__link" href="#">Контакты</a></li>
+								<li class="header-top-menu__item"><a class="header-top-menu__link" href="#">Общественная приемная СКФ</a></li>
+								<li class="header-top-menu__item"><a class="header-top-menu__link" href="#">Закупки</a></li>
+								<li class="header-top-menu__item"><a class="header-top-menu__link" href="#">Противодействие коррупции</a></li>
+							</ul>
+						</nav>
+						<div class="header-top__actions" data-adapt="menu__content-wrapper,991">
+							<a class="header-top__enter _icon-enter" href="#">Внутренний портал</a>
+							<div class="header-top__socials socials">
+								<a class="socials__social _icon-tg" href="#"></a>
+								<a class="socials__social _icon-vk" href="#"></a>
+							</div>
+						</div>
+					</div>
+					<div class="header__bottom header-bottom">
+						<a class="header-bottom__logo logo" href="#">
+							<img src="assets/img/main/logo.svg" alt="logo">
+						</a>
+						<div class="header-bottom__menu menu" data-menu="main-menu">
+							<nav class="menu__body" data-menu-container="main-menu">
+								<div class="menu__content-wrapper">
+									<div class="menu__content">
+										<button class="menu__close _icon-cross" type="button" data-menu-close></button>
+										<h4 class="menu__title left-line">Меню</h4>
+										<ul class="menu__list">
+											<li class="menu__item" data-menu-item>
+												<button class="menu__control _icon-arrow-4" data-menu-control>О компании</button>
+												<div class="menu__sub-menu sub-menu" data-menu-submenu>
+													<div class="sub-menu__content">
+														<h4 class="sub-menu__title left-line">О компании</h4>
+														<button class="sub-menu__close _icon-cross" type="button" data-menu-back><span class="_icon-arrow-4">Назад</span></button>
+														<ul class="sub-menu__list">
+															<li class="sub-menu__item" data-menu-item><a class="sub-menu__link" href="#">Тестовый пункт меню 1</a></li>
+															<li class="sub-menu__item" data-menu-item><a class="sub-menu__link" href="#">Тестовый пункт меню 2</a></li>
+															<li class="sub-menu__item" data-menu-item><a class="sub-menu__link" href="#">Тестовый пункт меню 3</a></li>
+															<li class="sub-menu__item" data-menu-item><a class="sub-menu__link" href="#">Тестовый пункт меню 4</a></li>
+															<li class="sub-menu__item" data-menu-item><a class="sub-menu__link" href="#">Тестовый пункт меню 5</a></li>
+														</ul>
+													</div>
+												</div>
+											</li>
+											<li class="menu__item" data-menu-item>
+												<button class="menu__control _icon-arrow-4" data-menu-control>Инвесторам и акционерам</button>
+												<div class="menu__sub-menu sub-menu" data-menu-submenu>
+													<div class="sub-menu__content">
+														<h4 class="sub-menu__title left-line">Инвесторам и акционерам</h4>
+														<button class="sub-menu__close _icon-cross" type="button" data-menu-back><span class="_icon-arrow-4">Назад</span></button>
+														<ul class="sub-menu__list">
+															<li class="sub-menu__item" data-menu-item>
+																<button class="sub-menu__control _icon-arrow-4" data-menu-control>Акции</button>
+																<div class="sub-menu__sub-menu sub-sub-menu" data-menu-submenu>
+																	<div class="sub-sub-menu__content">
+																		<h4 class="sub-sub-menu__title left-line">Акции</h4>
+																		<button class="sub-sub-menu__close _icon-cross" type="button" data-menu-back><span class="_icon-arrow-4">Назад</span></button>
+																		<ul class="sub-sub-menu__list">
+																			<li class="sub-sub-menu__item" data-menu-item><a class="sub-sub-menu__link" href="#">test 1</a></li>
+																			<li class="sub-sub-menu__item" data-menu-item><a class="sub-sub-menu__link" href="#">test 2</a></li>
+																			<li class="sub-sub-menu__item" data-menu-item><a class="sub-sub-menu__link" href="#">test 4</a></li>
+																		</ul>
+																	</div>
+																</div>
+															</li>
+															<li class="sub-menu__item" data-menu-item>
+																<button class="sub-menu__control _icon-arrow-4" data-menu-control>Долговые инструменты</button>
+																<div class="sub-menu__sub-menu sub-sub-menu" data-menu-submenu>
+																	<div class="sub-sub-menu__content">
+																		<h4 class="sub-sub-menu__title left-line">Долговые инструменты</h4>
+																		<button class="sub-sub-menu__close _icon-cross" type="button" data-menu-back><span class="_icon-arrow-4">Назад</span></button>
+																		<ul class="sub-sub-menu__list">
+																			<li class="sub-sub-menu__item" data-menu-item><a class="sub-sub-menu__link" href="#">test 1</a></li>
+																			<li class="sub-sub-menu__item" data-menu-item><a class="sub-sub-menu__link" href="#">test 2</a></li>
+																			<li class="sub-sub-menu__item" data-menu-item><a class="sub-sub-menu__link" href="#">test 4</a></li>
+																		</ul>
+																	</div>
+																</div>
+															</li>
+															<li class="sub-menu__item" data-menu-item>
+																<button class="sub-menu__control _icon-arrow-4" data-menu-control>Отчеты и результаты</button>
+																<div class="sub-menu__sub-menu sub-sub-menu" data-menu-submenu>
+																	<div class="sub-sub-menu__content">
+																		<h4 class="sub-sub-menu__title left-line">Отчеты и результаты</h4>
+																		<button class="sub-sub-menu__close _icon-cross" type="button" data-menu-back><span class="_icon-arrow-4">Назад</span></button>
+																		<ul class="sub-sub-menu__list">
+																			<li class="sub-sub-menu__item" data-menu-item><a class="sub-sub-menu__link" href="#">test 1</a></li>
+																			<li class="sub-sub-menu__item" data-menu-item><a class="sub-sub-menu__link" href="#">test 2</a></li>
+																			<li class="sub-sub-menu__item" data-menu-item><a class="sub-sub-menu__link" href="#">test 4</a></li>
+																		</ul>
+																	</div>
+																</div>
+															</li>
+															<li class="sub-menu__item" data-menu-item>
+																<button class="sub-menu__control _icon-arrow-4" data-menu-control>Корпоративное управление</button>
+																<div class="sub-menu__sub-menu sub-sub-menu" data-menu-submenu>
+																	<div class="sub-sub-menu__content">
+																		<h4 class="sub-sub-menu__title left-line">Корпоративное управление</h4>
+																		<button class="sub-sub-menu__close _icon-cross" type="button" data-menu-back><span class="_icon-arrow-4">Назад</span></button>
+																		<ul class="sub-sub-menu__list">
+																			<li class="sub-sub-menu__item" data-menu-item><a class="sub-sub-menu__link" href="#">test 1</a></li>
+																			<li class="sub-sub-menu__item" data-menu-item><a class="sub-sub-menu__link" href="#">test 2</a></li>
+																			<li class="sub-sub-menu__item" data-menu-item><a class="sub-sub-menu__link" href="#">test 4</a></li>
+																		</ul>
+																	</div>
+																</div>
+															</li>
+															<li class="sub-menu__item" data-menu-item>
+																<a class="sub-menu__link" href="#">Собрания акционеров</a>
+															</li>
+															<li class="sub-menu__item" data-menu-item>
+																<button class="sub-menu__control _icon-arrow-4" data-menu-control>Раскрытие информации</button>
+																<div class="sub-menu__sub-menu sub-sub-menu" data-menu-submenu>
+																	<div class="sub-sub-menu__content">
+																		<h4 class="sub-sub-menu__title left-line">Раскрытие информации</h4>
+																		<button class="sub-sub-menu__close _icon-cross" type="button" data-menu-back><span class="_icon-arrow-4">Назад</span></button>
+																		<ul class="sub-sub-menu__list">
+																			<li class="sub-sub-menu__item" data-menu-item><a class="sub-sub-menu__link" href="#">Аффилированные лица</a></li>
+																			<li class="sub-sub-menu__item" data-menu-item><a class="sub-sub-menu__link" href="#">Существенные факты</a></li>
+																			<li class="sub-sub-menu__item" data-menu-item><a class="sub-sub-menu__link" href="#">Проспект ценных бумаг</a></li>
+																			<li class="sub-sub-menu__item" data-menu-item><a class="sub-sub-menu__link" href="#">Отчеты эмитента</a></li>
+																			<li class="sub-sub-menu__item" data-menu-item><a class="sub-sub-menu__link" href="#">Финансовая отчетность по МФСО в рублях</a></li>
+																			<li class="sub-sub-menu__item" data-menu-item><a class="sub-sub-menu__link" href="#">Финансовая отчетность по РСБУ</a></li>
+																			<li class="sub-sub-menu__item" data-menu-item><a class="sub-sub-menu__link" href="#">Инсайдерам</a></li>
+																		</ul>
+																	</div>
+																</div>
+															</li>
+															<li class="sub-menu__item" data-menu-item>
+																<a class="sub-menu__link" href="#">Аналитики</a>
+															</li>
+															<li class="sub-menu__item" data-menu-item>
+																<a class="sub-menu__link" href="#">Календарь инвестора</a>
+															</li>
+															<li class="sub-menu__item" data-menu-item>
+																<a class="sub-menu__link" href="#">Контакты для инвесторов</a>
+															</li>
+														</ul>
+													</div>
+												</div>
+											</li>
+											<li class="menu__item" data-menu-item>
+												<button class="menu__control _icon-arrow-4" data-menu-control>Работа в СКФ</button>
+												<div class="menu__sub-menu sub-menu" data-menu-submenu>
+													<div class="sub-menu__content">
+														<h4 class="sub-menu__title left-line">Работа в СКФ</h4>
+														<button class="sub-menu__close _icon-cross" type="button" data-menu-back><span class="_icon-arrow-4">Назад</span></button>
+														<ul class="sub-menu__list">
+															<li class="sub-menu__item" data-menu-item><a class="sub-menu__link" href="#">Тестовый пункт меню 1</a></li>
+															<li class="sub-menu__item" data-menu-item><a class="sub-menu__link" href="#">Тестовый пункт меню 2</a></li>
+														</ul>
+													</div>
+												</div>
+											</li>
+											<li class="menu__item" data-menu-item>
+												<button class="menu__control _icon-arrow-4" data-menu-control>Пресс-релизы</button>
+												<div class="menu__sub-menu sub-menu" data-menu-submenu>
+													<div class="sub-menu__content">
+														<h4 class="sub-menu__title left-line">Пресс-релизы</h4>
+														<button class="sub-menu__close _icon-cross" type="button" data-menu-back><span class="_icon-arrow-4">Назад</span></button>
+														<ul class="sub-menu__list">
+															<li class="sub-menu__item" data-menu-item><a class="sub-menu__link" href="#">Тестовый пункт меню 1</a></li>
+															<li class="sub-menu__item" data-menu-item><a class="sub-menu__link" href="#">Тестовый пункт меню 2</a></li>
+															<li class="sub-menu__item" data-menu-item><a class="sub-menu__link" href="#">Тестовый пункт меню 3</a></li>
+														</ul>
+													</div>
+												</div>
+											</li>
+										</ul>
+									</div>
+								</div>
+							</nav>
+						</div>
+						<div class="header-bottom__actions">
+							<div class="search">
+								<form class="search__search-form search-form" action="#" method="get">
+									<label class="search-form__label" for="search">Поиск</label>
+									<input class="search-form__input input" id="search" type="text" name="s">
+									<button class="search-form__btn _icon-arrow-1" type="submit"></button>
+									<span class="search-form__close _icon-cross"></span>
+								</form>
+								<button class="search__search-btn _icon-search" type="button" data-link="search-form"><span>Поиск</span></button>
+							</div>
+							<div class="languages">
+								<a class="languages__language _active" href="#">
+									<span class="languages__desc">Русский</span>
+									<span class="languages__mobile">Рус</span>
+								</a>
+								<a class="languages__language" href="#">
+									<span class="languages__desc">English</span>
+									<span class="languages__mobile">Eng</span>
+								</a>
+							</div>
+							<button class="menu-icon" type="button" data-menu-icon="main-menu"></button>
+						</div>
+					</div>
+				</div>
+			</div>
+		</header>
+		
+		<main class="page">
+			<div class="page__inner page-inner">
+				<header class="page-inner__head inner-head">
+					<div class="inner-head__top">
+						<div class="inner-head__container _container">
+							<div class="inner-head__top-body">
+								<h1 class="inner-head__title">Анкета моряка</h1>
+							</div>
+						</div>
+						<figure class="inner-head__bg _ibg">
+							<img src="assets/img/bgs/bg2.jpg" alt="image">
+						</figure>
+					</div>
+					<div class="inner-head__bottom">
+						<div class="inner-head__container _container">
+							<div class="inner-head__bottom-body">
+								<nav class="breadcrumbs">
+									<ul class="breadcrumbs__list">
+										<li class="breadcrumbs__item"><a class="breadcrumbs__link" href="#" title="Главная">Главная</a></li>
+										<li class="breadcrumbs__item"><a class="breadcrumbs__link" href="#" title="Работа в СКФ">Работа в СКФ</a></li>
+										<li class="breadcrumbs__item"><a class="breadcrumbs__link" href="#" title="Кадровые офисы">Кадровые офисы</a></li>
+										<li class="breadcrumbs__item"><span class="breadcrumbs__current" title="Анкета моряка">Анкета моряка</span></li>
+									</ul>
+								</nav>
+							</div>
+						</div>
+					</div>
+				</header>
+
+				<section class="page-inner__section inner-section">
+					<div class="inner-section__container _container">
+						<div class="inner-section__body">
+							<div class="survey-section">
+								<section class="survey-section__section">
+									<h3 class="survey-section__accept">Согласие на обработку персональных данных в соответствии с Федеральным Законом от 27.07.2006 г. № 152-ФЗ «О персональных данных».</h3>
+									<div class="survey-section__check">
+										<input type="checkbox" name="accept" value="1" data-check data-label="Подтверждаю, что все сообщенные мною персональные данные достоверны. Согласие дано на неограниченный срок.">
+									</div>
+									<div class="survey-section__text">
+										<p>Выражаю свое согласие на размещение моих персональных данных, указанных в анкете (Application Form), в базе резерва плавсостава в целях найма и трудоустройства, а также на осуществление следующих действий со всеми моими данными: сбор, систематизация, накопление, хранение, уточнение, обновление, обработка (в том числе автоматизированная, электронная), использование, распространение (в том числе трансграничная передача и передача третьим лицам) в целях найма и трудоустройства. Отзыв настоящего согласия производится только в письменной форме.</p>
+									</div>
+								</section>
+								<section class="survey-section__section">
+									<h3 class="survey-section__title left-line">Важно</h3>
+									<div class="white-blocks">
+										<div class="white-block">
+											<ul class="list list_gray">
+												<li class="_disc">Кадровые офисы группы СКФ осуществляют деятельность по трудоустройству исключительно граждан Российской Федерации. Анкеты граждан других государств не рассматриваются.</li>
+												<li class="_disc">Внесение персональных данных в базу резерва плавсостава не является гарантией трудоустройства. Все кандидаты на вакантные места отбираются на конкурсной основе.</li>
+												<li class="_disc">При появлении подходящей вакансии с Вами свяжется один из сотрудников кадрового офиса.</li>
+												<li class="_disc">Если в течение 6 месяцев для Вас не будет подобрана подходящая вакансия, необходимо направить анкету повторно.</li>
+												<li class="_disc">При появлении вопросов по трудоустройству, на которые Вы не нашли ответы на сайте, Вы можете обратиться в один из <a href="#">кадровых офисов СКФ</a>.</li>
+											</ul>
+										</div>
+										<div class="doc-item">
+											<h5 class="doc-item__title"><a class="_icon-download" href="#">Скачать файл с анкетой</a></h5>
+											<div class="doc-item__info">
+												<span class="doc-item__size">XLS | 342 КБ</span>
+											</div>
+										</div>
+										<div class="doc-item">
+											<h5 class="doc-item__title"><a class="_icon-download" href="#">Скачать файл с примером анкеты</a></h5>
+											<div class="doc-item__info">
+												<span class="doc-item__size">XLS | 342 КБ</span>
+											</div>
+										</div>
+									</div>
+								</section>
+								<section class="survey-section__section">
+									<h3 class="survey-section__title left-line">Требования</h3>
+									<div class="white-blocks">
+										<div class="white-block list-block">
+											<ul class="list">
+												<li class="_disc">Анкета должна быть заполнена только на английском языке.</li>
+												<li class="_disc">Анкета должна быть заполнена полностью. Исключением могут быть поля, отмеченные как необязательные.</li>
+												<li class="_disc">Заполненную анкету необходимо отправить по электронной почте на vacancy@scf-group.ru</li>
+												<li class="_disc">К анкете необходимо приложить свое фото отдельным файлом в формате JPG.</li>
+												<li class="_disc">Размер отправляемого сообщения не должен превышать 2 МБ.</li>
+												<li class="_disc">
+													Тема сообщения должна содержать следующую информацию: CV / Rank / Name / Year of birth / Type of vessel / Sea service / Visa
+													<ul class="sub-list">
+														<li class="_circle">Rank – должность на данный момент. Должна соответствовать должности, которая указана в самой анкете в выпадающем списке.</li>
+														<li class="_circle">Name – имя и фамилия латиницей.</li>
+														<li class="_circle">Year of birth – год рождения. День и месяц рождения указывать не требуется.</li>
+														<li class="_circle">Type of vessel – тип судна, на котором получен последний опыт работы. Должен соответствовать типу судна, который указан в самой анкете в выпадающем списке.</li>
+														<li class="_circle">Sea service – общий стаж работы на судах в текущей должности.</li>
+														<li class="_circle">Visa – наличие визы США и/или Шенгенской визы (USA Visa / Schengen Visa). В случае отсутствия визы просьба оставить поле Visa пустым.</li>
+													</ul>
+												</li>
+											</ul>
+											<br>
+											<p>Пример: CV / Ordinary Seaman / Ivan Ivanov / 1985 / Chemical tanker / 24 months / Schengen Visa.</p>
+										</div>
+										<div class="white-block">
+											Единая эл. почта для подачи анкеты моряка: <a href="mailto:vacancy@scf-group.com">vacancy@scf-group.com</a>
+										</div>
+										<div class="white-blocks">
+											<div class="blue-block">
+												<a class="more-link" href="#">Первая сслыка</a>
+											</div>
+											<div class="blue-block">
+												<a class="more-link" href="#">Вторая ссылка</a>
+											</div>
+										</div>
+									</div>
+								</section>
+							</div>
+						</div>
+					</div>
+				</section>
+			</div>
+
+		</main>
+		
+		<footer class="footer">
+			<div class="footer__container _container">
+				<div class="footer__body">
+					<div class="footer__row footer__row_1">
+						<figure class="footer__logo logo">
+							<img src="assets/img/main/logo.svg" alt="logo">
+						</figure>
+						<nav class="footer__menu footer-menu">
+							<ul class="footer-menu__list">
+								<li class="footer-menu__item"><a class="footer-menu__link" href="#">Контакты</a></li>
+								<li class="footer-menu__item"><a class="footer-menu__link" href="#">Общественная приемная СКФ</a></li>
+								<li class="footer-menu__item"><a class="footer-menu__link" href="#">Закупки</a></li>
+								<li class="footer-menu__item"><a class="footer-menu__link" href="#">Противодействие коррупции</a></li>
+								<li class="footer-menu__item"><a class="footer-menu__link" href="#">Карта сайта</a></li>
+							</ul>
+						</nav>
+					</div>
+					<div class="footer__row footer__row_2">
+						<div class="footer__socials socials">
+							<a class="socials__social _icon-tg" href="#"></a>
+							<a class="socials__social _icon-vk" href="#"></a>
+						</div>
+						<p class="footer__copy">© ПАО Совкомфлот 2024</p>
+					</div>
+				</div>
+			</div>
+		</footer>
+	</div>
+
+
+	<button class="move-up _icon-arrow-3" type="button" data-move-up data-goto="wrapper"></button>
+	
+
+	<!-- services -->
+	<script src="https://www.google.com/recaptcha/api.js?render=<reCAPTCHA_site_key>&badge=bottomleft"></script>
+	<script src="https://api-maps.yandex.ru/2.1/?lang=ru_RU&amp;apikey=<ваш API-ключ>"></script>
+	
+	<!-- libs -->
+	<script src="assets/js/libs/lazyload.min.js"></script>
+	<script src="assets/js/libs/choices.min.js"></script>
+	<script src="assets/js/libs/nouislider.min.js"></script>
+	<script src="assets/js/libs/inputmask.min.js"></script>
+	<script src="assets/js/libs/justvalidate.min.js"></script>
+	<script src="assets/js/libs/date-fns.min.js"></script>
+	<script src="assets/js/libs/datepicker.min.js"></script>
+	<script src="assets/js/libs/swiper.min.js"></script>
+	<script src="assets/js/libs/lightgallery.min.js"></script>
+	<script src="assets/js/libs/aos.min.js"></script>
+
+	<!-- plugins -->
+	<script src="assets/js/plugins/adapt.js"></script>
+	<script src="assets/js/plugins/menu.js"></script>
+	<script src="assets/js/plugins/modal.js"></script>
+	<script src="assets/js/plugins/tabs.js"></script>
+	<script src="assets/js/plugins/spoiler.js"></script>
+	<script src="assets/js/plugins/rating.js"></script>
+
+	<!-- files -->
+	<script src="assets/js/files/functions.js"></script>
+	<script src="assets/js/files/forms.js"></script>
+	<script src="assets/js/files/sliders.js"></script>
+	<script src="assets/js/files/scroll.js"></script>
+	<script src="assets/js/files/media.js"></script>
+	<script src="assets/js/files/scripts.js"></script>
+
+
+</body>
+
+</html>
