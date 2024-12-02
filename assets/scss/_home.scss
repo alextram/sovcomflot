@@ -96,8 +96,9 @@
 //---------------------------------------------------------------
 .main-slide {
 	position: relative;
-	@include adaptiv-value(height, 720, 600, 1);
-	min-height: rem(500);
+	// @include adaptiv-value(height, 720, 600, 1);
+	// min-height: rem(500);
+	height: 100vh;
 	padding: rem(128) 0px 0px 0px;
 	@media (max-width: em($md2)) {
 		padding: rem(80) 0px 0px 0px;

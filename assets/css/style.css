@@ -8739,14 +8739,8 @@ textarea.input {
 
 .main-slide {
   position: relative;
-  height: 720px;
-  min-height: 31.25rem;
+  height: 100vh;
   padding: 8rem 0px 0px 0px;
-}
-@media (max-width: 1410px) {
-  .main-slide {
-    height: calc(600px + 120 * (100vw - 320px) / 1090);
-  }
 }
 @media (max-width: 61.9375em) {
   .main-slide {
