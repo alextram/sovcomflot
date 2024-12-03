@@ -27,6 +27,14 @@ new Spoiler('spoiler-1');
 new Spoiler('spoiler-2');
 
 
+// Инициализация чекбокса анкеты
+const surveyCheckbox = document.querySelector('input[name="accept"]');
+surveyCheckbox?.addEventListener('change', (event) => {
+	const target = event.target;
+	const blocks = document.querySelectorAll('[data-survey-block]');
+	blocks.forEach(block => target.checked ? block.classList.add('_active') : block.classList.remove('_active'));
+});
+
 // Инициализация функционала формы
 const themeSelector = document.querySelector('select[name="theme"]');
 themeSelector?.addEventListener('change', (event) => {
@@ -220,7 +228,7 @@ function dateClickHandler(date) {
 
 	const dateFormat = dateFns.format(date, 'dd-MM-yyyy');
 
-	const eventElement = document.querySelector(`.events-item[data-date="${dateFormat}"]`);
+	const eventElement = document.querySelector(`.event-item[data-date="${dateFormat}"]`);
 
 	if (!eventElement) return;
 
@@ -231,5 +239,5 @@ function dateClickHandler(date) {
 
 //===============================================================
 function clearActiveDateEvent() {
-	document.querySelectorAll('.events-item._active').forEach(elem => elem.classList.remove('_active'));
+	document.querySelectorAll('.event-item._active').forEach(elem => elem.classList.remove('_active'));
 }

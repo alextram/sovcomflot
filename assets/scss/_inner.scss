@@ -16,6 +16,13 @@
 	// .inner-section__body
 	&__body {
 		max-width: rem(1030);
+		display: grid;
+		gap: rem(40);
+	}
+	// .inner-section__block
+	&__block {
+		display: grid;
+		gap: rem(20);
 	}
 	// .inner-section__title
 	&__title {

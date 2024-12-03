@@ -75,7 +75,7 @@
 }
 
 //===============================================================
-.events-item {
+.event-item {
 	background: #fff;
 	padding: rem(20) rem(30);
 	border: rem(2) solid #fff;
@@ -83,7 +83,7 @@
 	&._active {
 		border: rem(2) solid #DBE3F6;
 	}
-	// .events-item__head
+	// .event-item__head
 	&__head {
 		display: flex;
 		flex-wrap: wrap;
@@ -92,7 +92,7 @@
 		color: var(--color-font-gray);
 		margin: 0px 0px rem(8) 0px;
 	}
-	// .events-item__date-time
+	// .event-item__date-time
 	&__date-time {
 		display: flex;
 		gap: rem(10);
@@ -100,24 +100,24 @@
 			white-space: nowrap;
 		}
 	}
-	// .events-item__place
+	// .event-item__place
 	&__place {
 		display: inline-flex;
 		justify-content: center;
 		align-items: center;
 		gap: rem(5);
 	}
-	// .events-item__main
+	// .event-item__main
 	&__main {
 		& > *:last-child {
 			margin: 0 !important;
 		}
 	}
-	// .events-item__title
+	// .event-item__title
 	&__title {
 		margin: 0px 0px rem(3) 0px;
 	}
-	// .events-item__link
+	// .event-item__link
 	&__link {
 		color: var(--color-main);
 		display: inline-flex;

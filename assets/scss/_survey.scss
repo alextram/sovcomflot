@@ -36,3 +36,12 @@
 		margin: 0px 0px rem(20) 0px;
 	}
 }
+
+
+//===============================================================
+[data-survey-block] {
+	display: none;
+	&._active {
+		display: block;
+	}
+}

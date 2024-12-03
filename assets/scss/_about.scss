@@ -336,6 +336,9 @@
 		font-size: rem(16);
 		padding: rem(5) rem(14);
 		transition: all 0.3s ease 0s;
+		&._active {
+			background: #DBE3F6;
+		}
 		@media (any-hover: hover) {
 			&:hover {
 				background: #DBE3F6;

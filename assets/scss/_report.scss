@@ -106,14 +106,14 @@
 	&__row {
 		// .report-card__row_top
 		&_top {
-			padding-bottom: rem(16);
-			border-bottom: rem(1) solid #D9D9D9;
+			// padding-bottom: rem(16);
 			display: grid;
 			gap: rem(8);
 		}
 		// .report-card__row_bottom
 		&_bottom {
 			padding-top: rem(16);
+			border-bottom: rem(1) solid #D9D9D9;
 			text-align: center;
 		}
 	}

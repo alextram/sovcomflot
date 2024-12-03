@@ -412,7 +412,7 @@
 	&::before {
 		content: '';
 		position: absolute;
-		top: rem(3);
+		top: rem(5);
 		left: 0;
 		height: rem(20);
 		width: rem(3);
@@ -616,4 +616,44 @@
 //===============================================================
 .list-block {
 	color: var(--color-font-gray);
+}
+
+
+//===============================================================
+.sub-info {
+	display: grid;
+	gap: rem(5);
+	color: var(--color-font-gray);
+	font-size: rem(16);
+	line-height: 125%;
+	margin: 0px 0px rem(15) 0px;
+	// .sub-info__date
+	&__date {
+	}
+	// .sub-info__author
+	&__author {
+	}
+}
+
+//===============================================================
+.block-title {
+	color: var(--color-main);
+	@include adaptiv-value(font-size, 24, 18, 1);
+	// .block-title_main
+	&_main {
+		@include adaptiv-value(font-size, 34, 26, 1);
+	}
+}
+
+//===============================================================
+.block-sub-title {
+	color: #000;
+	@include adaptiv-value(font-size, 20, 18, 1);
+	font-weight: 500;
+}
+
+//===============================================================
+.block-list {
+	display: grid;
+	gap: rem(10);
 }
