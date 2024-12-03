@@ -831,12 +831,12 @@
 			}
 		}
 		@media (max-width: em($md4)) {
-			display: none;
 			&._active {
 				display: inline-flex;
 				color: #fff;
 				border: rem(1) solid #fff;
 				background: transparent;
+				display: none;
 			}
 		}
 	}

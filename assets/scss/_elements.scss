@@ -421,6 +421,22 @@
 }
 
 //===============================================================
+.corner {
+	position: relative;
+	padding: 0px 0px 0px rem(28);
+	&::before {
+		content: '';
+		position: absolute;
+		top: rem(1);
+		left: 0;
+		height: rem(20);
+		width: rem(20);
+		border-left: rem(4) solid var(--color-second);
+		border-bottom: rem(4) solid var(--color-second);
+	}
+}
+
+//===============================================================
 .line-block {
 	position: relative;
 	background: #eef4fd;

@@ -120,13 +120,14 @@
 .sitemap {
 	display: grid;
 	gap: rem(20);
-	grid-template-columns: repeat(3, 1fr);
-	@media (max-width: em($md2)) {
-		grid-template-columns: repeat(2, 1fr);
-	}
-	@media (max-width: em($md3)) {
-		grid-template-columns: repeat(1, 1fr);
-	}
+	grid-template-columns: repeat(1, 1fr);
+	// grid-template-columns: repeat(3, 1fr);
+	// @media (max-width: em($md2)) {
+	// 	grid-template-columns: repeat(2, 1fr);
+	// }
+	// @media (max-width: em($md3)) {
+	// 	grid-template-columns: repeat(1, 1fr);
+	// }
 	// .sitemap__column
 	&__column {
 		display: grid;
