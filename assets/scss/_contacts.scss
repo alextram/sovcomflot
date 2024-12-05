@@ -1,7 +1,4 @@
 .contacts-section {
-	// .contacts-section__container
-	&__container {
-	}
 	// .contacts-section__title
 	&__title {
 		@include adaptiv-value(font-size, 34, 28, 1);

@@ -6237,14 +6237,110 @@ body h5 {
   line-height: 144.4444444444%;
   color: var(--color-titles);
 }
-body ._typography h1, body ._typography h2, body ._typography h3, body ._typography h4, body ._typography h5, body ._typography h6 {
-  margin: 0px 0px 1.25rem 0px;
-  color: var(--color-main);
+body ._typography > *:last-child {
+  margin: 0px 0px 0px 0px;
 }
-body ._typography h1 span, body ._typography h2 span, body ._typography h3 span, body ._typography h4 span, body ._typography h5 span, body ._typography h6 span {
+body ._typography .h1,
+body ._typography h1 a,
+body ._typography h1 {
+  font-weight: 500;
+  font-size: 44px;
+  font-size: 2.75rem;
+  line-height: 100%;
+  color: var(--color-titles);
+  margin: 0px 0px 1.25rem 0px;
+}
+@media (max-width: 1410px) {
+  body ._typography .h1,
+  body ._typography h1 a,
+  body ._typography h1 {
+    font-size: calc(36px + 8 * (100vw - 320px) / 1090);
+  }
+}
+body ._typography h2 a,
+body ._typography h2 {
+  color: var(--color-main);
+  font-weight: 500;
+  font-size: 34px;
+  line-height: 111.765%;
+  margin: 0px 0px 1.25rem 0px;
+}
+@media (max-width: 1410px) {
+  body ._typography h2 a,
+  body ._typography h2 {
+    font-size: calc(26px + 8 * (100vw - 320px) / 1090);
+  }
+}
+body ._typography h3 a,
+body ._typography h3 {
+  color: #000;
+  font-size: 28px;
+  font-weight: 400;
+  line-height: 128.571%;
+  margin: 0px 0px 1.25rem 0px;
+}
+@media (max-width: 1410px) {
+  body ._typography h3 a,
+  body ._typography h3 {
+    font-size: calc(22px + 6 * (100vw - 320px) / 1090);
+  }
+}
+body ._typography h4 a,
+body ._typography h4 {
+  color: var(--color-main);
+  font-weight: 500;
+  font-size: 24px;
+  line-height: 116.667%;
+  margin: 0px 0px 1.25rem 0px;
+  position: relative;
+  padding: 0px 0px 0px 0.8125rem;
+}
+@media (max-width: 1410px) {
+  body ._typography h4 a,
+  body ._typography h4 {
+    font-size: calc(20px + 4 * (100vw - 320px) / 1090);
+  }
+}
+body ._typography h4 a span,
+body ._typography h4 span {
   color: #000;
   font-size: 1.125rem;
   font-weight: 300;
+}
+body ._typography h4 a::before,
+body ._typography h4::before {
+  content: "";
+  position: absolute;
+  top: 0.1875rem;
+  left: 0;
+  height: 1.25rem;
+  width: 0.1875rem;
+  background: var(--color-second);
+}
+body ._typography h5 a,
+body ._typography h5 {
+  color: #000;
+  font-family: "Fira Sans";
+  font-size: 20px;
+  font-weight: 500;
+  line-height: 140%;
+  margin: 0px 0px 1.25rem 0px;
+}
+@media (max-width: 1410px) {
+  body ._typography h5 a,
+  body ._typography h5 {
+    font-size: calc(18px + 2 * (100vw - 320px) / 1090);
+  }
+}
+body ._typography h6 a,
+body ._typography h6 {
+  color: #000;
+  font-size: 1.125rem;
+  font-weight: 400;
+  line-height: 144.444%;
+}
+body ._typography img {
+  margin: 0px 0px 1.875rem 0px;
 }
 body ._typography a {
   -webkit-transition: all 0.3s ease 0s;
@@ -6260,7 +6356,8 @@ body ._typography p {
   margin: 0px 0px 0.9375rem 0px;
   font-weight: 300;
 }
-body ._typography b {
+body ._typography strong, body ._typography b {
+  color: #000;
   font-weight: 500;
 }
 body ._typography blockquote {
@@ -6271,7 +6368,7 @@ body ._typography blockquote {
   font-style: italic;
   font-weight: 300;
   line-height: 136.364%;
-  margin: 1.875rem 0rem 2.5rem;
+  margin: 1.875rem 0rem;
 }
 body ._typography blockquote.white {
   background: #fff;
@@ -6286,7 +6383,7 @@ body ._typography ul {
   padding: 0px 0px 0px 1.375rem;
   margin: 0px 0px 2.125rem 0px;
   display: grid;
-  gap: 0.9375rem;
+  gap: 0.6875rem;
 }
 body ._typography ul li {
   position: relative;
@@ -6302,7 +6399,7 @@ body ._typography ul li > ul, body ._typography ul li > ol {
 body ._typography ul li::before {
   content: "";
   position: absolute;
-  top: 0.7222222222em;
+  top: 0.6666666667em;
   left: -0.7222222222em;
   width: 0.3333333333em;
   height: 0.3333333333em;
@@ -7361,6 +7458,18 @@ textarea.input {
   color: var(--color-font-gray);
 }
 
+.quote-block {
+  background: #fff;
+  padding: 1.5625rem 1.875rem;
+  color: #000;
+  font-size: 1.125rem;
+  font-style: italic;
+  font-weight: 300;
+  line-height: 144.444%;
+  display: grid;
+  gap: 0.9375rem;
+}
+
 .blue-block {
   padding: 1.0625rem 1.875rem;
   background: #DBE3F6;
@@ -7539,6 +7648,9 @@ textarea.input {
   }
 }
 
+.tabs {
+  min-width: 0;
+}
 .tabs__nav {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -7678,6 +7790,18 @@ textarea.input {
 .block-list {
   display: grid;
   gap: 0.625rem;
+}
+
+.card-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1.5rem;
+  margin: 0px 0px 3.75rem 0px;
+}
+@media (max-width: 47.9375em) {
+  .card-grid {
+    grid-template-columns: repeat(1, 1fr);
+  }
 }
 
 .header {
@@ -8934,33 +9058,19 @@ textarea.input {
   margin: 0px 0px 3.75rem 0px;
 }
 
-.inner-section__body {
-  max-width: 64.375rem;
+.inner-section__content {
   display: grid;
   gap: 2.5rem;
 }
-.inner-section__block {
+.inner-section__content_narrow {
+  max-width: 64.375rem;
+}
+.inner-section__content._typography {
+  display: block;
+}
+.inner-section__body {
   display: grid;
   gap: 1.25rem;
-}
-.inner-section__title {
-  margin: 0px 0px 1.25rem 0px;
-  color: #000;
-  font-size: 28px;
-  font-weight: 400;
-  line-height: 128.571%;
-}
-@media (max-width: 1410px) {
-  .inner-section__title {
-    font-size: calc(22px + 6 * (100vw - 320px) / 1090);
-  }
-}
-.inner-section__title_blue {
-  color: var(--color-main);
-  font-weight: 500;
-}
-.inner-section__content {
-  margin: 0px 0px 3.75rem 0px;
 }
 
 .inner-head__top {
@@ -9400,7 +9510,7 @@ textarea.input {
   grid-gap: 0.625rem;
 }
 
-.info-section__body {
+.info-section {
   display: grid;
   gap: 1.5rem;
 }
@@ -9765,17 +9875,9 @@ textarea.input {
     grid-template-columns: repeat(1, 1fr);
   }
 }
-.press-section__main {
+.press-section {
   display: grid;
   gap: 1.25rem;
-  max-width: 64.375rem;
-}
-.press-section__body {
-  max-width: 64.375rem;
-}
-.press-section__title {
-  color: var(--color-main);
-  margin: 0px 0px 0.9375rem 0px;
 }
 .press-section__info {
   display: grid;
@@ -9788,21 +9890,10 @@ textarea.input {
 .press-section__back {
   margin: 2.5rem 0px 3.75rem;
 }
-.press-section__grid {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 1.5rem;
-  margin: 0px 0px 3.75rem 0px;
-}
-@media (max-width: 47.9375em) {
-  .press-section__grid {
-    grid-template-columns: repeat(1, 1fr);
-  }
-}
+
 .press-spoiler {
   display: grid;
   gap: 1.25rem;
-  margin: 2.5rem 0rem 1.25rem;
 }
 .press-spoiler__item {
   background: #fff;
@@ -9845,6 +9936,7 @@ textarea.input {
 }
 .press-spoiler__content {
   padding: 0.3125rem 1.875rem 0.9375rem 1.875rem;
+  font-weight: 300;
 }
 .press-spoiler__body {
   display: grid;
@@ -9868,7 +9960,6 @@ textarea.input {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   gap: 1.4375rem;
-  margin: 2.5rem 0px;
 }
 @media (max-width: 29.9375em) {
   .press-gallery {
@@ -10067,7 +10158,7 @@ textarea.input {
 .press-list {
   display: grid;
   gap: 0.625rem;
-  margin: 0px 0px 3.75rem 0px;
+  margin: 0px 0px 1.875rem 0px;
 }
 .press-list__item {
   padding: 1.25rem 1.875rem;
@@ -10358,6 +10449,12 @@ textarea.input {
 .event-item__title {
   margin: 0px 0px 0.1875rem 0px;
 }
+.event-item__title a {
+  color: var(--color-main);
+}
+.event-item__text {
+  color: #525253;
+}
 .event-item__link {
   color: var(--color-main);
   display: -webkit-inline-box;
@@ -10561,6 +10658,7 @@ textarea.input {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   gap: 1.5rem;
+  margin: 0px 0px 1.25rem 0px;
 }
 .video-card__date {
   margin: 0px 0px 0.5rem 0px;

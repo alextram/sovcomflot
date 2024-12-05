@@ -116,6 +116,13 @@
 	// .event-item__title
 	&__title {
 		margin: 0px 0px rem(3) 0px;
+		a {
+			color: var(--color-main);
+		}
+	}
+	// .event-item__text
+	&__text {
+		color: #525253;
 	}
 	// .event-item__link
 	&__link {

@@ -1,12 +1,6 @@
 .info-section {
-	// .info-section__container
-	&__container {
-	}
-	// .info-section__body
-	&__body {
-		display: grid;
-		gap: rem(24);
-	}
+	display: grid;
+	gap: rem(24);
 	// .info-section__row
 	&__row {
 	}

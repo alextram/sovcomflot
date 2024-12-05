@@ -358,6 +358,19 @@
 }
 
 //===============================================================
+.quote-block {
+	background: #fff;
+	padding: rem(25) rem(30);
+	color: #000;
+	font-size: rem(18);
+	font-style: italic;
+	font-weight: 300;
+	line-height: 144.444%;
+	display: grid;
+	gap: rem(15);
+}
+
+//===============================================================
 .blue-block {
 	padding: rem(17) rem(30);
 	background: #DBE3F6;
@@ -525,6 +538,7 @@
 
 //===============================================================
 .tabs {
+	min-width: 0;
 	// .tabs__nav
 	&__nav {
 		display: flex;
@@ -672,4 +686,15 @@
 .block-list {
 	display: grid;
 	gap: rem(10);
+}
+
+//===============================================================
+.card-grid {
+	display: grid;
+	grid-template-columns: repeat(3, 1fr);
+	gap: rem(24);
+	margin: 0px 0px rem(60) 0px;
+	@media (max-width: em($md3)) {
+		grid-template-columns: repeat(1, 1fr);
+	}
 }
