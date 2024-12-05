@@ -136,10 +136,10 @@ body {
 			}
 		}
 
-		h3 {
-			@include adaptiv-value(font-size, 24, 20, 1);
-			line-height: 116.667%;
-		}
+		// h3 {
+		// 	@include adaptiv-value(font-size, 24, 20, 1);
+		// 	line-height: 116.667%;
+		// }
 
 		a {
 			transition: all 0.3s ease 0s;

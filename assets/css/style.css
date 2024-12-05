@@ -6246,15 +6246,6 @@ body ._typography h1 span, body ._typography h2 span, body ._typography h3 span,
   font-size: 1.125rem;
   font-weight: 300;
 }
-body ._typography h3 {
-  font-size: 24px;
-  line-height: 116.667%;
-}
-@media (max-width: 1410px) {
-  body ._typography h3 {
-    font-size: calc(20px + 4 * (100vw - 320px) / 1090);
-  }
-}
 body ._typography a {
   -webkit-transition: all 0.3s ease 0s;
   transition: all 0.3s ease 0s;
