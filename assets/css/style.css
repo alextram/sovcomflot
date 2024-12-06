@@ -9199,7 +9199,12 @@ textarea.input {
   padding: 1.5rem;
 }
 .card__title {
-  color: #fff;
+  color: #fff !important;
+  padding-left: 0 !important;
+  margin-bottom: 0 !important;
+}
+.card__title::before {
+  display: none;
 }
 .card__title:after {
   content: "\e900";

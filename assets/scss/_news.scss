@@ -14,7 +14,12 @@
 	}
 	// .card__title
 	&__title {
-		color: #fff;
+		color: #fff !important;
+		padding-left: 0 !important;
+		margin-bottom: 0 !important;
+		&::before {
+			display: none;
+		}
 		&:after {
 			content: "\e900";
 			font-family: "icons";
