@@ -10803,6 +10803,7 @@ textarea.input {
   position: relative;
   display: grid;
   gap: 1.5625rem;
+  margin: 0px 0px 1.25rem 0px;
 }
 .chron::before {
   content: "";

@@ -272,7 +272,7 @@ class Menu {
 		controls.forEach(control => control.classList.remove(this.classes.hover));
 		submenus.forEach(submenu => submenu.classList.remove(this.classes.visible));
 
-		if (!this.isSomeSubMenuOpen() && window.innerWidth > 991) this.enableScroll();
+		if (!this.isSomeSubMenuOpen() && !this.isModalActive() && window.innerWidth > 991) this.enableScroll();
 	}
 
 
@@ -509,5 +509,15 @@ class Menu {
 		});
 
 		return isOpen;
+	}
+
+
+	/**
+	 * Проверка если модальное окно
+	 */
+	isModalActive() {
+		const modal = document.getElementById('modal');
+
+		return modal.classList.contains('_active');
 	}
 }

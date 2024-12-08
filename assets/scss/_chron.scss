@@ -3,6 +3,7 @@
 	position: relative;
 	display: grid;
 	gap: rem(25);
+	margin: 0px 0px rem(20) 0px;
 	&::before {
 		content: '';
 		position: absolute;
