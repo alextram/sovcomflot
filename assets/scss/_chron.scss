@@ -1,4 +1,4 @@
-.history {
+.chron {
 	padding: rem(25) 0px 0px 0px;
 	position: relative;
 	display: grid;
@@ -15,17 +15,17 @@
 			right: 0;
 		}
 	}
-	// .history__item
+	// .chron__item
 	&__item {
 	}
 }
 
-.history-item {
+.chron-item {
 	@media (min-width: em($md3+1)) {
 		width: 50%;
 		&:nth-child(2n) {
 			translate: 100% 0;
-			.history-item__head {
+			.chron-item__head {
 				text-align: right;
 				padding-left: rem(40);
 				&::before {
@@ -35,13 +35,13 @@
 					right: 100%;
 				}
 			}
-			.history-item__body {
+			.chron-item__body {
 				padding-left: rem(40);
 				padding-right: 0;
 			}
 		}
 	}
-	// .history-item__head
+	// .chron-item__head
 	&__head {
 		position: relative;
 		padding: 0px 0px rem(25) 0px;
@@ -68,14 +68,14 @@
 			translate: 50% 50%;
 		}
 	}
-	// .history-item__year
+	// .chron-item__year
 	&__year {
 		color: var(--color-main);
 		@include adaptiv-value(font-size, 32, 26, 1);
 		font-weight: 500;
 		line-height: 87.5%;
 	}
-	// .history-item__body
+	// .chron-item__body
 	&__body {
 		padding: rem(20) rem(40) 0px 0px;
 	}

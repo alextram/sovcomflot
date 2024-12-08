@@ -10798,13 +10798,13 @@ textarea.input {
   font-weight: 600;
 }
 
-.history {
+.chron {
   padding: 1.5625rem 0px 0px 0px;
   position: relative;
   display: grid;
   gap: 1.5625rem;
 }
-.history::before {
+.chron::before {
   content: "";
   position: absolute;
   width: 0.0625rem;
@@ -10814,39 +10814,39 @@ textarea.input {
   top: 0;
 }
 @media (max-width: 47.9375em) {
-  .history::before {
+  .chron::before {
     right: 0;
   }
 }
 @media (min-width: 48em) {
-  .history-item {
+  .chron-item {
     width: 50%;
   }
-  .history-item:nth-child(2n) {
+  .chron-item:nth-child(2n) {
     translate: 100% 0;
   }
-  .history-item:nth-child(2n) .history-item__head {
+  .chron-item:nth-child(2n) .chron-item__head {
     text-align: right;
     padding-left: 2.5rem;
   }
-  .history-item:nth-child(2n) .history-item__head::before {
+  .chron-item:nth-child(2n) .chron-item__head::before {
     right: 100%;
   }
-  .history-item:nth-child(2n) .history-item__head::after {
+  .chron-item:nth-child(2n) .chron-item__head::after {
     right: 100%;
   }
-  .history-item:nth-child(2n) .history-item__body {
+  .chron-item:nth-child(2n) .chron-item__body {
     padding-left: 2.5rem;
     padding-right: 0;
   }
 }
-.history-item__head {
+.chron-item__head {
   position: relative;
   padding: 0px 0px 1.5625rem 0px;
   margin: 0px 0px 1.5625rem 0px;
   border-bottom: 0.0625rem solid var(--color-main);
 }
-.history-item__head::before {
+.chron-item__head::before {
   content: "";
   position: absolute;
   bottom: 0;
@@ -10856,7 +10856,7 @@ textarea.input {
   background: var(--color-body-background);
   translate: 50% calc(50% - 1.25rem);
 }
-.history-item__head::after {
+.chron-item__head::after {
   content: "";
   position: absolute;
   bottom: 0;
@@ -10866,17 +10866,17 @@ textarea.input {
   background: var(--color-main);
   translate: 50% 50%;
 }
-.history-item__year {
+.chron-item__year {
   color: var(--color-main);
   font-size: 32px;
   font-weight: 500;
   line-height: 87.5%;
 }
 @media (max-width: 1410px) {
-  .history-item__year {
+  .chron-item__year {
     font-size: calc(26px + 6 * (100vw - 320px) / 1090);
   }
 }
-.history-item__body {
+.chron-item__body {
   padding: 1.25rem 2.5rem 0px 0px;
 }
