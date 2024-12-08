@@ -223,6 +223,11 @@ body {
 			font-weight: 500;
 		}
 
+		mark {
+			font-weight: 400;
+			background: inherit;
+		}
+
 		blockquote {
 			background: #EEF4FD;
 			padding: rem(25) rem(30);

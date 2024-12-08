@@ -27,6 +27,11 @@ new Spoiler('spoiler-1');
 new Spoiler('spoiler-2');
 
 
+document.addEventListener('DOMContentLoaded', () => {
+	modal.openModal('info-modal');
+})
+
+
 // Инициализация чекбокса анкеты
 const surveyCheckbox = document.querySelector('input[name="accept"]');
 surveyCheckbox?.addEventListener('change', (event) => {

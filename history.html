@@ -1,0 +1,655 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+	<title>СКФ</title>
+	<meta charset="UTF-8">
+	<meta name="format-detection" content="telephone=no">
+	<link rel="stylesheet" href="assets/css/style.css">
+	<link rel="shortcut icon" href="favicon.ico">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+	<script>
+		const LOCALIZATION = 'Russian'; // English, Spanish... Ключ локализации. При необходимости изменять в соответствии с ответом сервера.
+	</script>
+</head>
+
+<body>
+	<div class="wrapper">
+		<header class="header" data-fix>
+			<div class="header__container _container">
+				<div class="header__body">
+					<div class="header__top header-top">
+						<nav class="header-top__menu header-top-menu">
+							<ul class="header-top-menu__list" data-adapt="menu__content,991">
+								<li class="header-top-menu__item"><a class="header-top-menu__link" href="#">Контакты</a></li>
+								<li class="header-top-menu__item"><a class="header-top-menu__link" href="#">Общественная приемная СКФ</a></li>
+								<li class="header-top-menu__item"><a class="header-top-menu__link" href="#">Закупки</a></li>
+								<li class="header-top-menu__item"><a class="header-top-menu__link" href="#">Противодействие коррупции</a></li>
+							</ul>
+						</nav>
+						<div class="header-top__actions" data-adapt="menu__content-wrapper,991">
+							<a class="header-top__enter _icon-enter" href="#">Внутренний портал</a>
+							<div class="header-top__socials socials">
+								<a class="socials__social _icon-tg" href="#"></a>
+								<a class="socials__social _icon-vk" href="#"></a>
+							</div>
+						</div>
+					</div>
+					<div class="header__bottom header-bottom">
+						<a class="header-bottom__logo logo" href="#">
+							<img src="assets/img/main/logo.svg" alt="logo">
+						</a>
+						<div class="header-bottom__menu menu" data-menu="main-menu">
+							<nav class="menu__body" data-menu-container="main-menu">
+								<div class="menu__content-wrapper">
+									<div class="menu__content">
+										<button class="menu__close _icon-cross" type="button" data-menu-close></button>
+										<h4 class="menu__title left-line">Меню</h4>
+										<ul class="menu__list">
+											<li class="menu__item" data-menu-item>
+												<button class="menu__control _icon-arrow-4" data-menu-control>О компании</button>
+												<div class="menu__sub-menu sub-menu" data-menu-submenu>
+													<div class="sub-menu__content">
+														<h4 class="sub-menu__title left-line">О компании</h4>
+														<button class="sub-menu__close _icon-cross" type="button" data-menu-back><span class="_icon-arrow-4">Назад</span></button>
+														<ul class="sub-menu__list">
+															<li class="sub-menu__item" data-menu-item><a class="sub-menu__link" href="#">Тестовый пункт меню 1</a></li>
+															<li class="sub-menu__item" data-menu-item><a class="sub-menu__link" href="#">Тестовый пункт меню 2</a></li>
+															<li class="sub-menu__item" data-menu-item><a class="sub-menu__link" href="#">Тестовый пункт меню 3</a></li>
+															<li class="sub-menu__item" data-menu-item><a class="sub-menu__link" href="#">Тестовый пункт меню 4</a></li>
+															<li class="sub-menu__item" data-menu-item><a class="sub-menu__link" href="#">Тестовый пункт меню 5</a></li>
+														</ul>
+													</div>
+												</div>
+											</li>
+											<li class="menu__item" data-menu-item>
+												<button class="menu__control _icon-arrow-4" data-menu-control>Инвесторам и акционерам</button>
+												<div class="menu__sub-menu sub-menu" data-menu-submenu>
+													<div class="sub-menu__content">
+														<h4 class="sub-menu__title left-line">Инвесторам и акционерам</h4>
+														<button class="sub-menu__close _icon-cross" type="button" data-menu-back><span class="_icon-arrow-4">Назад</span></button>
+														<ul class="sub-menu__list">
+															<li class="sub-menu__item" data-menu-item>
+																<button class="sub-menu__control _icon-arrow-4" data-menu-control>Акции</button>
+																<div class="sub-menu__sub-menu sub-sub-menu" data-menu-submenu>
+																	<div class="sub-sub-menu__content">
+																		<h4 class="sub-sub-menu__title left-line">Акции</h4>
+																		<button class="sub-sub-menu__close _icon-cross" type="button" data-menu-back><span class="_icon-arrow-4">Назад</span></button>
+																		<ul class="sub-sub-menu__list">
+																			<li class="sub-sub-menu__item" data-menu-item><a class="sub-sub-menu__link" href="#">test 1</a></li>
+																			<li class="sub-sub-menu__item" data-menu-item><a class="sub-sub-menu__link" href="#">test 2</a></li>
+																			<li class="sub-sub-menu__item" data-menu-item><a class="sub-sub-menu__link" href="#">test 4</a></li>
+																		</ul>
+																	</div>
+																</div>
+															</li>
+															<li class="sub-menu__item" data-menu-item>
+																<button class="sub-menu__control _icon-arrow-4" data-menu-control>Долговые инструменты</button>
+																<div class="sub-menu__sub-menu sub-sub-menu" data-menu-submenu>
+																	<div class="sub-sub-menu__content">
+																		<h4 class="sub-sub-menu__title left-line">Долговые инструменты</h4>
+																		<button class="sub-sub-menu__close _icon-cross" type="button" data-menu-back><span class="_icon-arrow-4">Назад</span></button>
+																		<ul class="sub-sub-menu__list">
+																			<li class="sub-sub-menu__item" data-menu-item><a class="sub-sub-menu__link" href="#">test 1</a></li>
+																			<li class="sub-sub-menu__item" data-menu-item><a class="sub-sub-menu__link" href="#">test 2</a></li>
+																			<li class="sub-sub-menu__item" data-menu-item><a class="sub-sub-menu__link" href="#">test 4</a></li>
+																		</ul>
+																	</div>
+																</div>
+															</li>
+															<li class="sub-menu__item" data-menu-item>
+																<button class="sub-menu__control _icon-arrow-4" data-menu-control>Отчеты и результаты</button>
+																<div class="sub-menu__sub-menu sub-sub-menu" data-menu-submenu>
+																	<div class="sub-sub-menu__content">
+																		<h4 class="sub-sub-menu__title left-line">Отчеты и результаты</h4>
+																		<button class="sub-sub-menu__close _icon-cross" type="button" data-menu-back><span class="_icon-arrow-4">Назад</span></button>
+																		<ul class="sub-sub-menu__list">
+																			<li class="sub-sub-menu__item" data-menu-item><a class="sub-sub-menu__link" href="#">test 1</a></li>
+																			<li class="sub-sub-menu__item" data-menu-item><a class="sub-sub-menu__link" href="#">test 2</a></li>
+																			<li class="sub-sub-menu__item" data-menu-item><a class="sub-sub-menu__link" href="#">test 4</a></li>
+																		</ul>
+																	</div>
+																</div>
+															</li>
+															<li class="sub-menu__item" data-menu-item>
+																<button class="sub-menu__control _icon-arrow-4" data-menu-control>Корпоративное управление</button>
+																<div class="sub-menu__sub-menu sub-sub-menu" data-menu-submenu>
+																	<div class="sub-sub-menu__content">
+																		<h4 class="sub-sub-menu__title left-line">Корпоративное управление</h4>
+																		<button class="sub-sub-menu__close _icon-cross" type="button" data-menu-back><span class="_icon-arrow-4">Назад</span></button>
+																		<ul class="sub-sub-menu__list">
+																			<li class="sub-sub-menu__item" data-menu-item><a class="sub-sub-menu__link" href="#">test 1</a></li>
+																			<li class="sub-sub-menu__item" data-menu-item><a class="sub-sub-menu__link" href="#">test 2</a></li>
+																			<li class="sub-sub-menu__item" data-menu-item><a class="sub-sub-menu__link" href="#">test 4</a></li>
+																		</ul>
+																	</div>
+																</div>
+															</li>
+															<li class="sub-menu__item" data-menu-item>
+																<a class="sub-menu__link" href="#">Собрания акционеров</a>
+															</li>
+															<li class="sub-menu__item" data-menu-item>
+																<button class="sub-menu__control _icon-arrow-4" data-menu-control>Раскрытие информации</button>
+																<div class="sub-menu__sub-menu sub-sub-menu" data-menu-submenu>
+																	<div class="sub-sub-menu__content">
+																		<h4 class="sub-sub-menu__title left-line">Раскрытие информации</h4>
+																		<button class="sub-sub-menu__close _icon-cross" type="button" data-menu-back><span class="_icon-arrow-4">Назад</span></button>
+																		<ul class="sub-sub-menu__list">
+																			<li class="sub-sub-menu__item" data-menu-item><a class="sub-sub-menu__link" href="#">Аффилированные лица</a></li>
+																			<li class="sub-sub-menu__item" data-menu-item><a class="sub-sub-menu__link" href="#">Существенные факты</a></li>
+																			<li class="sub-sub-menu__item" data-menu-item><a class="sub-sub-menu__link" href="#">Проспект ценных бумаг</a></li>
+																			<li class="sub-sub-menu__item" data-menu-item><a class="sub-sub-menu__link" href="#">Отчеты эмитента</a></li>
+																			<li class="sub-sub-menu__item" data-menu-item><a class="sub-sub-menu__link" href="#">Финансовая отчетность по МФСО в рублях</a></li>
+																			<li class="sub-sub-menu__item" data-menu-item><a class="sub-sub-menu__link" href="#">Финансовая отчетность по РСБУ</a></li>
+																			<li class="sub-sub-menu__item" data-menu-item><a class="sub-sub-menu__link" href="#">Инсайдерам</a></li>
+																		</ul>
+																	</div>
+																</div>
+															</li>
+															<li class="sub-menu__item" data-menu-item>
+																<a class="sub-menu__link" href="#">Аналитики</a>
+															</li>
+															<li class="sub-menu__item" data-menu-item>
+																<a class="sub-menu__link" href="#">Календарь инвестора</a>
+															</li>
+															<li class="sub-menu__item" data-menu-item>
+																<a class="sub-menu__link" href="#">Контакты для инвесторов</a>
+															</li>
+														</ul>
+													</div>
+												</div>
+											</li>
+											<li class="menu__item" data-menu-item>
+												<button class="menu__control _icon-arrow-4" data-menu-control>Работа в СКФ</button>
+												<div class="menu__sub-menu sub-menu" data-menu-submenu>
+													<div class="sub-menu__content">
+														<h4 class="sub-menu__title left-line">Работа в СКФ</h4>
+														<button class="sub-menu__close _icon-cross" type="button" data-menu-back><span class="_icon-arrow-4">Назад</span></button>
+														<ul class="sub-menu__list">
+															<li class="sub-menu__item" data-menu-item><a class="sub-menu__link" href="#">Тестовый пункт меню 1</a></li>
+															<li class="sub-menu__item" data-menu-item><a class="sub-menu__link" href="#">Тестовый пункт меню 2</a></li>
+														</ul>
+													</div>
+												</div>
+											</li>
+											<li class="menu__item" data-menu-item>
+												<button class="menu__control _icon-arrow-4" data-menu-control>Пресс-релизы</button>
+												<div class="menu__sub-menu sub-menu" data-menu-submenu>
+													<div class="sub-menu__content">
+														<h4 class="sub-menu__title left-line">Пресс-релизы</h4>
+														<button class="sub-menu__close _icon-cross" type="button" data-menu-back><span class="_icon-arrow-4">Назад</span></button>
+														<ul class="sub-menu__list">
+															<li class="sub-menu__item" data-menu-item><a class="sub-menu__link" href="#">Тестовый пункт меню 1</a></li>
+															<li class="sub-menu__item" data-menu-item><a class="sub-menu__link" href="#">Тестовый пункт меню 2</a></li>
+															<li class="sub-menu__item" data-menu-item><a class="sub-menu__link" href="#">Тестовый пункт меню 3</a></li>
+														</ul>
+													</div>
+												</div>
+											</li>
+										</ul>
+									</div>
+								</div>
+							</nav>
+						</div>
+						<div class="header-bottom__actions">
+							<div class="search">
+								<form class="search__search-form search-form" action="#" method="get">
+									<label class="search-form__label" for="search">Поиск</label>
+									<input class="search-form__input input" id="search" type="text" name="s">
+									<button class="search-form__btn _icon-arrow-1" type="submit"></button>
+									<span class="search-form__close _icon-cross"></span>
+								</form>
+								<button class="search__search-btn _icon-search" type="button" data-link="search-form"><span>Поиск</span></button>
+							</div>
+							<div class="languages">
+								<a class="languages__language _active" href="#">
+									<span class="languages__desc">Русский</span>
+									<span class="languages__mobile">Рус</span>
+								</a>
+								<a class="languages__language" href="#">
+									<span class="languages__desc">English</span>
+									<span class="languages__mobile">Eng</span>
+								</a>
+							</div>
+							<button class="menu-icon" type="button" data-menu-icon="main-menu"></button>
+						</div>
+					</div>
+				</div>
+			</div>
+		</header>
+		
+		<main class="page">
+			
+			<div class="page__inner page-inner">
+
+				<header class="page-inner__head inner-head">
+					<div class="inner-head__top">
+						<div class="inner-head__container _container">
+							<div class="inner-head__top-body">
+								<h1 class="inner-head__title">Хронология событий</h1>
+							</div>
+						</div>
+						<figure class="inner-head__bg _ibg">
+							<img src="assets/img/bgs/bg3-2.jpg" alt="image">
+						</figure>
+					</div>
+					<div class="inner-head__bottom">
+						<div class="inner-head__container _container">
+							<div class="inner-head__bottom-body">
+								<nav class="breadcrumbs">
+									<ul class="breadcrumbs__list">
+										<li class="breadcrumbs__item"><a class="breadcrumbs__link" href="#" title="Главная">Главная</a></li>
+										<li class="breadcrumbs__item"><a class="breadcrumbs__link" href="#" title="О компании">О компании</a></li>
+										<li class="breadcrumbs__item"><a class="breadcrumbs__link" href="#" title="История">История</a></li>
+										<li class="breadcrumbs__item"><span class="breadcrumbs__current" title="Хронология событий">Хронология событий</span></li>
+									</ul>
+								</nav>
+							</div>
+						</div>
+					</div>
+				</header>
+
+				<section class="page-inner__section inner-section">
+					<div class="inner-section__container _container">
+						<div class="inner-section__content inner-section__content_narrow">
+							<div class="inner-section__body">
+								<div class="_typography">
+									<h2>Хронология основных событий</h2>
+									<p>В июне 1988 года на базе Всесоюзного хозрасчетного внешнеторгового объединения «Совкомфлот» было создано акционерное коммерческое предприятие – одно из первых в истории современной России. Общий дедвейт флота, не имевшего четко выраженной специализации, составлял 1,6 млн тонн. Учредителями предприятия стали Минморфлот СССР и морские пароходства: Дальневосточное, Черноморское, Новороссийское, Латвийское, Балтийское и Советское Дунайское. Благодаря грамотно избранной стратегии развития, «Совкомфлот» постепенно трансформировался из пароходства средних размеров в одного из мировых лидеров в области морской транспортировки энергоносителей.</p>
+								</div>
+								<div class="history">
+									<div class="history__item history-item">
+										<div class="history-item__head">
+											<div class="history-item__year">1973</div>
+										</div>
+										<div class="history-item__body _typography">
+											<ul>
+												<li>Начало коммерческих операций по фрахтованию иностранного тоннажа</li>
+											</ul>
+										</div>
+									</div>
+									<div class="history__item history-item">
+										<div class="history-item__head">
+											<div class="history-item__year">1988</div>
+										</div>
+										<div class="history-item__body _typography">
+											<ul>
+												<li>Создание АКП «Совкомфлот» - одного из первых акционерных обществ в истории современной России</li>
+											</ul>
+										</div>
+									</div>
+									<div class="history__item history-item">
+										<div class="history-item__head">
+											<div class="history-item__year">1989</div>
+										</div>
+										<div class="history-item__body _typography">
+											<ul>
+												<li>1989 Первая финансовая отчетность по международным стандартам</li>
+											</ul>
+										</div>
+									</div>
+									<div class="history__item history-item">
+										<div class="history-item__head">
+											<div class="history-item__year">1990</div>
+										</div>
+										<div class="history-item__body _typography">
+											<ul>
+												<li>Получение первых синдицированных кредитов международных банков</li>
+											</ul>
+										</div>
+									</div>
+									<div class="history__item history-item">
+										<div class="history-item__head">
+											<div class="history-item__year">1991</div>
+										</div>
+										<div class="history-item__body _typography">
+											<ul>
+												<li>Учреждение технического менеджера флота группы компаний – SCF Unicom</li>
+											</ul>
+										</div>
+									</div>
+									<div class="history__item history-item">
+										<div class="history-item__head">
+											<div class="history-item__year">1995</div>
+										</div>
+										<div class="history-item__body _typography">
+											<ul>
+												<li>Начало самостоятельных операций по техническому менеджменту танкерного флота</li>
+											</ul>
+										</div>
+									</div>
+									<div class="history__item history-item">
+										<div class="history-item__head">
+											<div class="history-item__year">2001</div>
+										</div>
+										<div class="history-item__body _typography">
+											<ul>
+												<li>Первая погрузка нефти в порту Приморск (Ленинградская область)</li>
+											</ul>
+										</div>
+									</div>
+									<div class="history__item history-item">
+										<div class="history-item__head">
+											<div class="history-item__year">2004</div>
+										</div>
+										<div class="history-item__body _typography">
+											<img src="assets/img/history/c1.jpg" alt="history">
+											<ul>
+												<li>Принятие стратегии развития, направленной на морскую транспортировку энергоресурсов, на 2005-2010 гг.</li>
+											</ul>
+										</div>
+									</div>
+									<div class="history__item history-item">
+										<div class="history-item__head">
+											<div class="history-item__year">2006</div>
+										</div>
+										<div class="history-item__body _typography">
+											<img src="assets/img/history/c2.jpg" alt="history">
+											<ul>
+												<li>Начало эксплуатации газовозов СПГ</li>
+											</ul>
+										</div>
+									</div>
+									<div class="history__item history-item">
+										<div class="history-item__head">
+											<div class="history-item__year">2007</div>
+										</div>
+										<div class="history-item__body _typography">
+											<img src="assets/img/history/c3.jpg" alt="history">
+											<ul>
+												<li>Принятие стратегии развития, направленной на морскую транспортировку энергоресурсов, на 2005-2010 гг.</li>
+											</ul>
+										</div>
+									</div>
+									<div class="history__item history-item">
+										<div class="history-item__head">
+											<div class="history-item__year">2008</div>
+										</div>
+										<div class="history-item__body _typography">
+											<img src="assets/img/history/c4.jpg" alt="history">
+											<ul>
+												<li>Первая погрузка нефти на российском арктическом шельфе (проект «Варандей»)</li>
+												<li>Cоздание нового бренда группы компаний – СКФ (SCF)</li>
+											</ul>
+										</div>
+									</div>
+									<div class="history__item history-item">
+										<div class="history-item__head">
+											<div class="history-item__year">2009</div>
+										</div>
+										<div class="history-item__body _typography">
+											<img src="assets/img/history/c5.jpg" alt="history">
+											<ul>
+												<li>Погрузка первого российского СПГ (проект «Сахалин-2»)</li>
+												<li>Начало эксплуатации многофункциональных судов снабжения добывающих платформ</li>
+											</ul>
+										</div>
+									</div>
+									<div class="history__item history-item">
+										<div class="history-item__head">
+											<div class="history-item__year">2010</div>
+										</div>
+										<div class="history-item__body _typography">
+											<img src="assets/img/history/c6.jpg" alt="history">
+											<ul>
+												<li>Первый в истории мирового судоходства рейс крупнотоннажного танкера «СКФ Балтика» (дедвейт 113 тыс. тонн) по трассам Северного морского пути</li>
+											</ul>
+										</div>
+									</div>
+									<div class="history__item history-item">
+										<div class="history-item__head">
+											<div class="history-item__year">2011</div>
+										</div>
+										<div class="history-item__body _typography">
+											<img src="assets/img/history/c7.jpg" alt="history">
+											<ul>
+												<li>Открытие представительства в Юго-Восточной Азии (Сингапур)</li>
+												<li>Рейс крупнейшего в истории танкера «Владимир Тихонов» (дедвейт 163 тыс. тонн) по трассам Северного морского пути</li>
+												<li>Принятие стратегии развития до 2017 года</li>
+											</ul>
+										</div>
+									</div>
+									<div class="history__item history-item">
+										<div class="history-item__head">
+											<div class="history-item__year">2012</div>
+										</div>
+										<div class="history-item__body _typography">
+											<img src="assets/img/history/c8.jpg" alt="history">
+											<ul>
+												<li>Учреждение группы компаний «СКФ Арктика» в рамках расширения участия в проектах на континентальном шельфе России</li>
+												<li>Начало эксплуатации судна геофизической разведки «Вячеслав Тихонов»</li>
+												<li>Первая инженерная операция по морской буксировке основания добывающей платформы для нового шельфового месторождения проекта «Сахалин-1»</li>
+											</ul>
+										</div>
+									</div>
+									<div class="history__item history-item">
+										<div class="history-item__head">
+											<div class="history-item__year">2013</div>
+										</div>
+										<div class="history-item__body _typography">
+											<img src="assets/img/history/c9.jpg" alt="history">
+											<ul>
+												<li>«Совкомфлот» отмечает 25-летие</li>
+												<li>Крупнейший танкер российского торгового флота получил имя «Свет» (типоразмер VLCC, дедвейт 320 тыс. тонн)</li>
+											</ul>
+										</div>
+									</div>
+									<div class="history__item history-item">
+										<div class="history-item__head">
+											<div class="history-item__year">2014</div>
+										</div>
+										<div class="history-item__body _typography">
+											<img src="assets/img/history/c10.jpg" alt="history">
+											<ul>
+												<li>Арктический челночный танкер «Михаил Ульянов» (дедвейт 70 тыс. тонн) перевёз первую партию сырой нефти, добытой на российском арктическом шельфе</li>
+												<li>Основано совместное предприятие в сфере морской сейсморазведки с французской компанией CGG</li>
+												<li>Успешно завершена модернизация порта Сочи в рамках подготовки к XXII-м Зимним Олимпийским Играм 2014 года</li>
+											</ul>
+										</div>
+									</div>
+									<div class="history__item history-item">
+										<div class="history-item__head">
+											<div class="history-item__year">2015</div>
+										</div>
+										<div class="history-item__body _typography">
+											<img src="assets/img/history/c11.jpg" alt="history">
+											<ul>
+												<li>Двойной юбилей работы СКФ на проекте «Сахалин-2»: газовоз «Гранд Елена» совершил сотый рейс из порта Пригородное в Японию, а танкер «Залив Анива» доставил японским потребителям четырехсотую партию нефти с начала круглогодичных отгрузок в 2008 году</li>
+												<li>Завершено строительство серии ультрасовременных газовозов СПГ типоразмера Atlanticmax: «Великий Новгород», «Псков», «СКФ Мелампус» и «СКФ Митре»</li>
+											</ul>
+										</div>
+									</div>
+									<div class="history__item history-item">
+										<div class="history-item__head">
+											<div class="history-item__year">2016</div>
+										</div>
+										<div class="history-item__body _typography">
+											<img src="assets/img/history/c12.jpg" alt="history">
+											<ul>
+												<li>«Совкомфлот» укрепил свои позиции в стратегически важных сегментах рынка, приобретя 9 современных танкеров ледового класса у компании PRISCO и 2 ледокольных судна снабжения морских платформ у Swire Pacific Offshore</li>
+												<li>Система технического управления флотом СКФ реструктурирована и консолидирована под единым брендом SCF Management Services</li>
+												<li>Завершено строительство серии уникальных арктических челночных танкеров «Штурман Альбанов», «Штурман Малыгин» и «Штурман Овцын» для круглогодичной транспортировки нефти из Обской губы</li>
+												<li>ПАО «Совкомфлот» выступил титульным спонсором СКФ Черноморской регаты больших парусников 2016</li>
+											</ul>
+										</div>
+									</div>
+									<div class="history__item history-item">
+										<div class="history-item__head">
+											<div class="history-item__year">2017</div>
+										</div>
+										<div class="history-item__body _typography">
+											<img src="assets/img/history/c13.jpg" alt="history">
+											<ul>
+												<li>«Совкомфлот» совместно с Shell первыми в отрасли сделали шаг к переводу нефтяных танкеров на газомоторное топливо</li>
+												<li>Танкер «Штурман Альбанов» стал обладателем международной премии Marine Propulsion Awards 2017 в номинации «Судно года 2016»</li>
+												<li>Принят в эксплуатацию «Кристоф де Маржери», первый в мире ледокольный танкер для перевозки СПГ. Он предназначен для обслуживания проекта «Ямал СПГ»</li>
+												<li>Флот СКФ пополнили три новых ледокольных суда снабжения и обеспечения добывающих платформ для проекта «Сахалин-2». Они названы в честь адмиралов Геннадия Невельского, Степана Макарова и Федора Ушакова</li>
+											</ul>
+										</div>
+									</div>
+									<div class="history__item history-item">
+										<div class="history-item__head">
+											<div class="history-item__year">2018</div>
+										</div>
+										<div class="history-item__body _typography">
+											<img src="assets/img/history/c14.jpg" alt="history">
+											<ul>
+												<li>Начата эксплуатация «зеленой» серии танкеров типа «Проспект Гагарина», которые используют газомоторное (СПГ) топливо в качестве основного</li>
+												<li>Танкер «Ломоносовский проспект» на газомоторном топливе успешно завершил переход по Севморпути из Азии в Европу</li>
+												<li>Флот многофункциональных ледокольных судов СКФ, обслуживающих нефтегазовые проекты на Сахалине, достиг 10 единиц после того, как в эксплуатацию принято судно «Евгений Примаков»</li>
+												<li>При поддержке «Совкомфлота» на Дальнем Востоке России впервые в новейшей истории региона прошла международная регата больших учебных парусников</li>
+											</ul>
+										</div>
+									</div>
+									<div class="history__item history-item">
+										<div class="history-item__head">
+											<div class="history-item__year">2019</div>
+										</div>
+										<div class="history-item__body _typography">
+											<img src="assets/img/history/c15.jpg" alt="history">
+											<ul>
+												<li>«Совкомфлот» стал победителем престижной премии Lloyd’s List Europe Awards 2019 в номинации «Компания года»</li>
+												<li>«Совкомфлот» и «НОВАТЭК» создали совместное предприятие «Современный морской арктический транспорт СПГ» («СМАРТ СПГ»), которое будет владеть и управлять флотом газовозов для обеспечения проекта «Арктик СПГ 2»</li>
+												<li>Компания внедряет экологически более безопасное газомоторное топливо в практику арктического судоходства. Три танкера «зеленой» серии СКФ выполнили грузовые рейсы по Севморпути, используя только СПГ-топливо</li>
+												<li>В преддверии 200-летия открытия Антарктиды новому челночному танкеру СКФ присвоено имя Михаила Лазарева, одного из первооткрывателей шестого материка Земли</li>
+											</ul>
+										</div>
+									</div>
+									<div class="history__item history-item">
+										<div class="history-item__head">
+											<div class="history-item__year">2020</div>
+										</div>
+										<div class="history-item__body _typography">
+											<img src="assets/img/history/c16.jpg" alt="history">
+											<ul>
+												<li>«Совкомфлот» стал победителем отраслевой премии Seatrade Maritime Awards International 2020 в номинации «Судоходная компания года»</li>
+												<li>СКФ продолжает наращивать портфель долгосрочных индустриальных контрактов: в течение 2020 года оператору проекта «Арктик СПГ 2» отфрахтованы 17 новых ледокольных газовозов</li>
+												<li>Приняты в эксплуатацию газовозы нового поколения «СКФ Лаперуз» и «СКФ Баренц». Суда одними из первых в мире оборудованы системой частичного повторного сжижения отпарного газа</li>
+												<li>Газовоз «Кристоф де Маржери» стал первым в истории крупнотоннажным грузовым судном, которое преодолело трассу Севморпути в восточном направлении в мае, на два месяца раньше традиционного начала навигации</li>
+											</ul>
+										</div>
+									</div>
+									<div class="history__item history-item">
+										<div class="history-item__head">
+											<div class="history-item__year">2021</div>
+										</div>
+										<div class="history-item__body _typography">
+											<img src="assets/img/history/c17.jpg" alt="history">
+											<ul>
+												<li>Арктический газовоз «Кристоф де Маржери» осуществил экспериментальный круговой рейс по Севморпути: впервые в истории крупнотоннажное грузовое судно выполнило транзитный переход по восточному сектору СМП в феврале. Это позволило существенно расширить временные рамки навигации по СМП</li>
+												<li>Танкер «Проспект Гагарина» успешно осуществил первую в США операцию по морской СПГ-бункеровке танкера типоразмера «Афрамакс». Бункеровка была выполнена на рейде порта Канаверал (штат Флорида)</li>
+												<li>«Совкомфлот» и Shell организовали юбилейную, 150-ю операцию по морской бункеровке крупнотоннажных танкеров зеленой серии СКФ газомоторным топливом</li>
+											</ul>
+										</div>
+									</div>
+									<div class="history__item history-item">
+										<div class="history-item__head">
+											<div class="history-item__year">2022</div>
+										</div>
+										<div class="history-item__body _typography">
+											<img src="assets/img/history/c18.jpg" alt="history">
+											<ul>
+												<li>«Совкомфлот» принял в эксплуатацию танкер нового поколения на СПГ-топливе «Океанский проспект» – головное судно серии из двух нефтеналивных танкеров типоразмера «Афрамакс», заказанных компанией на ССК «Звезда»</li>
+												<li>СКФ и «Газпром нефть» осуществили первую в России СПГ- бункеровку, операция с участием танкера «Проспект Королева» прошла в порту Усть-Луга</li>
+												<li>Завершено строительство серии новых челночных танкеров ледового класса для работы в рамках проекта «Сахалин-1»</li>
+											</ul>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</section>
+			</div>
+
+		</main>
+		
+		<footer class="footer">
+			<div class="footer__container _container">
+				<div class="footer__body">
+					<div class="footer__row footer__row_1">
+						<figure class="footer__logo logo">
+							<img src="assets/img/main/logo.svg" alt="logo">
+						</figure>
+						<nav class="footer__menu footer-menu">
+							<ul class="footer-menu__list">
+								<li class="footer-menu__item"><a class="footer-menu__link" href="#">Контакты</a></li>
+								<li class="footer-menu__item"><a class="footer-menu__link" href="#">Общественная приемная СКФ</a></li>
+								<li class="footer-menu__item"><a class="footer-menu__link" href="#">Закупки</a></li>
+								<li class="footer-menu__item"><a class="footer-menu__link" href="#">Противодействие коррупции</a></li>
+								<li class="footer-menu__item"><a class="footer-menu__link" href="#">Карта сайта</a></li>
+							</ul>
+						</nav>
+					</div>
+					<div class="footer__row footer__row_2">
+						<div class="footer__socials socials">
+							<a class="socials__social _icon-tg" href="#"></a>
+							<a class="socials__social _icon-vk" href="#"></a>
+						</div>
+						<p class="footer__copy">© ПАО Совкомфлот 2024</p>
+					</div>
+				</div>
+			</div>
+		</footer>
+	</div>
+
+
+	<button class="move-up _icon-arrow-3" type="button" data-move-up data-goto="wrapper"></button>
+
+	<div id="modal">
+
+		<div class="info-modal" data-modal="info-modal">
+			<div class="_typography">
+				<h2>Заголовок</h2>
+				<ul>
+					<li>Информация и материалы, содержащиеся в данном разделе («Информация») <b>не предназначены для распространения</b> (прямо или косвенно) или использования каким-либо лицом, являющимся гражданином или резидентом или расположенным в месте, государстве или юрисдикции, где такое распространение, публикация или использование противоречит законодательству или требует регистрацию, получение лицензии или иного разрешения. Информация не может быть доставлена, передана (прямо или косвенно) в Соединенные Штаты (или лицам Соединенных Штатов), Канаду, Австралию, Российскую Федерацию, Японию и Италию или любою иную юрисдикцию, в той степени, в которой такое действие будет нарушать применимое законодательство.</li>
+					<li>Информация <b>не является офертой</b> или рекламой каких-либо ценных бумаг в какой-либо юрисдикции.</li>
+					<li>Информация <b>не является офертой</b> по продаже ценных бумаг в США.</li>
+					<li>Информация <b>не является офертой</b> каких-либо ценных бумаг в России, российским лицам или в их пользу.</li>
+					<li>Информация не предназначена для какого-либо лица в Российской Федерации, не являющегося «квалифицированным инвестором» для целей Федерального закона №39-ФЗ «О рынке ценных бумаг» от 22.04.1996 (с учетом последующих изменений) («Квалифицированные инвесторы») и не может быть передана или направлена в Россию или публично распространена в России или передана лицам, не являющимся Квалифицированными инвесторами, за исключением случаев, когда (и в той степени, в которой) иное разрешено российским законодательством.</li>
+				</ul>
+				<h6>ПРОДОЛЖАЯ ПРОСМОТР ИНФОРМАЦИИ, ВЫ ПОДТВЕРЖДАЕТЕ, ЧТО ПРОСМОТР И ИСПОЛЬЗОВАНИЕ ИНФОРМАЦИИНЕ ПРОТИВОРЕЧАТ ЛЮБОМУ ПРИМЕНИМОМУ ЗАКОНОДАТЕЛЬСТВУ И ДОПУСТИМО В СООТВЕТСТВИИ С НИМ.</h6>
+				<button class="btn" type="button" data-close>Ок</button>
+			</div>
+		</div>
+
+	</div>
+	
+
+	<!-- services -->
+	<script src="https://www.google.com/recaptcha/api.js?render=<reCAPTCHA_site_key>&badge=bottomleft"></script>
+	<script src="https://api-maps.yandex.ru/2.1/?lang=ru_RU&amp;apikey=<ваш API-ключ>"></script>
+	
+	<!-- libs -->
+	<script src="assets/js/libs/lazyload.min.js"></script>
+	<script src="assets/js/libs/choices.min.js"></script>
+	<script src="assets/js/libs/nouislider.min.js"></script>
+	<script src="assets/js/libs/inputmask.min.js"></script>
+	<script src="assets/js/libs/justvalidate.min.js"></script>
+	<script src="assets/js/libs/date-fns.min.js"></script>
+	<script src="assets/js/libs/datepicker.min.js"></script>
+	<script src="assets/js/libs/swiper.min.js"></script>
+	<script src="assets/js/libs/lightgallery.min.js"></script>
+	<script src="assets/js/libs/aos.min.js"></script>
+
+	<!-- plugins -->
+	<script src="assets/js/plugins/adapt.js"></script>
+	<script src="assets/js/plugins/menu.js"></script>
+	<script src="assets/js/plugins/modal.js"></script>
+	<script src="assets/js/plugins/tabs.js"></script>
+	<script src="assets/js/plugins/spoiler.js"></script>
+	<script src="assets/js/plugins/rating.js"></script>
+
+	<!-- files -->
+	<script src="assets/js/files/functions.js"></script>
+	<script src="assets/js/files/forms.js"></script>
+	<script src="assets/js/files/sliders.js"></script>
+	<script src="assets/js/files/scroll.js"></script>
+	<script src="assets/js/files/media.js"></script>
+	<script src="assets/js/files/scripts.js"></script>
+
+
+</body>
+
+</html>

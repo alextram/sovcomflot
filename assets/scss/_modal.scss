@@ -171,4 +171,17 @@ a[data-modal-opener] {
 		padding: 0;
 	}
 
+	.info-modal {
+		._typography {
+			display: grid;
+			h2 {
+				justify-self: center;
+			}
+			button {
+				margin-top: rem(20);
+				justify-self: center;
+			}
+		}
+	}
+
 }
