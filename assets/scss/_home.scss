@@ -104,8 +104,8 @@
 		padding: rem(80) 0px 0px 0px;
 	}
 
-	// .main-slide_video
-	&_video {
+	// .main-slide_shadow
+	&_shadow {
 		&::after {
 			content: '';
 			position: absolute;
