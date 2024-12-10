@@ -8937,7 +8937,7 @@ textarea.input {
     padding: 5rem 0px 0px 0px;
   }
 }
-.main-slide_video::after {
+.main-slide_shadow::after {
   content: "";
   position: absolute;
   width: 100%;
@@ -10122,8 +10122,14 @@ textarea.input {
 .press-archive__control._selected span {
   border-color: transparent;
 }
+@media (any-hover: hover) {
+  .press-archive__control._selected:hover {
+    color: #fff;
+    background: var(--color-second);
+  }
+}
 .press-archive__control._active {
-  background: #DBE3F6;
+  background: #DBE3F6 !important;
 }
 .press-archive__control._active._selected {
   color: var(--color-main);

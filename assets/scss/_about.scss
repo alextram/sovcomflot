@@ -249,9 +249,15 @@
 			span {
 				border-color: transparent;
 			}
+			@media (any-hover: hover) {
+				&:hover {
+					color: #fff;
+					background: var(--color-second);
+				}
+			}
 		}
 		&._active {
-			background: #DBE3F6;
+			background: #DBE3F6 !important;
 			&._selected {
 				color: var(--color-main);
 			}
