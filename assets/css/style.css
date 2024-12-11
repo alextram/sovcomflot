@@ -10490,7 +10490,7 @@ textarea.input {
   color: var(--color-main);
 }
 .event-item__text {
-  color: #525253;
+  color: var(--color-font-gray);
 }
 .event-item__link {
   color: var(--color-main);
