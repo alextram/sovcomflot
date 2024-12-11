@@ -10278,6 +10278,9 @@ textarea.input {
     padding: 0.5rem 0px 0px 0rem;
   }
 }
+.doc-item__text a {
+  color: var(--color-main);
+}
 .doc-item__info {
   display: -webkit-box;
   display: -ms-flexbox;

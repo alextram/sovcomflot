@@ -43,6 +43,9 @@
 		@media (max-width: em($md3)) {
 			padding: rem(8) 0px 0px rem(0);
 		}
+		a {
+			color: var(--color-main);
+		}
 	}
 	// .doc-item__info
 	&__info {
