@@ -1,0 +1,407 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+	<title>СКФ</title>
+	<meta charset="UTF-8">
+	<meta name="format-detection" content="telephone=no">
+	<link rel="stylesheet" href="assets/css/style.css">
+	<link rel="shortcut icon" href="favicon.ico">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+	<script>
+		const LOCALIZATION = 'Russian'; // English, Spanish... Ключ локализации. При необходимости изменять в соответствии с ответом сервера.
+	</script>
+</head>
+
+<body>
+	<div class="wrapper">
+		<header class="header" data-fix>
+			<div class="header__container _container">
+				<div class="header__body">
+					<div class="header__top header-top">
+						<nav class="header-top__menu header-top-menu">
+							<ul class="header-top-menu__list" data-adapt="menu__content,991">
+								<li class="header-top-menu__item"><a class="header-top-menu__link" href="#">Контакты</a></li>
+								<li class="header-top-menu__item"><a class="header-top-menu__link" href="#">Общественная приемная СКФ</a></li>
+								<li class="header-top-menu__item"><a class="header-top-menu__link" href="#">Закупки</a></li>
+								<li class="header-top-menu__item"><a class="header-top-menu__link" href="#">Противодействие коррупции</a></li>
+							</ul>
+						</nav>
+						<div class="header-top__actions" data-adapt="menu__content-wrapper,991">
+							<a class="header-top__enter _icon-enter" href="#">Внутренний портал</a>
+							<div class="header-top__socials socials">
+								<a class="socials__social _icon-tg" href="#"></a>
+								<a class="socials__social _icon-vk" href="#"></a>
+							</div>
+						</div>
+					</div>
+					<div class="header__bottom header-bottom">
+						<a class="header-bottom__logo logo" href="#">
+							<img src="assets/img/main/logo.svg" alt="logo">
+						</a>
+						<div class="header-bottom__menu menu" data-menu="main-menu">
+							<nav class="menu__body" data-menu-container="main-menu">
+								<div class="menu__content-wrapper">
+									<div class="menu__content">
+										<button class="menu__close _icon-cross" type="button" data-menu-close></button>
+										<h4 class="menu__title left-line">Меню</h4>
+										<ul class="menu__list">
+											<li class="menu__item" data-menu-item>
+												<button class="menu__control _icon-arrow-4" data-menu-control>О компании</button>
+												<div class="menu__sub-menu sub-menu" data-menu-submenu>
+													<div class="sub-menu__content">
+														<h4 class="sub-menu__title left-line">О компании</h4>
+														<button class="sub-menu__close _icon-cross" type="button" data-menu-back><span class="_icon-arrow-4">Назад</span></button>
+														<ul class="sub-menu__list">
+															<li class="sub-menu__item" data-menu-item><a class="sub-menu__link" href="#">Тестовый пункт меню 1</a></li>
+															<li class="sub-menu__item" data-menu-item><a class="sub-menu__link" href="#">Тестовый пункт меню 2</a></li>
+															<li class="sub-menu__item" data-menu-item><a class="sub-menu__link" href="#">Тестовый пункт меню 3</a></li>
+															<li class="sub-menu__item" data-menu-item><a class="sub-menu__link" href="#">Тестовый пункт меню 4</a></li>
+															<li class="sub-menu__item" data-menu-item><a class="sub-menu__link" href="#">Тестовый пункт меню 5</a></li>
+														</ul>
+													</div>
+												</div>
+											</li>
+											<li class="menu__item" data-menu-item>
+												<button class="menu__control _icon-arrow-4" data-menu-control>Инвесторам и акционерам</button>
+												<div class="menu__sub-menu sub-menu" data-menu-submenu>
+													<div class="sub-menu__content">
+														<h4 class="sub-menu__title left-line">Инвесторам и акционерам</h4>
+														<button class="sub-menu__close _icon-cross" type="button" data-menu-back><span class="_icon-arrow-4">Назад</span></button>
+														<ul class="sub-menu__list">
+															<li class="sub-menu__item" data-menu-item>
+																<button class="sub-menu__control _icon-arrow-4" data-menu-control>Акции</button>
+																<div class="sub-menu__sub-menu sub-sub-menu" data-menu-submenu>
+																	<div class="sub-sub-menu__content">
+																		<h4 class="sub-sub-menu__title left-line">Акции</h4>
+																		<button class="sub-sub-menu__close _icon-cross" type="button" data-menu-back><span class="_icon-arrow-4">Назад</span></button>
+																		<ul class="sub-sub-menu__list">
+																			<li class="sub-sub-menu__item" data-menu-item><a class="sub-sub-menu__link" href="#">test 1</a></li>
+																			<li class="sub-sub-menu__item" data-menu-item><a class="sub-sub-menu__link" href="#">test 2</a></li>
+																			<li class="sub-sub-menu__item" data-menu-item><a class="sub-sub-menu__link" href="#">test 4</a></li>
+																		</ul>
+																	</div>
+																</div>
+															</li>
+															<li class="sub-menu__item" data-menu-item>
+																<button class="sub-menu__control _icon-arrow-4" data-menu-control>Долговые инструменты</button>
+																<div class="sub-menu__sub-menu sub-sub-menu" data-menu-submenu>
+																	<div class="sub-sub-menu__content">
+																		<h4 class="sub-sub-menu__title left-line">Долговые инструменты</h4>
+																		<button class="sub-sub-menu__close _icon-cross" type="button" data-menu-back><span class="_icon-arrow-4">Назад</span></button>
+																		<ul class="sub-sub-menu__list">
+																			<li class="sub-sub-menu__item" data-menu-item><a class="sub-sub-menu__link" href="#">test 1</a></li>
+																			<li class="sub-sub-menu__item" data-menu-item><a class="sub-sub-menu__link" href="#">test 2</a></li>
+																			<li class="sub-sub-menu__item" data-menu-item><a class="sub-sub-menu__link" href="#">test 4</a></li>
+																		</ul>
+																	</div>
+																</div>
+															</li>
+															<li class="sub-menu__item" data-menu-item>
+																<button class="sub-menu__control _icon-arrow-4" data-menu-control>Отчеты и результаты</button>
+																<div class="sub-menu__sub-menu sub-sub-menu" data-menu-submenu>
+																	<div class="sub-sub-menu__content">
+																		<h4 class="sub-sub-menu__title left-line">Отчеты и результаты</h4>
+																		<button class="sub-sub-menu__close _icon-cross" type="button" data-menu-back><span class="_icon-arrow-4">Назад</span></button>
+																		<ul class="sub-sub-menu__list">
+																			<li class="sub-sub-menu__item" data-menu-item><a class="sub-sub-menu__link" href="#">test 1</a></li>
+																			<li class="sub-sub-menu__item" data-menu-item><a class="sub-sub-menu__link" href="#">test 2</a></li>
+																			<li class="sub-sub-menu__item" data-menu-item><a class="sub-sub-menu__link" href="#">test 4</a></li>
+																		</ul>
+																	</div>
+																</div>
+															</li>
+															<li class="sub-menu__item" data-menu-item>
+																<button class="sub-menu__control _icon-arrow-4" data-menu-control>Корпоративное управление</button>
+																<div class="sub-menu__sub-menu sub-sub-menu" data-menu-submenu>
+																	<div class="sub-sub-menu__content">
+																		<h4 class="sub-sub-menu__title left-line">Корпоративное управление</h4>
+																		<button class="sub-sub-menu__close _icon-cross" type="button" data-menu-back><span class="_icon-arrow-4">Назад</span></button>
+																		<ul class="sub-sub-menu__list">
+																			<li class="sub-sub-menu__item" data-menu-item><a class="sub-sub-menu__link" href="#">test 1</a></li>
+																			<li class="sub-sub-menu__item" data-menu-item><a class="sub-sub-menu__link" href="#">test 2</a></li>
+																			<li class="sub-sub-menu__item" data-menu-item><a class="sub-sub-menu__link" href="#">test 4</a></li>
+																		</ul>
+																	</div>
+																</div>
+															</li>
+															<li class="sub-menu__item" data-menu-item>
+																<a class="sub-menu__link" href="#">Собрания акционеров</a>
+															</li>
+															<li class="sub-menu__item" data-menu-item>
+																<button class="sub-menu__control _icon-arrow-4" data-menu-control>Раскрытие информации</button>
+																<div class="sub-menu__sub-menu sub-sub-menu" data-menu-submenu>
+																	<div class="sub-sub-menu__content">
+																		<h4 class="sub-sub-menu__title left-line">Раскрытие информации</h4>
+																		<button class="sub-sub-menu__close _icon-cross" type="button" data-menu-back><span class="_icon-arrow-4">Назад</span></button>
+																		<ul class="sub-sub-menu__list">
+																			<li class="sub-sub-menu__item" data-menu-item><a class="sub-sub-menu__link" href="#">Аффилированные лица</a></li>
+																			<li class="sub-sub-menu__item" data-menu-item><a class="sub-sub-menu__link" href="#">Существенные факты</a></li>
+																			<li class="sub-sub-menu__item" data-menu-item><a class="sub-sub-menu__link" href="#">Проспект ценных бумаг</a></li>
+																			<li class="sub-sub-menu__item" data-menu-item><a class="sub-sub-menu__link" href="#">Отчеты эмитента</a></li>
+																			<li class="sub-sub-menu__item" data-menu-item><a class="sub-sub-menu__link" href="#">Финансовая отчетность по МФСО в рублях</a></li>
+																			<li class="sub-sub-menu__item" data-menu-item><a class="sub-sub-menu__link" href="#">Финансовая отчетность по РСБУ</a></li>
+																			<li class="sub-sub-menu__item" data-menu-item><a class="sub-sub-menu__link" href="#">Инсайдерам</a></li>
+																		</ul>
+																	</div>
+																</div>
+															</li>
+															<li class="sub-menu__item" data-menu-item>
+																<a class="sub-menu__link" href="#">Аналитики</a>
+															</li>
+															<li class="sub-menu__item" data-menu-item>
+																<a class="sub-menu__link" href="#">Календарь инвестора</a>
+															</li>
+															<li class="sub-menu__item" data-menu-item>
+																<a class="sub-menu__link" href="#">Контакты для инвесторов</a>
+															</li>
+														</ul>
+													</div>
+												</div>
+											</li>
+											<li class="menu__item" data-menu-item>
+												<button class="menu__control _icon-arrow-4" data-menu-control>Работа в СКФ</button>
+												<div class="menu__sub-menu sub-menu" data-menu-submenu>
+													<div class="sub-menu__content">
+														<h4 class="sub-menu__title left-line">Работа в СКФ</h4>
+														<button class="sub-menu__close _icon-cross" type="button" data-menu-back><span class="_icon-arrow-4">Назад</span></button>
+														<ul class="sub-menu__list">
+															<li class="sub-menu__item" data-menu-item><a class="sub-menu__link" href="#">Тестовый пункт меню 1</a></li>
+															<li class="sub-menu__item" data-menu-item><a class="sub-menu__link" href="#">Тестовый пункт меню 2</a></li>
+														</ul>
+													</div>
+												</div>
+											</li>
+											<li class="menu__item" data-menu-item>
+												<button class="menu__control _icon-arrow-4" data-menu-control>Пресс-релизы</button>
+												<div class="menu__sub-menu sub-menu" data-menu-submenu>
+													<div class="sub-menu__content">
+														<h4 class="sub-menu__title left-line">Пресс-релизы</h4>
+														<button class="sub-menu__close _icon-cross" type="button" data-menu-back><span class="_icon-arrow-4">Назад</span></button>
+														<ul class="sub-menu__list">
+															<li class="sub-menu__item" data-menu-item><a class="sub-menu__link" href="#">Тестовый пункт меню 1</a></li>
+															<li class="sub-menu__item" data-menu-item><a class="sub-menu__link" href="#">Тестовый пункт меню 2</a></li>
+															<li class="sub-menu__item" data-menu-item><a class="sub-menu__link" href="#">Тестовый пункт меню 3</a></li>
+														</ul>
+													</div>
+												</div>
+											</li>
+										</ul>
+									</div>
+								</div>
+							</nav>
+						</div>
+						<div class="header-bottom__actions">
+							<div class="search">
+								<form class="search__search-form search-form" action="#" method="get">
+									<label class="search-form__label" for="search">Поиск</label>
+									<input class="search-form__input input" id="search" type="text" name="s">
+									<button class="search-form__btn _icon-arrow-1" type="submit"></button>
+									<span class="search-form__close _icon-cross"></span>
+								</form>
+								<button class="search__search-btn _icon-search" type="button" data-link="search-form"><span>Поиск</span></button>
+							</div>
+							<div class="languages">
+								<a class="languages__language _active" href="#">
+									<span class="languages__desc">Русский</span>
+									<span class="languages__mobile">Рус</span>
+								</a>
+								<a class="languages__language" href="#">
+									<span class="languages__desc">English</span>
+									<span class="languages__mobile">Eng</span>
+								</a>
+							</div>
+							<button class="menu-icon" type="button" data-menu-icon="main-menu"></button>
+						</div>
+					</div>
+				</div>
+			</div>
+		</header>
+		
+		<main class="page">
+			
+			<div class="page__inner page-inner">
+
+				<header class="page-inner__head inner-head">
+					<div class="inner-head__top">
+						<div class="inner-head__container _container">
+							<div class="inner-head__top-body">
+								<h1 class="inner-head__title">Корпоративное управление</h1>
+							</div>
+						</div>
+						<figure class="inner-head__bg _ibg">
+							<img src="assets/img/bgs/bg3-2.jpg" alt="image">
+						</figure>
+					</div>
+					<div class="inner-head__bottom">
+						<div class="inner-head__container _container">
+							<div class="inner-head__bottom-body">
+								<nav class="breadcrumbs">
+									<ul class="breadcrumbs__list">
+										<li class="breadcrumbs__item"><a class="breadcrumbs__link" href="#" title="Главная">Главная</a></li>
+										<li class="breadcrumbs__item"><a class="breadcrumbs__link" href="#" title="Инвесторам и акционерам">Инвесторам и акционерам</a></li>
+										<li class="breadcrumbs__item"><a class="breadcrumbs__link" href="#" title="Кадровые офисы">Кадровые офисы</a></li>
+										<li class="breadcrumbs__item"><span class="breadcrumbs__current" title="Корпоративное управление">Корпоративное управление</span></li>
+									</ul>
+								</nav>
+							</div>
+						</div>
+					</div>
+				</header>
+
+				<section class="page-inner__section inner-section">
+					<div class="inner-section__container _container">
+						<div class="inner-section__content">
+							<div class="_typography">
+								<h2>Система корпоративного управления ПАО «Совкомфорт»</h2>
+								<div class="table-wrapper">
+									<div class="management">
+										<div class="management__top management-top">
+											<div class="management-top__left management-top-left">
+												<div class="management-top-left__top management-blue">Общее собрание акционеров</div>
+												<div class="management-top-left__bottom management-top-left-bottom">
+													<div class="management-top-left-bottom__top management-blue management-blue_with-title">
+														<div class="management-blue__top">Совет директоров</div>
+														<div class="management-blue__bottom"><span>11 членов Совета директоров: 3 независимых директора, 8 профессиональных поверенных, включая генерального директора</span></div>
+													</div>
+													<div class="management-top-left-bottom__bottom management-top-left-bottom-bottom">
+														<div class="management-top-left-bottom-bottom__item">Комитет по стратегии</div>
+														<div class="management-top-left-bottom-bottom__item">Комитет по аудиту</div>
+														<div class="management-top-left-bottom-bottom__item">Комитет по кадрам и вознаграждениям</div>
+														<div class="management-top-left-bottom-bottom__item">Комитет по инновационному развитию и технической политике</div>
+													</div>
+												</div>
+											</div>
+											<div class="management-top__right management-top-right">
+												<div class="management-top-right__top">
+													<div class="management-blue">Ревизионная комиссия</div>
+													<div class="management-blue">Внешний аудитор</div>
+												</div>
+												<div class="management-top-right__bottom">
+													<div class="management-blue">Отдел внутреннего аудита</div>
+												</div>
+											</div>
+										</div>
+										<div class="management__bottom management-bottom">
+											<div class="management-bottom__top management-bottom-top">
+												<div class="management-bottom-top__top">Исполнительные органы</div>
+												<div class="management-bottom-top__bottom">
+													<div class="management-blue management-blue_with-title">
+														<div class="management-blue__top">Правление</div>
+														<div class="management-blue__bottom"><span>7 членов Правления, включая председателя Правления</span></div>
+													</div>
+													<div class="management-blue">Генеральный директор — председатель Правления</div>
+												</div>
+											</div>
+											<div class="management-bottom__bottom management-bottom-bottom">
+												<div class="management-bottom-bottom__item management-bottom-bottom__item_2">Комитет по инвестициям и управлению активами</div>
+												<div class="management-bottom-bottom__item management-bottom-bottom__item_1">Финансовый комитет</div>
+												<div class="management-bottom-bottom__item management-bottom-bottom__item_3">Комитет по социальной, кадровой политике и корпоративной этике</div>
+												<div class="management-bottom-bottom__item management-bottom-bottom__item_1">Технический совет</div>
+												<div class="management-bottom-bottom__item management-bottom-bottom__item_2">Комитет по информационным технологиям</div>
+												<div class="management-bottom-bottom__item management-bottom-bottom__item_3">Комитет по безопасности мореплавания, охране окружающей среды, качеству и новым технологиям</div>
+												<div class="management-bottom-bottom__item management-bottom-bottom__item_3">Комитет по корпоративной айдентике и связям с общественностью</div>
+												<div class="management-bottom-bottom__item management-bottom-bottom__item_1">Фрахтовый комитет</div>
+												<div class="management-bottom-bottom__item management-bottom-bottom__item_1">Страховой комитет</div>
+												<div class="management-bottom-bottom__item management-bottom-bottom__item_1">Комитет по рискам</div>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</section>
+			</div>
+
+		</main>
+		
+		<footer class="footer">
+			<div class="footer__container _container">
+				<div class="footer__body">
+					<div class="footer__row footer__row_1">
+						<figure class="footer__logo logo">
+							<img src="assets/img/main/logo.svg" alt="logo">
+						</figure>
+						<nav class="footer__menu footer-menu">
+							<ul class="footer-menu__list">
+								<li class="footer-menu__item"><a class="footer-menu__link" href="#">Контакты</a></li>
+								<li class="footer-menu__item"><a class="footer-menu__link" href="#">Общественная приемная СКФ</a></li>
+								<li class="footer-menu__item"><a class="footer-menu__link" href="#">Закупки</a></li>
+								<li class="footer-menu__item"><a class="footer-menu__link" href="#">Противодействие коррупции</a></li>
+								<li class="footer-menu__item"><a class="footer-menu__link" href="#">Карта сайта</a></li>
+							</ul>
+						</nav>
+					</div>
+					<div class="footer__row footer__row_2">
+						<div class="footer__socials socials">
+							<a class="socials__social _icon-tg" href="#"></a>
+							<a class="socials__social _icon-vk" href="#"></a>
+						</div>
+						<p class="footer__copy">© ПАО Совкомфлот 2024</p>
+					</div>
+				</div>
+			</div>
+		</footer>
+	</div>
+
+
+	<button class="move-up _icon-arrow-3" type="button" data-move-up data-goto="wrapper"></button>
+
+	<div id="modal">
+
+		<div class="info-modal" data-modal="info-modal">
+			<div class="_typography">
+				<h2>Заголовок</h2>
+				<ul>
+					<li>Информация и материалы, содержащиеся в данном разделе («Информация») <b>не предназначены для распространения</b> (прямо или косвенно) или использования каким-либо лицом, являющимся гражданином или резидентом или расположенным в месте, государстве или юрисдикции, где такое распространение, публикация или использование противоречит законодательству или требует регистрацию, получение лицензии или иного разрешения. Информация не может быть доставлена, передана (прямо или косвенно) в Соединенные Штаты (или лицам Соединенных Штатов), Канаду, Австралию, Российскую Федерацию, Японию и Италию или любою иную юрисдикцию, в той степени, в которой такое действие будет нарушать применимое законодательство.</li>
+					<li>Информация <b>не является офертой</b> или рекламой каких-либо ценных бумаг в какой-либо юрисдикции.</li>
+					<li>Информация <b>не является офертой</b> по продаже ценных бумаг в США.</li>
+					<li>Информация <b>не является офертой</b> каких-либо ценных бумаг в России, российским лицам или в их пользу.</li>
+					<li>Информация не предназначена для какого-либо лица в Российской Федерации, не являющегося «квалифицированным инвестором» для целей Федерального закона №39-ФЗ «О рынке ценных бумаг» от 22.04.1996 (с учетом последующих изменений) («Квалифицированные инвесторы») и не может быть передана или направлена в Россию или публично распространена в России или передана лицам, не являющимся Квалифицированными инвесторами, за исключением случаев, когда (и в той степени, в которой) иное разрешено российским законодательством.</li>
+				</ul>
+				<h6>ПРОДОЛЖАЯ ПРОСМОТР ИНФОРМАЦИИ, ВЫ ПОДТВЕРЖДАЕТЕ, ЧТО ПРОСМОТР И ИСПОЛЬЗОВАНИЕ ИНФОРМАЦИИНЕ ПРОТИВОРЕЧАТ ЛЮБОМУ ПРИМЕНИМОМУ ЗАКОНОДАТЕЛЬСТВУ И ДОПУСТИМО В СООТВЕТСТВИИ С НИМ.</h6>
+				<button class="btn" type="button" data-close>Ок</button>
+			</div>
+		</div>
+
+	</div>
+	
+
+	<!-- services -->
+	<script src="https://www.google.com/recaptcha/api.js?render=<reCAPTCHA_site_key>&badge=bottomleft"></script>
+	<script src="https://api-maps.yandex.ru/2.1/?lang=ru_RU&amp;apikey=<ваш API-ключ>"></script>
+	
+	<!-- libs -->
+	<script src="assets/js/libs/lazyload.min.js"></script>
+	<script src="assets/js/libs/choices.min.js"></script>
+	<script src="assets/js/libs/nouislider.min.js"></script>
+	<script src="assets/js/libs/inputmask.min.js"></script>
+	<script src="assets/js/libs/justvalidate.min.js"></script>
+	<script src="assets/js/libs/date-fns.min.js"></script>
+	<script src="assets/js/libs/datepicker.min.js"></script>
+	<script src="assets/js/libs/swiper.min.js"></script>
+	<script src="assets/js/libs/lightgallery.min.js"></script>
+	<script src="assets/js/libs/aos.min.js"></script>
+
+	<!-- plugins -->
+	<script src="assets/js/plugins/adapt.js"></script>
+	<script src="assets/js/plugins/menu.js"></script>
+	<script src="assets/js/plugins/modal.js"></script>
+	<script src="assets/js/plugins/tabs.js"></script>
+	<script src="assets/js/plugins/spoiler.js"></script>
+	<script src="assets/js/plugins/rating.js"></script>
+
+	<!-- files -->
+	<script src="assets/js/files/functions.js"></script>
+	<script src="assets/js/files/forms.js"></script>
+	<script src="assets/js/files/sliders.js"></script>
+	<script src="assets/js/files/scroll.js"></script>
+	<script src="assets/js/files/media.js"></script>
+	<script src="assets/js/files/scripts.js"></script>
+
+
+</body>
+
+</html>
