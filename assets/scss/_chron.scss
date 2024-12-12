@@ -1,5 +1,5 @@
 .chron {
-	padding: rem(25) 0px 0px 0px;
+	padding: rem(40) 0px 0px 0px;
 	position: relative;
 	display: grid;
 	gap: rem(25);
@@ -13,8 +13,11 @@
 		right: 50%;
 		top: 0;
 		@media (max-width: em($md3)) {
-			right: 0;
+			display: none;
 		}
+	}
+	@media (max-width: em($md3)) {
+		gap: rem(50);
 	}
 	// .chron__item
 	&__item {
@@ -22,62 +25,58 @@
 }
 
 .chron-item {
+	position: relative;
 	@media (min-width: em($md3+1)) {
 		width: 50%;
 		&:nth-child(2n) {
 			translate: 100% 0;
-			.chron-item__head {
-				text-align: right;
-				padding-left: rem(40);
-				&::before {
-					right: 100%;
-				}
-				&::after {
-					right: 100%;
-				}
-			}
-			.chron-item__body {
-				padding-left: rem(40);
+			.chron-item__content {
+				padding-left: rem(55);
 				padding-right: 0;
 			}
-		}
-	}
-	// .chron-item__head
-	&__head {
-		position: relative;
-		padding: 0px 0px rem(25) 0px;
-		margin: 0px 0px rem(25) 0px;
-		border-bottom: rem(1) solid var(--color-main);
-		&::before {
-			content: '';
-			position: absolute;
-			bottom: 0;
-			right: 0;
-			width: rem(80);
-			height: rem(117);
-			background: var(--color-body-background);
-			translate: calc(50%) calc(50% - rem(20));
-		}
-		&::after {
-			content: '';
-			position: absolute;
-			bottom: 0;
-			right: 0;
-			width: rem(40);
-			height: rem(40);
-			background: var(--color-main);
-			translate: 50% 50%;
+			.chron-item__year {
+				top: 0;
+				right: 100%;
+			}
 		}
 	}
 	// .chron-item__year
 	&__year {
-		color: var(--color-main);
-		@include adaptiv-value(font-size, 32, 26, 1);
+		position: absolute;
+		top: 0;
+		right: 0;
+		translate: 50% -50%;
+		display: inline-flex;
+		justify-content: center;
+		align-items: center;
+		background: var(--color-main);
+		color: #fff;
+		width: rem(75);
+		height: rem(75);
+		border-radius: 50%;
+		box-shadow: 0px 0px 0px rem(20) var(--color-body-background);
+		@include adaptiv-value(font-size, 24, 20, 1);
 		font-weight: 500;
-		line-height: 87.5%;
+		@media (max-width: em($md3)) {
+			top: 0;
+			right: 50%;
+			translate: 50% -50%;
+			width: rem(60);
+			height: rem(60);
+			box-shadow: 0px 0px 0px rem(10) var(--color-body-background);
+		}
 	}
-	// .chron-item__body
-	&__body {
-		padding: rem(20) rem(40) 0px 0px;
+	// .chron-item__content
+	&__content {
+		border-top: rem(1) solid var(--color-main);
+		margin: rem(13) 0px 0px 0px;
+		padding: rem(45) rem(55) rem(30) 0px;
+		ul {
+			padding: 0px 0px 0px rem(13) !important;
+		}
+		@media (max-width: em($md3)) {
+			margin: rem(0) 0px 0px 0px;
+			padding: rem(45) 0px rem(30) 0px;
+		}
 	}
 }
