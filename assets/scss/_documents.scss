@@ -27,8 +27,10 @@
 		position: relative;
 		flex: 1 1 auto;
 		padding: 0px 0px 0px rem(30);
+		margin: 0px 0px 0px 0px !important;
 		a {
-			color: var(--color-main);
+			color: var(--color-main) !important;
+			font-size: rem(18) !important;
 			&::before {
 				position: absolute;
 				top: rem(3);
