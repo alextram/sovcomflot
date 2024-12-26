@@ -7312,10 +7312,15 @@ textarea.input {
   scale: -1 1;
 }
 .pagging__list {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
+  display: -webkit-box !important;
+  display: -ms-flexbox !important;
+  display: flex !important;
   gap: 0.4375rem;
+  padding: 0 !important;
+  margin: 0 !important;
+}
+.pagging__item::before {
+  display: none;
 }
 .pagging__link {
   border: 0.0625rem solid var(--color-main);
@@ -7360,7 +7365,7 @@ textarea.input {
   width: 3.75rem;
   height: 3.75rem;
   border-radius: 50%;
-  background-color: #9DB7DA;
+  background-color: #9db7da;
   position: fixed;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -7489,7 +7494,7 @@ textarea.input {
 
 .blue-block {
   padding: 1.0625rem 1.875rem;
-  background: #DBE3F6;
+  background: #dbe3f6;
   color: var(--color-main);
 }
 .blue-block a {
