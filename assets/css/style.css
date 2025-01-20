@@ -10296,7 +10296,7 @@ textarea.input {
   margin: 0px 0px 0px 0px !important;
 }
 .doc-item__title a {
-  color: var(--color-main) !important;
+  color: var(--color-main);
   font-size: 1.125rem !important;
 }
 .doc-item__title a::before {
