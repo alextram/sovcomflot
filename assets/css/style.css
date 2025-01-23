@@ -1,7 +1,7 @@
 @charset "UTF-8";
 /**
  * style.scss
- * 
+ *
  * Copyright (c) 2023 Moiseev Evgeny
  * Organization: WebisGroup
  */
@@ -264,10 +264,10 @@ img {
 
 /**
  * _modal.scss
- * 
+ *
  * Copyright (c) 2023 Moiseev Evgeny
  * Organization: WebisGroup
- * 
+ *
  * Определение стилей модальных окон
  */
 a[data-modal-opener] {
@@ -10737,6 +10737,16 @@ textarea.input {
   gap: 1.5rem;
   margin: 0px 0px 1.25rem 0px;
 }
+.video-card {
+  overflow: hidden;
+}
+.video-card img {
+  transition: all 0.3s ease 0s;
+}
+@media (any-hover: hover) {
+  .video-card:hover img {
+    scale: 1.05;
+  }
 .video-card__date {
   margin: 0px 0px 0.5rem 0px;
   color: var(--color-font-gray);
@@ -10748,7 +10758,10 @@ textarea.input {
   font-weight: 500;
   cursor: pointer;
 }
-.video-card__preview {
+.video-card__title:hover {
+  color: var(--color-second);
+}
+}.video-card__preview {
   display: block;
   width: 100%;
   padding: 0px 0px 60.1593625498% 0px;
