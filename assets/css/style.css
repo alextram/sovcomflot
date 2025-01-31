@@ -460,7 +460,7 @@ a[data-modal-opener] {
 }
 
 .swiper,
-swiper-container {
+.swiper-container {
   margin-left: auto;
   margin-right: auto;
   position: relative;
@@ -6247,15 +6247,11 @@ body h5 {
   line-height: 144.4444444444%;
   color: var(--color-titles);
 }
-body ._typography {
-  min-width: 0;
+body ._typography > *:last-child:not([class]) {
+  margin: 0;
 }
-body ._typography > *:last-child {
-  margin: 0px 0px 0px 0px;
-}
-body ._typography .h1,
-body ._typography h1 a,
-body ._typography h1 {
+body ._typography h1:not([class]) a:not([class]),
+body ._typography h1:not([class]) {
   font-weight: 500;
   font-size: 44px;
   font-size: 2.75rem;
@@ -6264,14 +6260,13 @@ body ._typography h1 {
   margin: 0px 0px 1.25rem 0px;
 }
 @media (max-width: 1410px) {
-  body ._typography .h1,
-  body ._typography h1 a,
-  body ._typography h1 {
+  body ._typography h1:not([class]) a:not([class]),
+  body ._typography h1:not([class]) {
     font-size: calc(36px + 8 * (100vw - 320px) / 1090);
   }
 }
-body ._typography h2 a,
-body ._typography h2 {
+body ._typography h2:not([class]) a:not([class]),
+body ._typography h2:not([class]) {
   color: var(--color-main);
   font-weight: 500;
   font-size: 34px;
@@ -6279,13 +6274,13 @@ body ._typography h2 {
   margin: 0px 0px 1.25rem 0px;
 }
 @media (max-width: 1410px) {
-  body ._typography h2 a,
-  body ._typography h2 {
+  body ._typography h2:not([class]) a:not([class]),
+  body ._typography h2:not([class]) {
     font-size: calc(26px + 8 * (100vw - 320px) / 1090);
   }
 }
-body ._typography h3 a,
-body ._typography h3 {
+body ._typography h3:not([class]) a:not([class]),
+body ._typography h3:not([class]) {
   color: #000;
   font-size: 28px;
   font-weight: 400;
@@ -6293,13 +6288,13 @@ body ._typography h3 {
   margin: 0px 0px 1.25rem 0px;
 }
 @media (max-width: 1410px) {
-  body ._typography h3 a,
-  body ._typography h3 {
+  body ._typography h3:not([class]) a:not([class]),
+  body ._typography h3:not([class]) {
     font-size: calc(22px + 6 * (100vw - 320px) / 1090);
   }
 }
-body ._typography h4 a,
-body ._typography h4 {
+body ._typography h4:not([class]) a:not([class]),
+body ._typography h4:not([class]) {
   color: var(--color-main);
   font-weight: 500;
   font-size: 24px;
@@ -6309,19 +6304,19 @@ body ._typography h4 {
   padding: 0px 0px 0px 0.8125rem;
 }
 @media (max-width: 1410px) {
-  body ._typography h4 a,
-  body ._typography h4 {
+  body ._typography h4:not([class]) a:not([class]),
+  body ._typography h4:not([class]) {
     font-size: calc(20px + 4 * (100vw - 320px) / 1090);
   }
 }
-body ._typography h4 a span,
-body ._typography h4 span {
+body ._typography h4:not([class]) a:not([class]) span:not([class]),
+body ._typography h4:not([class]) span:not([class]) {
   color: #000;
   font-size: 1.125rem;
   font-weight: 300;
 }
-body ._typography h4 a::before,
-body ._typography h4::before {
+body ._typography h4:not([class]) a:not([class]):before,
+body ._typography h4:not([class]):before {
   content: "";
   position: absolute;
   top: 0.1875rem;
@@ -6330,8 +6325,8 @@ body ._typography h4::before {
   width: 0.1875rem;
   background: var(--color-second);
 }
-body ._typography h5 a,
-body ._typography h5 {
+body ._typography h5:not([class]) a:not([class]),
+body ._typography h5:not([class]) {
   color: #000;
   font-family: "Fira Sans";
   font-size: 20px;
@@ -6340,40 +6335,63 @@ body ._typography h5 {
   margin: 0px 0px 1.25rem 0px;
 }
 @media (max-width: 1410px) {
-  body ._typography h5 a,
-  body ._typography h5 {
+  body ._typography h5:not([class]) a:not([class]),
+  body ._typography h5:not([class]) {
     font-size: calc(18px + 2 * (100vw - 320px) / 1090);
   }
 }
-body ._typography h6 a,
-body ._typography h6 {
+body ._typography h6:not([class]) a:not([class]),
+body ._typography h6:not([class]) {
   color: #000;
   font-size: 1.125rem;
   font-weight: 400;
   line-height: 144.444%;
 }
-body ._typography img {
+body ._typography img:not([class]) {
   margin: 0px 0px 1.875rem 0px;
 }
-body ._typography a {
+body ._typography .form__test-code img,
+body ._typography .trade__charts img {
+  margin: 0;
+}
+
+body ._typography .chart img,
+body ._typography .actions-chart__chart img {
+  margin: 0;
+}
+body ._typography a:not([class]) {
   -webkit-transition: all 0.3s ease 0s;
   transition: all 0.3s ease 0s;
   color: var(--color-main);
 }
 @media (any-hover: hover) {
-  body ._typography a:hover {
+  body ._typography a:not([class]):hover {
     color: var(--color-second);
   }
 }
-body ._typography p {
+body ._typography p:not([class]) {
   margin: 0px 0px 0.9375rem 0px;
   font-weight: 300;
 }
+body ._typography div[class]:not(._typography) > p:not([class]) {
+  font-weight: 400;
+  margin: 0;
+}
+body ._typography ._spoiler p:not([class]),
+body ._typography .capital__content p {
+  margin: 0px 0px 0.9375rem 0px !important;
+  font-weight: 300 !important;
+}
+body ._typography ._spoiler .vacancy__row p,
+body ._typography ._spoiler .press-spoiler__content p {
+  margin: 0 !important;
+}
+
 body ._typography strong, body ._typography b {
   color: #000;
   font-weight: 500;
 }
-body ._typography mark {
+body ._typograp*hy mark {
   font-weight: 400;
   background: inherit;
 }
@@ -6396,24 +6414,24 @@ body ._typography figure {
   display: inline-block;
   margin: 0px 0px 1.875rem 0px;
 }
-body ._typography ul {
+body ._typography ul:not([class]) {
   padding: 0px 0px 0px 1.375rem;
   margin: 0px 0px 2.125rem 0px;
   display: grid;
   gap: 0.6875rem;
 }
-body ._typography ul li {
+body ._typography ul:not([class]) li:not([class]) {
   position: relative;
   line-height: 150%;
   font-weight: 300;
 }
-body ._typography ul li a {
+body ._typography ul:not([class]) li:not([class]) a:not([class]) {
   font-weight: 400;
 }
-body ._typography ul li > ul, body ._typography ul li > ol {
+body ._typography ul:not([class]) li:not([class]) > ul:not([class]), body ._typography ul:not([class]) li:not([class]) > ol:not([class]) {
   padding-top: 0.625rem;
 }
-body ._typography ul li::before {
+body ._typography ul:not([class]) li:not([class]):before {
   content: "";
   position: absolute;
   top: 0.6666666667em;
@@ -6423,18 +6441,19 @@ body ._typography ul li::before {
   background: var(--color-second);
   border-radius: 50%;
 }
-body ._typography ol {
+body ._typography ol:not([class]) {
   padding: 0px 0px 0px 1.375rem;
   margin: 0px 0px 0.9375rem 0px;
 }
-body ._typography ol li {
+body ._typography ol:not([class]) li:not([class]) {
   line-height: 150%;
   margin: 0px 0px 0.625rem 0px;
 }
-body ._typography ol li > ul, body ._typography ol li > ol {
+body ._typography ol:not([class]) li:not([class]) > ul:not([class]), body ._typography ol:not([class]) li:not([class]) > ol:not([class]) {
   padding-top: 0.625rem;
 }
-body ._typography table {
+body ._typography table:not([class]),
+body ._typography table.small {
   max-width: 100%;
   width: 100%;
   border-collapse: collapse;
@@ -6476,6 +6495,10 @@ body ._typography table tr td span {
 }
 body ._typography table tr.bold td {
   font-weight: 500;
+}
+body ._typography table tr.light td,
+body ._typography table tr td.light {
+  background-color: #eef4fd;
 }
 body ._typography table.numbers td {
   white-space: nowrap;
@@ -7819,6 +7842,9 @@ textarea.input {
   grid-template-columns: repeat(3, 1fr);
   gap: 1.5rem;
   margin: 0px 0px 3.75rem 0px;
+}
+.card-grid:last-child {
+  margin: 0;
 }
 @media (max-width: 47.9375em) {
   .card-grid {
@@ -10515,7 +10541,7 @@ textarea.input {
           align-items: center;
   gap: 0.3125rem;
 }
-.event-item__main > *:last-child {
+.event-item__main > *:not(.event-item__foot):last-child {
   margin: 0 !important;
 }
 .event-item__title {
@@ -10537,6 +10563,10 @@ textarea.input {
           align-items: center;
   gap: 0.625rem;
   word-break: break-all;
+}
+.event-item__foot {
+  color: var(--color-font-gray);
+  margin-top: .5rem;
 }
 
 .trade {
@@ -10567,7 +10597,7 @@ textarea.input {
   gap: 1.25rem;
 }
 .trade__item p {
-  font-weight: 300;
+  font-weight: 300 !important;
 }
 .trade__item a {
   color: var(--color-main);
@@ -10587,7 +10617,7 @@ textarea.input {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   gap: 1.5rem;
-  margin: 0px 0px 1.25rem 0px;
+  margin: 0;
 }
 @media (max-width: 47.9375em) {
   .reports {
@@ -10617,6 +10647,7 @@ textarea.input {
 .report-card__title {
   color: #fff !important;
   font-size: 24px;
+  line-height: 116.667%;
   font-weight: 500;
   max-width: 11.875rem;
   margin: 0px 0px 0px 0px !important;
