@@ -10594,6 +10594,9 @@ textarea.input {
     grid-template-columns: repeat(1, 1fr);
   }
 }
+.report-card {
+  padding-bottom: 0;
+}
 .report-card__top {
   display: block;
   position: relative;
