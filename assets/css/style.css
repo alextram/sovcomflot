@@ -6294,7 +6294,8 @@ body ._typography h3:not([class]) {
   }
 }
 body ._typography h4:not([class]) a:not([class]),
-body ._typography h4:not([class]) {
+body ._typography h4:not([class]),
+body ._typography h4.group {
   color: var(--color-main);
   font-weight: 500;
   font-size: 24px;
@@ -6302,6 +6303,9 @@ body ._typography h4:not([class]) {
   margin: 0px 0px 1.25rem 0px;
   position: relative;
   padding: 0px 0px 0px 0.8125rem;
+}
+body ._typography h4.group {
+  margin: 1.25rem 0 0;
 }
 @media (max-width: 1410px) {
   body ._typography h4:not([class]) a:not([class]),
@@ -6316,7 +6320,8 @@ body ._typography h4:not([class]) span:not([class]) {
   font-weight: 300;
 }
 body ._typography h4:not([class]) a:not([class]):before,
-body ._typography h4:not([class]):before {
+body ._typography h4:not([class]):before,
+body ._typography h4.group:before {
   content: "";
   position: absolute;
   top: 0.1875rem;
