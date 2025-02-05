@@ -6266,12 +6266,16 @@ body ._typography h1:not([class]) {
   }
 }
 body ._typography h2:not([class]) a:not([class]),
-body ._typography h2:not([class]) {
+body ._typography h2:not([class]),
+body ._typography h2.group {
   color: var(--color-main);
   font-weight: 500;
   font-size: 34px;
   line-height: 111.765%;
   margin: 0px 0px 1.25rem 0px;
+}
+body ._typography h2.group {
+  margin: 1.25rem 0 0;
 }
 @media (max-width: 1410px) {
   body ._typography h2:not([class]) a:not([class]),
@@ -6280,12 +6284,16 @@ body ._typography h2:not([class]) {
   }
 }
 body ._typography h3:not([class]) a:not([class]),
-body ._typography h3:not([class]) {
+body ._typography h3:not([class]),
+body ._typography h3.group {
   color: #000;
   font-size: 28px;
   font-weight: 400;
   line-height: 128.571%;
   margin: 0px 0px 1.25rem 0px;
+}
+body ._typography h3.group {
+  margin: 1.25rem 0 0;
 }
 @media (max-width: 1410px) {
   body ._typography h3:not([class]) a:not([class]),
@@ -6331,13 +6339,17 @@ body ._typography h4.group:before {
   background: var(--color-second);
 }
 body ._typography h5:not([class]) a:not([class]),
-body ._typography h5:not([class]) {
+body ._typography h5:not([class]),
+body ._typography h5.group {
   color: #000;
   font-family: "Fira Sans";
   font-size: 20px;
   font-weight: 500;
   line-height: 140%;
   margin: 0px 0px 1.25rem 0px;
+}
+body ._typography h5.group {
+  margin: 1.25rem 0 0;
 }
 @media (max-width: 1410px) {
   body ._typography h5:not([class]) a:not([class]),
