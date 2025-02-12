@@ -6431,24 +6431,31 @@ body ._typography figure {
   display: inline-block;
   margin: 0px 0px 1.875rem 0px;
 }
-body ._typography ul:not([class]) {
-  padding: 0px 0px 0px 1.375rem;
-  margin: 0px 0px 2.125rem 0px;
+
+body ._typography ul:not([class]),
+body ._typography ol:not([class]) {
+  padding-left: 1.375rem;
+  margin-bottom: 2.125rem;
   display: grid;
   gap: 0.6875rem;
 }
-body ._typography ul:not([class]) li:not([class]) {
+body ._typography ul:not([class]) li,
+body ._typography ol:not([class]) li {
   position: relative;
   line-height: 150%;
   font-weight: 300;
 }
-body ._typography ul:not([class]) li:not([class]) a:not([class]) {
+body ._typography ul:not([class]) li a,
+body ._typography ol:not([class]) li a {
   font-weight: 400;
 }
-body ._typography ul:not([class]) li:not([class]) > ul:not([class]), body ._typography ul:not([class]) li:not([class]) > ol:not([class]) {
+body ._typography ul:not([class]) li > ul,
+body ._typography ul:not([class]) li > ol,
+body ._typography ol:not([class]) li > ul,
+body ._typography ol:not([class]) li > ol {
   padding-top: 0.625rem;
 }
-body ._typography ul:not([class]) li:not([class]):before {
+body ._typography ul:not([class]) li:before {
   content: "";
   position: absolute;
   top: 0.6666666667em;
@@ -6458,17 +6465,38 @@ body ._typography ul:not([class]) li:not([class]):before {
   background: var(--color-second);
   border-radius: 50%;
 }
+body ._typography ul:not([class]) ul:not([class]),
+body ._typography ol:not([class]) ul:not([class]),
+body ._typography ul:not([class]) ol:not([class]),
+body ._typography ol:not([class]) ol:not([class]) {
+  margin-bottom: 0;
+}
+body ._typography ul:not([class]) ul:not([class]) > li:before {
+  top: 0.5555555556em;
+  background: transparent;
+  border: 0.09375rem solid var(--color-second);
+}
 body ._typography ol:not([class]) {
-  padding: 0px 0px 0px 1.375rem;
-  margin: 0px 0px 0.9375rem 0px;
+  counter-reset: item;
+  padding-left: .375rem;
 }
-body ._typography ol:not([class]) li:not([class]) {
-  line-height: 150%;
-  margin: 0px 0px 0.625rem 0px;
+body ._typography ol:not([class]) ol:not([class]),
+body ._typography ul:not([class]) ol:not([class]) {
+  padding-left: 1.375rem;
 }
-body ._typography ol:not([class]) li:not([class]) > ul:not([class]), body ._typography ol:not([class]) li:not([class]) > ol:not([class]) {
-  padding-top: 0.625rem;
+body ._typography ol:not([class]) li {
+  list-style-type: none;
 }
+body ._typography ol:not([class]) li:before {
+  content: counter(item) '. ';
+  counter-increment: item;
+  color: var(--color-second);
+  font-weight: 400;
+}
+body ._typography ol:not([class]) li li:before {
+  font-weight: 300;
+}
+
 body ._typography table:not([class]),
 body ._typography table.small {
   max-width: 100%;
@@ -6476,7 +6504,6 @@ body ._typography table.small {
   border-collapse: collapse;
 }
 body ._typography table tr th {
-  font-weight: 400;
   background: #C9DDF6;
   padding: 0.75rem 1.25rem;
   border: 1px solid #DBE3F6;
@@ -6583,7 +6610,7 @@ body ._typography .table-wrapper {
 }
 @media (any-hover: hover) {
   .btn:hover {
-    background: #0048a7;
+    background: var(--color-second);
   }
 }
 .btn_red {
@@ -10276,7 +10303,8 @@ textarea.input {
   display: grid;
   gap: 0.5rem;
 }
-.press-list__date {
+.press-list__date,
+.press-list__source {
   color: var(--color-font-gray);
   font-size: 1rem;
 }
