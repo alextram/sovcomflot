@@ -9636,12 +9636,12 @@ textarea.input {
 
 .info-section {
   display: grid;
-  gap: 1.5rem;
+  gap: 1rem;
 }
 .info-row-1 {
   display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  gap: 1.5rem;
+  grid-template-columns: 5fr 3fr;
+  gap: 1rem;
 }
 @media (max-width: 61.9375em) {
   .info-row-1 {
@@ -9699,8 +9699,8 @@ textarea.input {
 
 .info-row-2 {
   display: grid;
-  gap: 1.5rem;
-  grid-template-columns: 3fr 4fr;
+  gap: 1rem;
+  grid-template-columns: 1fr 1fr;
 }
 @media (max-width: 61.9375em) {
   .info-row-2 {
@@ -9847,8 +9847,8 @@ textarea.input {
 
 .info-row-3 {
   display: grid;
-  gap: 1.5rem;
-  grid-template-columns: 8fr 15fr;
+  gap: 1rem;
+  grid-template-columns: 2fr 5fr;
 }
 @media (max-width: 61.9375em) {
   .info-row-3 {
