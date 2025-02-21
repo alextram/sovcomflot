@@ -6380,6 +6380,7 @@ body ._typography a:not([class]) {
   -webkit-transition: all 0.3s ease 0s;
   transition: all 0.3s ease 0s;
   color: var(--color-main);
+  font-weight: 400;
 }
 @media (any-hover: hover) {
   body ._typography a:not([class]):hover {
