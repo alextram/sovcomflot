@@ -10086,6 +10086,11 @@ textarea.input {
   grid-template-columns: repeat(2, 1fr);
   gap: 1.4375rem;
 }
+.press-gallery-full-width {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1.4375rem;
+}
 @media (max-width: 29.9375em) {
   .press-gallery {
     grid-template-columns: repeat(1, 1fr);
@@ -10102,6 +10107,9 @@ textarea.input {
   overflow: hidden;
   padding: 0px 0px 58.8469184891% 0px;
   position: relative;
+}
+.press-gallery-full-width .press-gallery__image-wrapper {
+  padding-bottom: 30%;
 }
 .press-gallery__image-wrapper::before {
   content: url("../img/scale.svg");
@@ -10135,6 +10143,9 @@ textarea.input {
   font-size: 0.875rem;
   font-weight: 300;
   margin: 0 !important;
+}
+img + .press-gallery__text {
+  margin: -1.5rem 0 1.875rem !important;
 }
 
 .press-nav {
