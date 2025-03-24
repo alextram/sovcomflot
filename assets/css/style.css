@@ -9820,6 +9820,7 @@ textarea.input {
       -ms-flex-align: end;
           align-items: flex-end;
   color: var(--color-main);
+  min-width: 4rem;
 }
 .calendar-info__day {
   font-size: 2.25rem;
