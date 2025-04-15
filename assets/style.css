@@ -8462,7 +8462,7 @@ textarea.input {
 }
 @media (max-width: 37.5em) {
   .sub-menu__content {
-    padding: 1.875rem 0rem;
+    padding: 1.875rem 0 5rem 0;
   }
 }
 .sub-menu__title {
@@ -9817,8 +9817,8 @@ textarea.input {
   display: -ms-flexbox;
   display: flex;
   -webkit-box-align: end;
-      -ms-flex-align: end;
-          align-items: flex-end;
+  -ms-flex-align: end;
+  align-items: flex-end;
   color: var(--color-main);
   min-width: 4rem;
 }
