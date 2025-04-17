@@ -8371,7 +8371,7 @@ textarea.input {
   top: 100%;
   left: 0;
   background: #F7F9FE;
-  height: 100vh;
+  height: 100%;
   width: 25.625rem;
   translate: -200% 0;
   opacity: 0;
@@ -8462,7 +8462,7 @@ textarea.input {
 }
 @media (max-width: 37.5em) {
   .sub-menu__content {
-    padding: 1.875rem 0 5rem 0;
+    padding: 1.875rem 0rem;
   }
 }
 .sub-menu__title {
@@ -8478,6 +8478,13 @@ textarea.input {
 .sub-menu__list {
   display: grid;
   gap: 1.25rem;
+}
+@media (max-width: 37.5em) {
+  .sub-menu__list:after {
+    content: '';
+    display: block;
+    height: 5rem;
+  }
 }
 .sub-menu__link {
   width: 100%;
