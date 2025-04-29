@@ -10117,7 +10117,7 @@ textarea.input {
   position: relative;
 }
 .press-gallery-full-width .press-gallery__image-wrapper {
-  padding-bottom: 30%;
+  padding-bottom: 60%;
 }
 .press-gallery__image-wrapper::before {
   content: url("../img/scale.svg");
